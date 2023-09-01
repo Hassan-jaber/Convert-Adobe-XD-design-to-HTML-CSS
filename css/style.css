@@ -1,0 +1,81 @@
+
+  /* ========================================= import font 'Montserrat' from google ========================================= */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+ 
+  /* ========================================= Start Global Rules =========================================*/
+
+  *{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--page-background);
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --page-background:#F7F7F7;
+    --main-btn-bg-color:#BA9950;
+    --main-btn-color:#F7F7F7;
+    --btn-hover-color:#BA9950;
+    --btn-border:#BA9950;
+    --btn-bg-hover-color:#F7F7F7;
+}
+/* ========================================= End Global Rules ========================================= */
+
+/* ========================================= Start Navbar =========================================*/
+
+
+.btn .login-btn{
+    padding-top: 0;
+
+}
+.Join-us-btn,.try-it-btn{
+    width: 144px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-btn-bg-color);
+    color: var(--main-btn-color);
+    font-size: 15px;
+    font-weight: bold;
+}
+.Join-us-btn:hover,.try-it-btn:hover{
+    background-color: var(--btn-bg-hover-color);
+    color: var(--btn-hover-color);
+    border: 1px solid var(--btn-border);
+    transition: 0.4s;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+
+.navbar-toggler{
+    border: none;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
+  }
+.nav-link,.login-btn,.dropdown-menu{
+    font: normal normal medium 15px/24px 'Montserrat' !important;
+    color: #727272 !important;
+}
+.dropdown .dropdown-menu ,.dropdown-menu .show{
+    width: 55px !important;
+}
+  /* ========================================= End Navbar =========================================*/
+
+  /*  ========================================= Start Header ========================================= */
+.try-it-btn{
+    width: 151px;
+}
+  /*  ========================================= End Header ========================================= */
