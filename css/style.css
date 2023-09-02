@@ -173,10 +173,11 @@ a{
         margin-top: 70px;
     }
     .card{
-        width: 352px;
+        width: 430px;
         min-height: 489px;
         padding: 0;
         text-align: center;
+        margin-bottom: 40px;
     }
     .card h2{
         font-size: 26px;
@@ -215,14 +216,18 @@ a{
     .card-img{
         position: relative;
     }
+    .card-img img{
+        width:430px;
+    }
     .triangle {
         position: absolute;
         z-index: 1;
         width: 0;
         height: 0;
         bottom: -1px;
-        border-left: 352px solid transparent;
-        border-bottom: 180px solid #F7F7F7;
+        /* right: -1px; */
+        border-left: 430px solid transparent;
+        border-bottom: 222px solid #F7F7F7;
     }
 @media (max-width:1200px) {
     .card{
@@ -230,4 +235,292 @@ a{
         margin-bottom: 40px; 
     }
 }
+@media (max-width:576px) {
+    .card{
+        width: 100%;
+        max-width: 352px;
+    }
+    .card-img img{
+        width:100%;
+    }
+    .triangle {
+        bottom: -2px;
+        border-left: 352px solid transparent;
+        border-bottom: 180px solid #F7F7F7;
+    }
+}
   /*  ========================================= End Card Section =========================================  */
+
+  /* ========================================= Start article ========================================= */
+    article{
+        margin-top: 60px;
+    }
+    .article-title{
+        font-size: 55px;
+        line-height: 67px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .article-title>:first-child{
+        color: #727272;
+    }
+    .article-title>:nth-child(2){
+        color: #BA9950;
+        font-weight: bold;
+    }
+    .reasons{
+        margin-top: 95px;
+    }
+    .reasons div{
+        padding-left: 100px;
+        position: relative;
+    }
+    .reasons div h1{
+        font-size: 32px;
+        color: #1A1818;
+        margin-bottom: 10px;
+    }
+    .reasons div h3{
+        font-size: 15px;
+        font-weight: bold;
+        color: #1A1818;
+        margin-bottom: 10px;
+    }
+    .reasons div p{
+        font-size: 15px;
+        color: #727272;
+    }
+    .reason-1::before,.reason-2::before,.reason-3::before{
+        content: "";
+        width: 110px;
+        height: 280px;
+        position: absolute;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 40px;
+        top: -75%;
+        z-index: -9999;
+    }
+    .reason-1::before{
+        background-image: url(../images/Number-1.png);
+        left: 30px;
+        top: -85%;
+    }
+    .reason-2::before{
+        background-image: url(../images/Number-2.png);
+    }
+    .reason-3::before{
+        background-image: url(../images/Number-3.png);
+    }
+    .ads{
+        position: relative;
+        margin-top: 90px;
+        width: 100%;
+        height: 200px;
+        background-color: #1A1818;
+        border-bottom: 5px solid #BA9950;
+        display: flex;
+        align-items: center;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .ads::before{
+        content: "";
+        position: absolute;
+        right: -129px;
+        top: 26px;
+        width: 100%;
+        height: 100%;
+        max-width: 622px;
+        max-height: 329px;
+        background-image: url(../images/Pattern.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom 30px right 129px;
+        z-index: 10;
+    }
+    .ads-img{
+        position: relative;
+    }
+    .ads-img img{
+        position: absolute;
+        top: -159px;
+    }
+    .ads-info{
+        max-width: 360px;
+        margin-left: 219px;
+    }
+    .ads-info h1{
+        font-size: 26px;
+        font-weight: bold;
+        color: #BA9950;
+        line-height: 36px;
+    }
+    .ads-info p{
+        font-size: 15px;
+        color: #F7F7F7;
+        line-height: 25px;
+    }
+    .ads a{
+        margin-left: 60px;
+        width: 198px;
+        height: 39px;
+        background-color: var(--main-btn-bg-color);
+        color: var(--main-btn-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .ads a:hover{
+        background-color: var(--btn-bg-hover-color);
+        color: var(--btn-hover-color);
+        border: 1px solid #BA9950;
+    }
+    .ads-info-content{
+        display: flex;
+        align-items: center;
+    }
+    @media (max-width:1200px) {
+        .reason-1::before,.reason-2::before,.reason-3::before{
+            left: -25px;
+        }
+        .reasons div {
+            margin: 0 auto;
+            padding-left: 20px;
+            margin-bottom: 40px; 
+        }
+        .ads a{
+            font-size: 12px;
+            padding: 0 15px;
+        }
+    }
+    @media (min-width:768px) and (max-width:992px) {
+        .reason-3::before{
+            top: -95%;
+        }
+    }
+    @media (max-width:992px) {
+        .reason-1::before,.reason-2::before,.reason-3::before{
+            left: -50px;
+        }
+        .ads{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .article-title{
+            font-size: 44px;
+            line-height: 48px;
+        }
+        .ads-info {
+            margin-left: 182px;
+        }
+        .ads-info h1 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .ads-info p {
+            font-size: 13px;
+            line-height: 22px;
+        }
+        .ads a{
+            font-size: 11px;
+            padding: 0 4px;
+            margin-left: 0;
+        }
+    }
+    @media (max-width:768px) {
+        .reason-1::before,.reason-2::before,.reason-3::before{
+            height: 200px;
+            width: 75px;
+            left: -20px;
+        }
+        .reason-1::before{
+            top: -90%;
+        }
+        .reason-2::before{
+            top: -70%;
+        }
+        .reasons div{
+            margin-bottom: 50px;
+        }
+        .article-title{
+            font-size: 32px;
+            line-height: 37px;
+        }
+        .ads-info-content{
+            flex-direction: column;
+            margin-left: 15px;
+            align-items: end;
+            width: 100%;
+        }
+        .ads-info{
+            max-width: 250px;
+        }
+        .ads-info h1{
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .ads-info p{
+            font-size: 12px;
+            line-height: 18px;
+        }
+        .ads a{
+            width: 150px;
+            margin-right: 102px;
+        }
+        .ads a,.ads-info{
+        margin-left: 0px;
+        }
+        
+    }
+    @media (max-width:576px) {
+        .reasons div{
+            padding-left: 60px;
+        }
+        .reason-1::before,.reason-2::before,.reason-3::before{
+            height: 200px;
+            width: 75px;
+            left: 15px;
+        }
+        .reason-1::before{
+            top: -65%;
+        }
+        .reason-2::before{
+            top: -50%;
+        }
+        .reason-3::before{
+            top: -65%;
+        }
+        .reasons div{
+            margin-bottom: 50px;
+        }
+        .article-title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .reasons {
+            margin-top: 75px;
+        }
+        article{
+            overflow-x: hidden;
+        }
+        .ads-img img{
+            width: 150px;
+            height: 200px;
+            top: -102px;
+        }
+        .ads-info {
+            max-width: 200px;
+        }
+        .ads a {
+            width: 120px;
+            margin-right: 80px;
+            height: 33px;
+            font-size: 10px;
+        }
+    }
+  /* ========================================= End article ========================================= */
