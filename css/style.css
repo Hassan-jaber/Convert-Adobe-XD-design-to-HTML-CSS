@@ -1055,3 +1055,57 @@ a{
     text-transform: uppercase;
 }
 /* ========================================= End Pricing Section ========================================= */
+
+/*  ========================================= Start About Section =========================================   */
+.about{
+    margin-top: 35px;
+}
+.about-img img{
+    object-fit: cover;
+}
+.about-info{
+    max-width: 490px;
+    margin-right:auto
+}
+.about-info h1{
+    font-size: 26px;
+    font-weight: bold;
+    color: #1A1818;
+}   
+.about-info p{
+    font-size: 15px;
+    color: #727272;
+}
+.about-info a{
+    width: 130px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--main-btn-bg-color);
+    color: var(--main-btn-color);
+}
+@media (max-width:992px) {
+    .about-info,.about-img{
+        width: 100%;
+    }
+    .about-info{
+        max-width: fit-content;
+    }
+}
+@media (max-width:768px){
+    .about-info {
+        margin-top: 20px;
+    }
+}
+@media (max-width:576px) {
+    .about-info h1 {
+        font-size: 18px;
+    }
+    .about-info p {
+    font-size: 13px;
+    }
+}
+/*  ========================================= End About Section =========================================   */
