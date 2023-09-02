@@ -172,6 +172,18 @@ a{
     .cards{
         margin-top: 70px;
     }
+    .cards::before{
+        content: "";
+        width: 217px;
+        height: 508px;
+        background-image: url(../images/1.png);
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 1000px;
+        z-index: 999;
+        background-repeat: no-repeat;
+    }
     .card{
         width: 430px;
         min-height: 489px;
@@ -234,6 +246,16 @@ a{
         margin: 0 auto;
         margin-bottom: 40px; 
     }
+    .cards::before{
+        top: 1200px;
+    }
+}
+@media (max-width:768px) {
+    .cards::before{
+        top: 2300px;
+        width: 117px;
+        height: 408px;
+    }
 }
 @media (max-width:576px) {
     .card{
@@ -248,12 +270,31 @@ a{
         border-left: 352px solid transparent;
         border-bottom: 180px solid #F7F7F7;
     }
+    .cards::before{
+        top: 2150px;
+    }
 }
   /*  ========================================= End Card Section =========================================  */
 
   /* ========================================= Start article ========================================= */
     article{
+        position: relative;
         margin-top: 60px;
+        width: 100%;
+        height: 100%;
+    }
+
+    article::after{
+        content: "";
+        width: 217px;
+        height: 508px;
+        background-image: url(../images/2.png);
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 200px;
+        z-index: -9999;
+        background-repeat: no-repeat;
     }
     .article-title{
         font-size: 55px;
@@ -384,6 +425,13 @@ a{
         display: flex;
         align-items: center;
     }
+    @media (max-width:1100px) {
+        article::after{
+            width: 99px;
+            height: 371px;
+            top: 425px;
+        }
+    }
     @media (max-width:1200px) {
         .reason-1::before,.reason-2::before,.reason-3::before{
             left: -25px;
@@ -431,6 +479,9 @@ a{
             padding: 0 4px;
             margin-left: 0;
         }
+        article::after{
+            top: 525px;
+        }
     }
     @media (max-width:768px) {
         .reason-1::before,.reason-2::before,.reason-3::before{
@@ -475,9 +526,14 @@ a{
         .ads a,.ads-info{
         margin-left: 0px;
         }
-        
+        article::after{
+            top: 625px;
+        }
     }
     @media (max-width:576px) {
+        article{
+            overflow: hidden;
+        }
         .reasons div{
             padding-left: 60px;
         }
@@ -505,9 +561,7 @@ a{
         .reasons {
             margin-top: 75px;
         }
-        article{
-            overflow-x: hidden;
-        }
+
         .ads-img img{
             width: 150px;
             height: 200px;
@@ -521,6 +575,10 @@ a{
             margin-right: 80px;
             height: 33px;
             font-size: 10px;
+        }
+        article::after{
+            top: 610px;
+            height: 240px;
         }
     }
   /* ========================================= End article ========================================= */
@@ -697,3 +755,147 @@ a{
   }
   
   /* ========================================= End Swiper ========================================= */
+
+/*  ========================================= Start materials section =========================================  */
+.materials{
+    width: 100%;
+    margin-top: 78px;
+    position: relative;
+}   
+.materials::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    height: 159px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -9999;
+    background-image: url(../images/TxtBIG.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.materials::after{
+    content: "";
+    position: absolute;
+    width: 338px;
+    height: 738px;
+    right:0;
+    top: 0;
+    z-index: -9999;
+    background-image: url(../images/3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.materials-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+.materials-title p{
+    font-size: 55px;
+    color: #1A1818;
+    margin-top: 30px;
+}
+.materials-title h2{
+    font-size: 55px;
+    color: #BA9950;
+    font-weight: bold;
+}
+.materials-cards{
+    margin-top: 65px;
+}
+.materials-card{
+    position: relative;
+    width: 352px;
+    height: 235px;
+    background-color: #F7F7F7;
+    border: 1px solid #BA9950;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 44px;
+    padding-bottom: 43px;
+}
+.materials-card img{
+    margin-bottom: 6px;
+}
+.materials-card:hover .border_left,.materials-card:hover .border_right{
+    animation:  border_left 1s;
+    animation:  border_right 1s;
+}
+.border_left,.border_right{
+    width: 5px;
+    height: 0px;
+    position: absolute;
+    background-color: #BA9950;
+}
+.border_left{
+    left: 0;
+    bottom: 0;
+}
+.border_right{
+    right: 0;
+    top: 0;
+}
+.materials-card h1{
+    font-size: 26px;
+    font-weight: bold;
+    color: #1A1818;
+}
+.materials-card p{
+    font-size: 15px;
+    color: #727272;
+}
+
+@keyframes border_left {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 235px;
+    }
+}
+@keyframes border_right {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 235px;
+    }
+}
+@media (max-width:1200px){
+    .materials-title p {
+        font-size: 45px;
+        margin-top: 0px;
+        margin-bottom: 0;
+    }
+    .materials-title h2 {
+        font-size: 45px;
+    }
+    .materials::after {
+        top: 75px;
+    }
+}
+@media (max-width:768px){
+    .materials::after{
+        top: 140px;
+    }
+}
+@media (max-width:576px) {
+    .materials-title p{
+        margin-top: 10px;
+    }
+    .materials-title p,.materials-title h2 {
+        font-size: 30px;
+        text-align: center;
+        align-self: center;
+    }
+}
+/*  ========================================= End materials section =========================================  */
