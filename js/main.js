@@ -46,3 +46,9 @@ var swiper = new Swiper(".slide-content", {
   }
   );
   
+  wow = new WOW(
+    {
+    mobile:false,
+  }
+  )
+  wow.init();
