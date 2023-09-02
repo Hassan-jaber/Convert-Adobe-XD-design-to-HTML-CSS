@@ -1484,7 +1484,67 @@ footer ul li {
 .footer-links ul li {
     margin-left: 25px;
 }
+.discord:hover{
+   background-color: #0D6EFD;
+   transition: 0.4s;
 
+}
+.discord:hover .fa-discord{
+    color: white;
+ }
+.fa-discord{
+color: #0D6EFD;
+}
+.fa-youtube{
+    color: #FF0000;
+}
+.Utube:hover{
+    background-color: #FF0000;
+    transition: 0.4s;
+}
+.Utube:hover .fa-youtube{
+    color: white;
+}
+.instagram:hover{
+    background-color: #e4405f;
+    transition: 0.4s;
+}
+.instagram:hover .fa-instagram{
+    color: white;   
+}
+.fa-instagram{
+    color: #e4405f;
+}
+.telegram:hover{
+    background-color: #0088cc;
+    transition: 0.4s;
+}
+.telegram:hover .fa-paper-plane{
+    color: white;
+}
+.fa-paper-plane{
+    color: #0088cc;
+}
+.twitter:hover{
+    background-color: black;
+    transition: 0.4s;
+}
+.twitter:hover .fa-x-twitter{
+    color: white;
+}
+.fa-x-twitter{
+    color: black;
+}
+.fa-facebook-f{
+    color: #146EBE;
+}
+.facebook:hover{
+    background-color: #146EBE;
+    transition: 0.4s;
+}
+.facebook:hover .fa-facebook-f{
+    color: white;
+}
 @media(max-width:1200px) {
     .footer-links ul li {
         font-size: 13px;
