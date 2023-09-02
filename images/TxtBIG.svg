@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="612" height="332" viewBox="0 0 612 332">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="584" height="159" transform="translate(-399 428)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f7f7f7" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f7f7f7"/>
+    </linearGradient>
+    <clipPath id="clip-path-2">
+      <rect id="Mask-2" data-name="Mask" width="402" height="159" transform="translate(-308 428)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect id="Mask-3" data-name="Mask" width="492" height="159" transform="translate(-353 428)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="TxtBIG" transform="translate(676 -392)">
+    <g id="Txt" transform="translate(-277 -36)" clip-path="url(#clip-path)">
+      <text id="who" transform="translate(-111 569)" fill="rgba(186,153,80,0.2)" stroke="#ba9950" stroke-width="2" font-size="185" font-family="SegoeUIBlack, Segoe UI"><tspan x="-242.406" y="0">WHO</tspan></text>
+      <rect id="Gradient" width="538" height="241" transform="translate(-381 333)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Txt-2" data-name="Txt" transform="translate(-158 44)" clip-path="url(#clip-path-2)">
+      <text id="we" transform="translate(-111 569)" fill="rgba(186,153,80,0.2)" stroke="#ba9950" stroke-width="2" font-size="185" font-family="SegoeUIBlack, Segoe UI"><tspan x="-148.461" y="0">WE</tspan></text>
+      <rect id="Gradient-2" data-name="Gradient" width="356" height="241" transform="translate(-290 333)" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Txt-3" data-name="Txt" transform="translate(-285 137)" clip-path="url(#clip-path-3)">
+      <text id="are" transform="translate(-111 569)" fill="rgba(186,153,80,0.2)" stroke="#ba9950" stroke-width="2" font-size="185" font-family="SegoeUIBlack, Segoe UI"><tspan x="-183.51" y="0">ARE</tspan></text>
+      <rect id="Gradient-3" data-name="Gradient" width="446" height="241" transform="translate(-335 333)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
