@@ -94,7 +94,9 @@ a {
 }
 
 
-
+.dropdown .dropdown-menu{
+    width: 100px !important;
+}
 
 .nav-item>:last-child span {
     display: none;
@@ -114,7 +116,7 @@ a {
     margin-top: -5px;
 }
 
-.nav-item:hover a {
+.nav-item:hover a:not(.dropdown-item) {
     color: #BA9950;
 }
 
@@ -125,7 +127,15 @@ a {
 .nav-item .active {
     color: #BA9950 !important;
 }
-
+.dropdown-item:hover{
+    background-color: transparent;  
+}
+.dropdown-menu[data-bs-popper]{
+    left: -40%;
+}
+[data-lang="EN"]{
+    font-weight: bold;
+}
 @keyframes nav-item-animation {
     0% {
         width: 0;
@@ -144,7 +154,36 @@ a {
         width: 90px;
     }
 }
-
+@media(max-width:992px){
+    .logo{
+        display: none;
+    }
+    .navbar-toggler{
+        margin: 0 auto;
+    }
+    .navbar-collapse{
+        margin-top: 30px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        padding-top: 40px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+    .navbar-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Join-us-btn{
+        margin: 39px auto;
+    }
+    .navbar-collapse{
+        transition: 0s;
+    }
+    .nav-container-bg{
+        background-color:#FFFFFF;
+        height: 100vh;
+    }
+}
 /* ========================================= End Navbar =========================================*/
 
 /*  ========================================= Start Header ========================================= */
@@ -1484,67 +1523,18 @@ footer ul li {
 .footer-links ul li {
     margin-left: 25px;
 }
-.discord:hover{
-   background-color: #0D6EFD;
-   transition: 0.4s;
-
-}
-.discord:hover .fa-discord{
-    color: white;
- }
-.fa-discord{
-color: #0D6EFD;
-}
-.fa-youtube{
-    color: #FF0000;
-}
-.Utube:hover{
-    background-color: #FF0000;
+.footer-social-media-links ul li a:hover{
+    border: 1px solid white;
+    background-color: #BA9950;
     transition: 0.4s;
 }
-.Utube:hover .fa-youtube{
+.footer-social-media-links ul li a:hover i{
     color: white;
 }
-.instagram:hover{
-    background-color: #e4405f;
-    transition: 0.4s;
-}
-.instagram:hover .fa-instagram{
-    color: white;   
-}
-.fa-instagram{
-    color: #e4405f;
-}
-.telegram:hover{
-    background-color: #0088cc;
-    transition: 0.4s;
-}
-.telegram:hover .fa-paper-plane{
-    color: white;
-}
-.fa-paper-plane{
-    color: #0088cc;
-}
-.twitter:hover{
-    background-color: black;
-    transition: 0.4s;
-}
-.twitter:hover .fa-x-twitter{
-    color: white;
-}
-.fa-x-twitter{
+.footer-social-media-links ul li a i{
     color: black;
 }
-.fa-facebook-f{
-    color: #146EBE;
-}
-.facebook:hover{
-    background-color: #146EBE;
-    transition: 0.4s;
-}
-.facebook:hover .fa-facebook-f{
-    color: white;
-}
+
 @media(max-width:1200px) {
     .footer-links ul li {
         font-size: 13px;
