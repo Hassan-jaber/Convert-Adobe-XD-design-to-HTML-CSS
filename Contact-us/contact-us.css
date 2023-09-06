@@ -346,7 +346,7 @@ textarea{
 
 /* ========================================= Start Footer ========================================= */
 footer {
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 30px;
 }
 
@@ -439,9 +439,7 @@ footer ul li {
     border: 1px solid #707070;
     margin-left: 10px;
 }
-.active-li a{
-    color: #BA9950 !important; 
-}
+
 .footer-links ul li a {
     font-size: 15px;
     color: #1A1818;
