@@ -20,9 +20,6 @@ body {
     background-repeat: no-repeat;
     width: 100%;
 }
-.overflow-scroll {
-    overflow: scroll;
-}
 a {
     text-decoration: none;
 }
@@ -236,7 +233,11 @@ font-weight: bold;
 margin-left: 19px;
 margin-bottom: 16px;
 }
-
+@media(max-width:768px){
+    body{
+        overflow: auto;
+    }
+}
 @media(max-width:576px){
     .login-form{
         max-width: 350px;
