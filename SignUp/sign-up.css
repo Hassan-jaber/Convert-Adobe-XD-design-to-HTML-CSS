@@ -15,18 +15,23 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-image: url(../images/sign-up-bg.png);
     background-size: 100% 100%;
-    overflow: auto;
-    max-height: 100vh;
+    overflow: hidden;
+    min-height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
 }
+        .overflow-scroll {
+            overflow: scroll;
+        }
 button{
     border: none ;
 }
 a {
     text-decoration: none;
 }
-
+::-webkit-scrollbar {
+    display: none;
+  }
 .page{
     display: flex;
     align-items: center;
@@ -34,13 +39,16 @@ a {
 }
 
 /* ========================================= End Global Rules ========================================= */
+.link-back{
+    margin-top: 13px;
+    margin-left: 19px;
+}
 .back{
-    position: absolute;
-    left: 19px;
-    top: 13px;
+    width: max-content;
+    height: auto;
+    margin-top: 13px;
     display: flex;
     align-items: center;
-    z-index: 9999;
 }
 .back span{
     font-size: 15px;
@@ -62,12 +70,22 @@ a {
 /* ========================================= Start left-section ========================================= */
 .left-section{
     width: 399px;
-    height: 100vh;
-    background-color: #BA9950;
+    height:calc(100vh - -35.6px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+.left-section::before{
+    content: "";
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top:-35.6px;
+    width: 399px;
+    background-color: #BA9950;
+    z-index: -9999;
 }
 .left-section p{
     font-size: 18px;
@@ -107,6 +125,7 @@ a {
     justify-content: center;
     align-items: center;
     position: relative;
+    /* align-self: flex-start; */
 }
 .sign-up-container{
     max-width: 794px;
@@ -218,12 +237,9 @@ input[type="checkbox"]:checked&::before {
 .sign-up-footer{
     display: flex;
     align-items: center;
-    position: absolute;
     font-size: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 35px;
     width: max-content;
+    margin: 20px auto;
 }
 .sign-up-footer p{
     margin-bottom: 0;
@@ -278,7 +294,7 @@ input[type="checkbox"]:checked&::before {
     }
     .form-control {
         max-width: 100%;
-        height: 40px;
+        height: 35px;
         border-radius: 0px;
     }
 
