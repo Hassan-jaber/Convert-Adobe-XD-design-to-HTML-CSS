@@ -16,7 +16,7 @@ body {
     background-image: url(../images/sign-up-bg.png);
     background-size: 100% 100%;
     overflow: auto;
-    min-height: 100vh;
+    max-height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
 }
