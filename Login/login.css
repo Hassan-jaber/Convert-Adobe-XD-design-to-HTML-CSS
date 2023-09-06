@@ -25,18 +25,22 @@ a {
     text-decoration: none;
 }
 
-:root {
-    --page-background: #F7F7F7;
-    --main-btn-bg-color: #BA9950;
-    --main-btn-color: #F7F7F7;
-    --btn-hover-color: #BA9950;
-    --btn-border: #BA9950;
-    --btn-bg-hover-color: #F7F7F7;
-}
 
 /* ========================================= End Global Rules ========================================= */
 
 /* ========================================= Start Login Page  =========================================  */
+.back{
+    position: absolute;
+    left: 19px;
+    top: 13px;
+    display: flex;
+    align-items: center;
+}
+.back span{
+    font-size: 15px;
+    color: #727272;
+    margin-left: 6px;
+}
 .login {
     width: 100%;
     height: 100%;
@@ -64,6 +68,7 @@ a {
     background-color: #F7F7F7;
     border: 1px solid #BA9950;
     padding: 32px 92px 35px 92px;
+    box-shadow: 0px 13px 20px #00000014;
 }
 
 .login-form h1 {
@@ -91,10 +96,14 @@ a {
     border: 1px solid #DBD5C9;
     box-shadow: none !important;
 }
-
+.form-control{
+    font-size: 15px;
+    font-weight: bold;
+}
 ::placeholder {
     font-size: 15px !important;
     color: #727272;
+    font-weight: normal !important;
 }
 #error-msg{
     color: #F11852 ;
@@ -221,6 +230,7 @@ font-weight: bold;
 margin-left: 19px;
 margin-bottom: 16px;
 }
+
 @media(max-width:576px){
     .login-form{
         max-width: 350px;

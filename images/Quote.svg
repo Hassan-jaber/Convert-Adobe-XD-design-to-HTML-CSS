@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="399" height="767" viewBox="0 0 399 767">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="399" height="767" fill="#ba9950"/>
+    </clipPath>
+  </defs>
+  <g id="Quote" clip-path="url(#clip-path)">
+    <path id="Quote-2" data-name="Quote" d="M33.763,299.1H104.2l46.5-88.254V6.75H4.528v204.1H74.967Zm204.646,0h70.439l45.68-88.254V6.75H209.174v204.1H284.09Z" transform="translate(152.065 519.5)" fill="none" stroke="#f7f7f7" stroke-width="2" opacity="0.296"/>
+  </g>
+</svg>
