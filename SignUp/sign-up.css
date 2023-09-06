@@ -21,7 +21,9 @@ body {
     background-repeat: no-repeat;
     width: 100%;
 }
-
+button{
+    border: none ;
+}
 a {
     text-decoration: none;
 }
