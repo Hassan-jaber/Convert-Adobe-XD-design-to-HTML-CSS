@@ -15,7 +15,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-image: url(../images/login-bg.png);
     background-size: 100% 100%;
-    overflow: hidden;
+    overflow: auto;
     min-height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
@@ -23,9 +23,7 @@ body {
 a {
     text-decoration: none;
 }
-::-webkit-scrollbar {
-    display: none;
-  }
+
 
 /* ========================================= End Global Rules ========================================= */
 
@@ -249,6 +247,11 @@ margin-bottom: 16px;
     }
     .login-Content{
         width: 100%;
+    }
+}
+@media(min-width:768px){
+    .link-back{
+        position: absolute;
     }
 }
 /* ========================================= End Login Page  =========================================  */

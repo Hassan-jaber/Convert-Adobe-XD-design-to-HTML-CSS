@@ -15,77 +15,89 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-image: url(../images/sign-up-bg.png);
     background-size: 100% 100%;
-    overflow: hidden;
-    min-height: 100vh;
-    background-repeat: no-repeat;
+    overflow: auto;
+    height: 100vh;
+    /* background-repeat: no-repeat; */
     width: 100%;
 }
 
-button{
-    border: none ;
+button {
+    border: none;
 }
+
 a {
     text-decoration: none;
 }
-::-webkit-scrollbar {
+
+/* ::-webkit-scrollbar {
     display: none;
-  }
-.page{
+  } */
+.page {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 /* ========================================= End Global Rules ========================================= */
-.link-back{
+.link-back {
+    position: absolute;
     margin-top: 13px;
     margin-left: 19px;
+    z-index: 9999;
 }
-.back{
+
+.back {
     width: max-content;
     height: auto;
     margin-top: 13px;
     display: flex;
     align-items: center;
 }
-.back span{
+
+.back span {
     font-size: 15px;
     color: #727272;
     margin-left: 6px;
 }
-.arrow-img{
+
+.arrow-img {
     width: 8px;
-    height: 10px;   
+    height: 10px;
     background-image: url(../images/icons/Arrow-white.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.back span{
+
+.back span {
     font-size: 15px;
     color: #FFFFFF;
-    margin-left: 6px;  
+    margin-left: 6px;
 }
+
 /* ========================================= Start left-section ========================================= */
-.left-section{
+.left-section {
     width: 399px;
-    height:calc(100vh - -35.6px);
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-}
-.left-section::before{
-    content: "";
-    min-height: 100vh;
-    position: absolute;
-    left: 0;
-    top:-35.6px;
-    width: 399px;
     background-color: #BA9950;
-    z-index: -9999;
 }
-.left-section p{
+
+.left-section::before {
+    content: "";
+    position: absolute;
+    z-index: -9999;
+    height: 700px;
+    width: 100%;
+    background-color: #BA9950;
+    left: 0;
+}
+
+.left-section p {
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -93,39 +105,47 @@ a {
     color: white;
     margin-top: 33px;
 }
-.left-section>:nth-child(2) div{
+
+.left-section>:nth-child(2) div {
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     margin-top: 16px;
 }
-.left-section>:nth-child(2) div>:nth-child(2){
+
+.left-section>:nth-child(2) div>:nth-child(2) {
     margin-left: 11px;
     margin-right: 11px;
 }
-.left-section>:nth-child(2) div>:first-child,.left-section>:nth-child(2) div>:nth-child(3){
+
+.left-section>:nth-child(2) div>:first-child,
+.left-section>:nth-child(2) div>:nth-child(3) {
     width: 18px;
     height: 1px;
     background-color: white;
 }
-.quote{
+
+.quote {
     position: absolute;
+    bottom: 0;
 }
+
 /* ========================================= End left-section ========================================= */
 
 
 /*  ========================================= Start Sign-Up =========================================  */
-.sign-up{
+.sign-up {
     width: calc(100% - 399px);
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     /* align-self: flex-start; */
 }
-.sign-up-container{
+
+.sign-up-container {
     max-width: 794px;
     min-height: 427px;
     background-color: #F7F7F7;
@@ -170,42 +190,51 @@ input[type="checkbox"]::before {
     transform: rotate(45deg);
     opacity: 0;
 }
-label:not(.form-check-label){
+
+label:not(.form-check-label) {
     font-size: 12px;
     color: #727272;
 }
-.form-check-label{
+
+.form-check-label {
     font-size: 15px;
     margin-left: 8px;
     color: #727272;
 }
+
 input[type="checkbox"]:checked {
     color: white;
     border-color: #BA9950;
     background: #BA9950;
 
 }
+
 .form-control {
     max-width: 352px;
     height: 50px;
     border-radius: 0px;
     border: 1px solid #DBD5C9;
 }
+
 .form-control:focus {
     outline: none !important;
     border: 1px solid #DBD5C9;
     box-shadow: none !important;
 }
+
 input[type="checkbox"]:checked&::before {
     opacity: 1;
 }
-#Phone{
+
+#Phone {
     text-indent: 40px;
 }
-.Phone-number-container{
+
+.Phone-number-container {
     position: relative;
 }
-.flag{
+
+.flag {
     position: absolute;
     left: 15px;
     display: flex;
@@ -213,10 +242,12 @@ input[type="checkbox"]:checked&::before {
     top: 50%;
     transform: translateY(-50%);
 }
-.flag>:nth-child(2){
+
+.flag>:nth-child(2) {
     margin-left: 5px;
 }
-.submit{
+
+.submit {
     width: 194px;
     height: 39px;
     background-color: #BA9950;
@@ -227,53 +258,65 @@ input[type="checkbox"]:checked&::before {
     justify-content: center;
     align-items: center;
 }
+
 ::placeholder {
     font-size: 15px !important;
     color: #727272;
     font-weight: normal !important;
 }
-.sign-up-footer{
+
+.sign-up-footer {
     display: flex;
     align-items: center;
     font-size: 15px;
     width: max-content;
     margin: 20px auto;
 }
-.sign-up-footer p{
+
+.sign-up-footer p {
     margin-bottom: 0;
     color: #727272;
 }
-.sign-up-footer a{
+
+.sign-up-footer a {
     margin-left: 34px;
     font-weight: bold;
     color: #1A1818;
 }
+
 @media (max-width:1200px) {
-    .left-section{
+    .left-section {
         display: none;
     }
-    .sign-up{
+
+    .sign-up {
         width: 100%;
         height: 100vh;
         padding-top: 15px;
         padding-bottom: 15px;
     }
-    .sign-up-container{
+
+    .sign-up-container {
         max-width: fit-content;
     }
-    .form-control{
+
+    .form-control {
         max-width: 100%;
     }
-    .back span{
+
+    .back span {
         color: #727272;
     }
-    .arrow-img{
+
+    .arrow-img {
         background-image: url(../images/icons/Arrow-back.svg);
     }
-    .sign-up{
+
+    .sign-up {
         flex-direction: column;
     }
-    .logo{
+
+    .logo {
         width: 100%;
         height: 60px;
         background-image: url(../images/Logo.svg);
@@ -283,13 +326,16 @@ input[type="checkbox"]:checked&::before {
         margin-bottom: 20px;
     }
 }
+
 @media (max-width:992px) {
-    .sign-up-container{
+    .sign-up-container {
         padding: 10px;
     }
-    .sign-up-footer{
+
+    .sign-up-footer {
         bottom: 5px;
     }
+
     .form-control {
         max-width: 100%;
         height: 35px;
@@ -299,37 +345,64 @@ input[type="checkbox"]:checked&::before {
 }
 
 @media (max-width:768px) {
-    .sign-up-container{
+    .sign-up-container {
         padding: 15px;
     }
-    body{
+
+    body {
         overflow: auto;
     }
 }
+
 @media (max-width:576px) {
-    .sign-up-container{
+    .sign-up-container {
         padding: 20px;
     }
-    .checkbox-container{
+
+    .checkbox-container {
         display: flex;
         align-items: flex-start;
         margin-top: 10px;
     }
-    .sign-up{
+
+    .sign-up {
         margin-top: 20px;
         height: fit-content;
     }
-    .sign-up-footer{
+
+    .sign-up-footer {
         bottom: -10px;
     }
 }
+
 @media (max-width:400px) {
     input[type="checkbox"] {
         width: 25px;
         height: 19px;
-        }
-        .sign-up-footer{
-            bottom: -2px;
-        }
+    }
+
+    .sign-up-footer {
+        bottom: -2px;
+    }
 }
+
+@media(min-width:1200px) {
+    .sign-up {
+        margin-top: 50px;
+    }
+}
+
+@media(max-width:1200px) {
+    .link-back {
+        position: relative;
+    }
+}
+
+@media(max-width:576px) {
+    body {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
 /*  ========================================= End Sign-Up =========================================  */
