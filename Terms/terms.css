@@ -20,8 +20,13 @@ body {
 a {
     text-decoration: none;
 }
-ul li{
-    list-style: none;
+.terms ul li{
+    list-style-image: url(../images/Ellipse\ 2.png);
+    margin-bottom: 10px;
+    max-width: 930px;
+}
+.terms ul{
+    padding-left: 1rem;
 }
 :root {
     --page-background: #F7F7F7;
@@ -205,7 +210,7 @@ button{
 
 /* ========================================= End Navbar =========================================*/
 
-/* ========================================= Start Contact us header ========================================= */
+/* ========================================= Start terms header ========================================= */
 header{
     width: 100%;
     height: 200px;
@@ -219,11 +224,12 @@ header{
 header::before{
     content: "";
     position: absolute;
-    background-image: url(../images/contact-us-header-Bg.png);
+    background-image: url(../images/terms-bg.png);
     background-repeat: no-repeat;
     width: 100%;
     height: 200px;
     background-size: cover;
+    background-position: right bottom;
 }
 .header-title>:first-child{
     font-size: 55px;
@@ -231,118 +237,43 @@ header::before{
     margin-bottom: 0;
     max-height: 73px;   
 }
-.header-title>:nth-child(2){
-    font-size: 18px;
-    color: #F7F7F7;
-    margin-top: 0;
-    margin-left: 8px;
-}
 @media (max-width:576px) {
     .header-title>:first-child{
         font-size: 35px;
         max-height: 45px;   
     }
-    .header-title>:nth-child(2){
-        font-size: 14px;
-        margin-left: 4px;
-    }
 }
-/* ========================================= End Contact us header ========================================= */
+/* ========================================= End terms header ========================================= */
 
-/* ========================================= Start Contact us cards ========================================= */
-.cards{
-    margin-top: 50px;
-}
-.card{
-    width: 400px;
-    height: 200px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 10px 25px #00000029;
-    border: 1px solid #BA9950;
-    border-radius: 0;
-    padding: 36px 68px 43px 68px;
-    margin-bottom: 47px;
-}
-.card h1{
-    font-size: 26px;
-    font-weight: bold;
-    color: #1A1818;
-    text-align: center;
-}
-.card p{
-font-size: 15px;
-color: #727272;
-text-align: center;
-margin-top: 8px;
-}
-.call-us ul,.email-us ul{
-    padding-left: 0;
-    margin-top: 8px;
-}
-.email-us ul li{
-    color: #BA9950;
-}
-.call-us,.email-us{
-    font-size: 15px;
-    text-align: center;
-}
-@media (max-width:576px) {
-    .card{
-        width: 350px;
-        padding: 36px 50px 43px 50px;
+/* ========================================= Start terms section ========================================= */
+    .terms{
+        margin-top: 27px;
     }
-    .card h1{
+    .terms h1{
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .terms p{
+        font-size: 15px;
+        color: #727272;
+    }
+    .terms>:first-child >:nth-child(2) p{
+        margin-bottom: 32px;
+    }
+    .terms>:first-child>:first-child{
+        margin-bottom: 21px;
+    }
+    .terms>:first-child>:nth-child(2){
+        margin-bottom: 69px;
+    }
+    
+@media (max-width:576px) {
+    .terms h1{
         font-size: 20px;
     }
 }
-/* ========================================= End Contact us cards ========================================= */
-
-/* ========================================= Start Contact us form ========================================= */
-.contact-us-title{
-    margin-bottom: 36px;
-}
-.contact-us-title>:first-child{
-font-size: 26px;
-font-weight: bold;
-}
-.contact-us-title>:nth-child(2){
-    font-size: 26px;
-    font-weight: bold;
-}
-.contact-us-title>:nth-child(3){
-    font-size: 15px;
-    color: #727272;
-}
-.form-control {
-    height: 50px;
-    border-radius: 0px;
-    border: 1px solid #DBD5C9;
-}
-.submit{
-    width: 140px;
-    height: 39px;
-    background-color: #BA9950;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.form-control:focus {
-    outline: none !important;
-    border: 1px solid #DBD5C9;
-    box-shadow: none !important;
-}
-textarea{
-    min-height: 140px !important;
-}
-@media (max-width:576px) {
-    .contact-us-title>:nth-child(2) {
-    font-size: 19px;
-    }
-}
-/* ========================================= End Contact us form ========================================= */
+/* ========================================= End terms section ========================================= */
 
 /* ========================================= Start Footer ========================================= */
 footer {
@@ -350,54 +281,9 @@ footer {
     margin-bottom: 30px;
 }
 
-.footer-ads {
-    width: 100%;
-    height: 276px;
-    border: 5px solid #BA9950;
-    background-image: url(../images/footer-img.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: right;
-}
 
-.footer-ads {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 77px;
-    padding-right: 55px;
-}
 
-.footer-ads-info h1 {
-    font-size: 26px;
-    font-weight: bold;
-    color: #BA9950;
-}
 
-.footer-ads-info p {
-    font-size: 15px;
-    color: #F7F7F7;
-}
-
-.footer-ads a {
-    width: 198px;
-    height: 39px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: var(--main-btn-bg-color);
-    color: var(--main-btn-color);
-}
-
-.footer-ads-info h1 {
-    max-width: 379px;
-}
-
-.footer-ads-info p {
-    max-width: 460px;
-}
 
 .footer {
     display: flex;
@@ -439,9 +325,7 @@ footer ul li {
     border: 1px solid #707070;
     margin-left: 10px;
 }
-.active-li a{
-    color: #BA9950 !important; 
-}
+
 .footer-links ul li a {
     font-size: 15px;
     color: #1A1818;
@@ -461,7 +345,9 @@ footer ul li {
 .footer-social-media-links ul li a i{
     color: black;
 }
-
+.active-li a{
+    color: #BA9950 !important; 
+}
 @media(max-width:1200px) {
     .footer-links ul li {
         font-size: 13px;
@@ -501,19 +387,9 @@ footer ul li {
         align-self: flex-start;
     }
 
-    .footer-ads {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 }
 
-@media(max-width:768px) {
-    .footer-ads {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-    }
-}
+
 
 @media (max-width:576px) {
     .footer {
@@ -528,25 +404,6 @@ footer ul li {
     .first-link,
     .footer-links ul>:first-of-type {
         margin-left: 0 !important;
-    }
-
-    .footer-ads-info h1,
-    .footer-ads-info p {
-        max-width: 100%;
-    }
-
-    .footer-ads-info h1 {
-        font-size: 18px;
-    }
-
-    .footer-ads-info p {
-        font-size: 13px;
-    }
-
-    .footer-ads a {
-        width: 150px;
-        height: 30px;
-        font-size: 12px;
     }
 }
 
