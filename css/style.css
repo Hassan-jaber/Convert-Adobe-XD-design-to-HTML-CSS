@@ -1173,7 +1173,10 @@ article::after {
     position: relative;
     overflow: hidden;
 }
-
+.pricing-cards{
+    display: flex;
+    align-items: center;
+}
 .pricing::after {
     content: "";
     width: 535px;
@@ -1349,7 +1352,117 @@ article::after {
     border: 1px solid #BA9950;
     text-transform: uppercase;
 }
-
+@media (max-width:1200px) {
+    .price-element,.recommended{
+        width: 350px;
+    }
+    .recommended{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .price-type h1,.month h1>:first-child{
+        font-size: 25px;
+        letter-spacing: 3.35px;
+    }
+    .month h1 {
+        font-size: 25px;
+    }
+    .last-type-of {
+        width: 265px !important;
+    }
+    .recommended .price-type,.price-element .price-type{
+        height: 130px;
+    }
+    .pricing ul li p,.pricing a, .recommended a{
+        font-size: 14px;
+    }
+    .recommended a{
+        width: 140px;
+    }
+    .price-element{
+        height: 540px;
+    }
+.recommended{
+    min-height: unset;
+    height: 600px;
+}
+}
+@media (max-width:992px) {
+    .pricing ul{
+        padding:0 0.5rem;
+    }
+    .pricing ul li p, .pricing a, .recommended a {
+        font-size: 12px;
+    }
+    .month h1,.price-type h1, .month h1>:first-child {
+        font-size: 20px;
+    }
+    .last-type-of,.month div {
+        width: 200px !important;
+        font-size: 11px;
+    }
+    .month div{
+        height: 30px;
+    }
+    .recommended::after {
+    width: 155px;
+    font-size: 12px;
+    }
+    .recommended{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .price-element{
+        height: 470px;
+    }
+.recommended{
+    min-height: unset;
+    height: 530px;
+}
+.recommended .price-type, .price-element .price-type{
+    height: 100px;
+}
+.month h1, .price-type h1, .month h1>:first-child{
+    font-size: 15px;
+}
+.last-price-element{
+    height: 485px;
+}
+}
+@media (max-width:768px) {
+    .pricing-cards{
+        flex-direction: column;
+    }
+    .month h1, .price-type h1, .month h1>:first-child {
+        font-size: 18px;
+    }
+    .price-type p {
+    font-size: 20px;
+    }
+    .last-type-of, .month div {
+        width: 260px;
+        font-size: 14px;
+        height: 40px;
+    }
+    .pricing ul li p, .pricing a, .recommended a{
+        font-size: 14px;
+    }
+    .pricing ul{
+        padding: 0 1rem;
+    }
+    .price-element {
+        height: 500px;
+    }
+    .last-price-element{
+        height: 505px;
+    }
+    .recommended{
+        height: 560px;
+    }
+    .last-type-of, .month div{
+        width: 250px !important;
+    }
+}
 /* ========================================= End Pricing Section ========================================= */
 
 /*  ========================================= Start About Section =========================================   */
