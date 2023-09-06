@@ -20,9 +20,7 @@ body {
     background-repeat: no-repeat;
     width: 100%;
 }
-        .overflow-scroll {
-            overflow: scroll;
-        }
+
 button{
     border: none ;
 }
@@ -299,9 +297,13 @@ input[type="checkbox"]:checked&::before {
     }
 
 }
+
 @media (max-width:768px) {
     .sign-up-container{
         padding: 15px;
+    }
+    body{
+        overflow: auto;
     }
 }
 @media (max-width:576px) {
