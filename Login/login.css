@@ -20,11 +20,15 @@ body {
     background-repeat: no-repeat;
     width: 100%;
 }
-
+.overflow-scroll {
+    overflow: scroll;
+}
 a {
     text-decoration: none;
 }
-
+::-webkit-scrollbar {
+    display: none;
+  }
 
 /* ========================================= End Global Rules ========================================= */
 
