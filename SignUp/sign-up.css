@@ -35,18 +35,18 @@ a {
 }
 
 /* ========================================= End Global Rules ========================================= */
-.back-container{
-    position: relative;
-}
 .back{
-    width:fit-content;
-    height: 20px;
     position: absolute;
     left: 19px;
     top: 13px;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    z-index: 9999;
+}
+.back span{
+    font-size: 15px;
+    color: #727272;
+    margin-left: 6px;
 }
 .arrow-img{
     width: 8px;
