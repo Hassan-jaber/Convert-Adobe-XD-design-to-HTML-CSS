@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="Photos-icon" transform="translate(-204 -8.556)">
+    <rect id="Rectangle_42" data-name="Rectangle 42" width="12.8" height="12.8" rx="2" transform="translate(207.2 11.756)" fill="#ba9950"/>
+    <g id="Rectangle_43" data-name="Rectangle 43" transform="translate(204 8.556)" fill="#ba9950" stroke="#1a1818" stroke-width="1.5">
+      <rect width="14.4" height="14.4" rx="3" stroke="none"/>
+      <rect x="0.75" y="0.75" width="12.9" height="12.9" rx="2.25" fill="none"/>
+    </g>
+  </g>
+</svg>
