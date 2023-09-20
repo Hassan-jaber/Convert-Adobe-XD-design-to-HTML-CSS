@@ -1,42 +1,33 @@
-let myCoursesContent = document.querySelector(".my-courses-content")
-let noCoursesSection = document.querySelector(".no-courses")
-
-
 // Get references to the elements
 const toggleButton = document.querySelector('.dropdown-toggle');
 const overlay = document.querySelector('.overlay-bg');
 
 // Function to toggle the overlay
 function toggleOverlay() {
-    if (overlay.style.display === 'block') {
-        overlay.style.display = 'none';
-    } else {
-        overlay.style.display = 'block';
-    }
+  if (overlay.style.display === 'block') {
+    overlay.style.display = 'none';
+  } else {
+    overlay.style.display = 'block';
+  }
 }
 
 // Add a click event listener to the toggle button
 toggleButton.addEventListener('click', function (e) {
-    e.stopPropagation(); // Prevent the click event from propagating to the document
-    toggleOverlay();
+  e.stopPropagation(); // Prevent the click event from propagating to the document
+  toggleOverlay();
 });
 
 // Add a click event listener to the document to close the overlay
 document.addEventListener('click', function () {
-    overlay.style.display = 'none'; // Hide the overlay when anything on the page is clicked
+  overlay.style.display = 'none'; // Hide the overlay when anything on the page is clicked
 });
 
 
 
 
+// --------------- js code for progress animation
 
-
-
-
-
-    // ---------------
-
-    const circularProgress = document.querySelectorAll(".circular-progress");
+const circularProgress = document.querySelectorAll(".circular-progress");
 
 Array.from(circularProgress).forEach((progressBar) => {
   const progressValue = progressBar.querySelector(".percentage");
@@ -67,8 +58,8 @@ Array.from(circularProgress).forEach((progressBar) => {
 
 let closeAlert = document.querySelector(".close")
 let alertPop = document.querySelector(".alert")
-closeAlert.addEventListener(("click"),_=>{
-alertPop.style.display="none"
+closeAlert.addEventListener(("click"), _ => {
+  alertPop.style.display = "none"
 })
 
 // --------------------------
@@ -87,7 +78,7 @@ var swiper = new Swiper(".swiper", {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
-    clickable:'true'
+    clickable: 'true'
   },
   breakpoints: {
     0: {
@@ -100,5 +91,4 @@ var swiper = new Swiper(".swiper", {
       slidesPerView: 1,
     },
   },
-}
-);
+});
