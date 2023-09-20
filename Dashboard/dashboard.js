@@ -30,17 +30,7 @@ document.addEventListener('click', function () {
 
 
 
-// remove no-courses element when add any courses or any html element
-    if(myCoursesContent.children.length === 1){
-        noCoursesSection.style.display = "flex"
-    }
 
-
-    let navbar_toggler = document.querySelector(".navbar-toggler")
-    let nav_container = document.querySelector(".nav_container")
-    navbar_toggler.addEventListener(("click"),_=>{
-      nav_container.classList.toggle("nav-container-bg")
-    })
 
 
 
@@ -80,3 +70,35 @@ let alertPop = document.querySelector(".alert")
 closeAlert.addEventListener(("click"),_=>{
 alertPop.style.display="none"
 })
+
+// --------------------------
+// Start Swiper
+var swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  navigation: {
+    nextEl: ".swiper-btn-next",
+    prevEl: ".swiper-btn-prev",
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable:'true'
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    992: {
+      slidesPerView: 1,
+    },
+    1200: {
+      slidesPerView: 1,
+    },
+  },
+}
+);
