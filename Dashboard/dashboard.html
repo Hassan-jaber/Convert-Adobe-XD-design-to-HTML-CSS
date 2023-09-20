@@ -6,6 +6,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -159,14 +160,116 @@
                             </a>
                         </div> 
                         <div class="my-courses-content">
-                            <div class="no-courses">
+                            <!-- remove no-courses element when add any courses 
+                                <div class="no-courses">
                                 <img src="../images/no-courses-img.svg" alt="">
                                 <h1>No courses yet</h1>
                                 <p>Looks you do not have any ongoing courses for now</p>
                                 <a href="#">View our courses</a>
-                            </div>
-                            <!-- add courses list here -->
+                            </div> -->
 
+                            <!-- add courses list here -->
+                            <!-- ========================================= Start Swiper ========================================= -->
+         <section class="slider" id="trading-tools">
+              <div class="slider-header">
+                  <h1>Your progress so far</h1>
+                  <p class="last-updated-date">Last updated: 12 September 2023</p>
+              </div>
+              <div class="cards-slide-container swiper">
+                      <div class="swiper-wrapper">
+      
+                          <div class="slide-card swiper-slide">
+                            <div class="course-info">
+                                <div class="course-img">
+                                    <img src="../images/course-slider-img.png" alt="">
+                                </div>
+                                <div>
+                                    <h1>Free Forex Course</h1>
+                                    <p>Trading can be a fairly subjective topic. The way that we have designed this course is to really get you thinking about certain topics and ideas.</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="Step-2">
+                                <p>Step 2 - How to Calculate Risk</p>
+                                <div class="quiz">
+                                    <p>What is Leverage?</p>
+                                    <p>1 Quiz</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-now">
+                                        <div></div>
+                                    </div>
+                                    <p><span>33</span>%Completed</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <a href="#" class="course-continue">Continue where you left off</a>
+                          </div>
+
+                          <div class="slide-card swiper-slide">
+                            <div class="course-info">
+                                <div class="course-img">
+                                    <img src="../images/course-slider-img.png" alt="">
+                                </div>
+                                <div>
+                                    <h1>Free Forex Course</h1>
+                                    <p>Trading can be a fairly subjective topic. The way that we have designed this course is to really get you thinking about certain topics and ideas.</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="Step-2">
+                                <p>Step 2 - How to Calculate Risk</p>
+                                <div class="quiz">
+                                    <p>What is Leverage?</p>
+                                    <p>1 Quiz</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-now">
+                                        <div></div>
+                                    </div>
+                                    <p><span>33</span>%Completed</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <a href="#" class="course-continue">Continue where you left off</a>
+                          </div>
+
+                          <div class="slide-card swiper-slide">
+                            <div class="course-info">
+                                <div class="course-img">
+                                    <img src="../images/course-slider-img.png" alt="">
+                                </div>
+                                <div>
+                                    <h1>Free Forex Course</h1>
+                                    <p>Trading can be a fairly subjective topic. The way that we have designed this course is to really get you thinking about certain topics and ideas.</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="Step-2">
+                                <p>Step 2 - How to Calculate Risk</p>
+                                <div class="quiz">
+                                    <p>What is Leverage?</p>
+                                    <p>1 Quiz</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-now">
+                                        <div></div>
+                                    </div>
+                                    <p><span>33</span>%Completed</p>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <a href="#" class="course-continue">Continue where you left off</a>
+                          </div>
+
+
+                      </div>
+
+                    <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+        <!-- ========================================= End Swiper ========================================= -->
                         </div>   
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 latest-activity">
@@ -489,6 +592,7 @@
 
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
     <script src="dashboard.js"></script>
 </body>
 </html>
