@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,20 @@
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="dashboard.css">
 </head>
+
 <body>
     <div class="overlay-bg"></div>
 
-     <!-- ========================================= Start Navbar ========================================= -->
-     <div class="container nav_container">
+    <!-- ========================================= Start Navbar ========================================= -->
+    <div class="container nav_container">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand logo" href="#">
                     <img src="../images/Logo.svg" alt="" width="100">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <img src="../images/Logo.svg" width="100" alt="">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -63,14 +67,15 @@
                     </ul>
 
                     <div class="d-flex align-items-center justify-content-center">
-                        <div class="notifications-navbar">
+                        <a href="../Notifications/notifications.html" class="notifications-navbar">
                             <div class="num-of-notifications">
                                 <span>23</span>
                             </div>
                             <img src="../images/icons/Notifications-Icon.svg" alt="">
-                        </div>
+                        </a>
                         <div class="dropdown-navbar">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="../images/icons/user-img.png" alt="">
                                 <span class="ml-1">John</span>
                             </a>
@@ -85,37 +90,37 @@
                                     <a class="dropdown-item" href="#">
                                         <img src="../images/icons/Icon-settings.svg" alt="">
                                         <span>Account Settings</span>
-                                    </a>                                
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../images/icons/Connections-Icon.svg" alt="">
                                         <span>Connections</span>
-                                    </a>                                
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../images/icons/Group-icon.svg" alt="">
                                         <span>Groups</span>
-                                    </a>                                
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../images/icons/Photos-icon.svg" alt="">
                                         <span>Photos</span>
-                                    </a>                                
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../images/icons/Email-icon.svg" alt="">
                                         <span>Email Invites</span>
-                                    </a>                                
+                                    </a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="#">
                                         <img src="../images/icons/Logout-icon.svg" alt="">
                                         <span>Logout</span>
-                                    </a>                                
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -129,10 +134,10 @@
     <!-- ========================================= Start alert ========================================= -->
     <div class="alert" role="alert">
 
-        <div class="circular-progress"  data-percentage="60" data-progress-color="#BA9950" data-bg-color="#EBE5D6">
+        <div class="circular-progress" data-percentage="60" data-progress-color="#BA9950" data-bg-color="#EBE5D6">
             <div class="inner-circle"></div>
             <p class="percentage">0%</p>
-          </div>
+        </div>
 
         <div class="alert-content">
             <p>Welcome <span class="username">John</span>!</p>
@@ -144,23 +149,23 @@
         </div>
 
         <img class="close" src="../images/icons/Close.svg" alt="">
-      </div>
+    </div>
     <!-- ========================================= End alert ========================================= -->
 
     <!-- ========================================= Start Page ========================================= -->
-        <div class="page">
-            <div class="container">
-                <div class="row justify-content-between flex-lg-row flex-md-column">
-                    <div class="col-lg-6 col-md-6 col-sm-12 my-courses">
-                        <div class="my-courses-header">
-                            <p>My Courses</p>
-                            <a href="#"> 
-                                <p class="me-1">View my courses</p>
-                                <img src="../images/icons/View-icon.svg" alt="">
-                            </a>
-                        </div> 
-                        <div class="my-courses-content">
-                            <!-- remove no-courses element when add any courses 
+    <div class="page">
+        <div class="container">
+            <div class="row justify-content-between flex-lg-row flex-md-column">
+                <div class="col-lg-6 col-md-6 col-sm-12 my-courses">
+                    <div class="my-courses-header">
+                        <p>My Courses</p>
+                        <a href="#">
+                            <p class="me-1">View my courses</p>
+                            <img src="../images/icons/View-icon.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="my-courses-content">
+                        <!-- remove no-courses element when add any courses 
                                 <div class="no-courses">
                                 <img src="../images/no-courses-img.svg" alt="">
                                 <h1>No courses yet</h1>
@@ -168,425 +173,435 @@
                                 <a href="#">View our courses</a>
                             </div> -->
 
-                            <!-- add courses list here -->
-                            <!-- ========================================= Start Swiper ========================================= -->
-         <section class="slider" id="trading-tools">
-              <div class="slider-header">
-                  <h1>Your progress so far</h1>
-                  <p class="last-updated-date">Last updated: 12 September 2023</p>
-              </div>
-              <div class="cards-slide-container swiper">
-                      <div class="swiper-wrapper">
-      
-                          <div class="slide-card swiper-slide">
-                            <div class="course-info">
-                                <div class="course-img">
-                                    <img src="../images/course-slider-img.png" alt="">
-                                </div>
-                                <div>
-                                    <h1>Free Forex Course</h1>
-                                    <p>Trading can be a fairly subjective topic. The way that we have designed this course is to really get you thinking about certain topics and ideas.</p>
-                                </div>
+                        <!-- add courses list here -->
+                        <!-- ========================================= Start Swiper ========================================= -->
+                        <section class="slider" id="trading-tools">
+                            <div class="slider-header">
+                                <h1>Your progress so far</h1>
+                                <p class="last-updated-date">Last updated: 12 September 2023</p>
                             </div>
-                            <!--  -->
-                            <div class="Step-2">
-                                <p>Step 2 - How to Calculate Risk</p>
-                                <div class="quiz">
-                                    <p>What is Leverage?</p>
-                                    <p>1 Quiz</p>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-now">
-                                        <div></div>
+                            <div class="cards-slide-container swiper">
+                                <div class="swiper-wrapper">
+
+                                    <div class="slide-card swiper-slide">
+                                        <div class="course-info">
+                                            <div class="course-img">
+                                                <img src="../images/course-slider-img.png" alt="">
+                                            </div>
+                                            <div>
+                                                <h1>Free Forex Course</h1>
+                                                <p>Trading can be a fairly subjective topic. The way that we have
+                                                    designed this course is to really get you thinking about certain
+                                                    topics and ideas.</p>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="Step-2">
+                                            <p>Step 2 - How to Calculate Risk</p>
+                                            <div class="quiz">
+                                                <p>What is Leverage?</p>
+                                                <p>1 Quiz</p>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-now">
+                                                    <div></div>
+                                                </div>
+                                                <p><span>33</span>%Completed</p>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <a href="#" class="course-continue">Continue where you left off</a>
                                     </div>
-                                    <p><span>33</span>%Completed</p>
+
+                                    <div class="slide-card swiper-slide">
+                                        <div class="course-info">
+                                            <div class="course-img">
+                                                <img src="../images/course-slider-img.png" alt="">
+                                            </div>
+                                            <div>
+                                                <h1>Free Forex Course</h1>
+                                                <p>Trading can be a fairly subjective topic. The way that we have
+                                                    designed this course is to really get you thinking about certain
+                                                    topics and ideas.</p>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="Step-2">
+                                            <p>Step 2 - How to Calculate Risk</p>
+                                            <div class="quiz">
+                                                <p>What is Leverage?</p>
+                                                <p>1 Quiz</p>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-now">
+                                                    <div></div>
+                                                </div>
+                                                <p><span>33</span>%Completed</p>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <a href="#" class="course-continue">Continue where you left off</a>
+                                    </div>
+
+                                    <div class="slide-card swiper-slide">
+                                        <div class="course-info">
+                                            <div class="course-img">
+                                                <img src="../images/course-slider-img.png" alt="">
+                                            </div>
+                                            <div>
+                                                <h1>Free Forex Course</h1>
+                                                <p>Trading can be a fairly subjective topic. The way that we have
+                                                    designed this course is to really get you thinking about certain
+                                                    topics and ideas.</p>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="Step-2">
+                                            <p>Step 2 - How to Calculate Risk</p>
+                                            <div class="quiz">
+                                                <p>What is Leverage?</p>
+                                                <p>1 Quiz</p>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-now">
+                                                    <div></div>
+                                                </div>
+                                                <p><span>33</span>%Completed</p>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <a href="#" class="course-continue">Continue where you left off</a>
+                                    </div>
+
+
                                 </div>
+
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <!--  -->
-                            <a href="#" class="course-continue">Continue where you left off</a>
-                          </div>
 
-                          <div class="slide-card swiper-slide">
-                            <div class="course-info">
-                                <div class="course-img">
-                                    <img src="../images/course-slider-img.png" alt="">
-                                </div>
-                                <div>
-                                    <h1>Free Forex Course</h1>
-                                    <p>Trading can be a fairly subjective topic. The way that we have designed this course is to really get you thinking about certain topics and ideas.</p>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="Step-2">
-                                <p>Step 2 - How to Calculate Risk</p>
-                                <div class="quiz">
-                                    <p>What is Leverage?</p>
-                                    <p>1 Quiz</p>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-now">
-                                        <div></div>
-                                    </div>
-                                    <p><span>33</span>%Completed</p>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <a href="#" class="course-continue">Continue where you left off</a>
-                          </div>
-
-                          <div class="slide-card swiper-slide">
-                            <div class="course-info">
-                                <div class="course-img">
-                                    <img src="../images/course-slider-img.png" alt="">
-                                </div>
-                                <div>
-                                    <h1>Free Forex Course</h1>
-                                    <p>Trading can be a fairly subjective topic. The way that we have designed this course is to really get you thinking about certain topics and ideas.</p>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <div class="Step-2">
-                                <p>Step 2 - How to Calculate Risk</p>
-                                <div class="quiz">
-                                    <p>What is Leverage?</p>
-                                    <p>1 Quiz</p>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-now">
-                                        <div></div>
-                                    </div>
-                                    <p><span>33</span>%Completed</p>
-                                </div>
-                            </div>
-                            <!--  -->
-                            <a href="#" class="course-continue">Continue where you left off</a>
-                          </div>
-
-
-                      </div>
-
-                    <div class="swiper-pagination"></div>
-            </div>
-
-        </section>
-        <!-- ========================================= End Swiper ========================================= -->
-                        </div>   
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-12 latest-activity">
-                        <div class="latest-activity-header">
-                            <p>Latest Activity</p>
-                            <a href="#">
-                                <p class="me-1">View all activity</p>
-                                <img src="../images/icons/View-icon.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="latest-activity-content">
-                            <div class="activities">
-                                <div class="activity">
-                                    <img src="../images/icons/user-activity-Icon.svg" alt="">
-                                    <div>
-                                        <div class="activity-header">
-                                            <img src="../images/icons/user-activity-Image.png" alt="">
-                                            <span class="activity-username">Elias</span>
-                                            <img  class="verified" src="../images/icons/Verified-icon.svg" alt="">
-                                            <p class="activity-action">changed his Profile Photo</p>
-                                        </div>
-                                        <div class="activity-content"></div>
-                                        <div class="activity-date">A few hours ago</div>
-                                        <div class="activity-btns">
-                                            <a href="#" class="like">
-                                                <img src="../images/icons/like-Icon.svg" alt="">
-                                                <span>Like</span>
-                                            </a>
-                                            <a href="#" class="Comment">
-                                                <img src="../images/icons/Comment-Icon.svg" alt="">
-                                                <span>Comment</span>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                                <div class="activity">
-                                    <img src="../images/icons/star-activity-Icon.svg" alt="">
-                                    <div>
-                                        <div class="activity-header">
-                                            <img src="../images/icons/user-activity-Image.png" alt="">
-                                            <span class="activity-username">Dany</span>
-                                            <img  class="verified" src="../images/icons/Verified-icon.svg" alt="">
-                                            <p class="activity-action">earned 10 Points</p>
-                                        </div>
-                                        <div class="activity-content">Points were earned for completing his first Course!</div>
-                                        <div class="activity-date">Yesterday</div>
-                                        <div class="activity-btns">
-                                            <a href="#" class="like">
-                                                <img src="../images/icons/like-Icon.svg" alt="">
-                                                <span>Like</span>
-                                            </a>
-                                            <a href="#" class="Comment">
-                                                <img src="../images/icons/Comment-Icon.svg" alt="">
-                                                <span>Comment</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="activity">
-                                    <img src="../images/icons/star-activity-Icon.svg" alt="">
-                                    <div>
-                                        <div class="activity-header">
-                                            <img src="../images/icons/user-activity-Image.png" alt="">
-                                            <span class="activity-username">Christine</span>
-                                            <img  class="verified" src="../images/icons/Verified-icon.svg" alt="">
-                                            <p class="activity-action">earned 25 Points</p>
-                                        </div>
-                                        <div class="activity-content">Points were earned for completing her second Course in a row!</div>
-                                        <div class="activity-date">2 Days ago</div>
-                                        <div class="activity-btns">
-                                            <a href="#" class="like">
-                                                <img src="../images/icons/like-Icon.svg" alt="">
-                                                <span>Like</span>
-                                            </a>
-                                            <a href="#" class="Comment">
-                                                <img src="../images/icons/Comment-Icon.svg" alt="">
-                                                <span>Comment</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="activity">
-                                    <img src="../images/icons/user-activity-Icon.svg" alt="">
-                                    <div>
-                                        <div class="activity-header">
-                                            <img src="../images/icons/user-activity-Image.png" alt="">
-                                            <span class="activity-username">Joseph</span>
-                                            <img  class="verified" src="../images/icons/Verified-icon.svg" alt="">
-                                            <p class="activity-action">changed his Profile Photo</p>
-                                        </div>
-                                        <div class="activity-content"></div>
-                                        <div class="activity-date">Yesterday</div>
-                                        <div class="activity-btns">
-                                            <a href="#" class="like">
-                                                <img src="../images/icons/like-Icon.svg" alt="">
-                                                <span>Like</span>
-                                            </a>
-                                            <a href="#" class="Comment">
-                                                <img src="../images/icons/Comment-Icon.svg" alt="">
-                                                <span>Comment</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="activity">
-                                    <img src="../images/icons/star-activity-Icon.svg" alt="">
-                                    <div>
-                                        <div class="activity-header">
-                                            <img src="../images/icons/user-activity-Image.png" alt="">
-                                            <span class="activity-username">Elias</span>
-                                            <img  class="verified" src="../images/icons/Verified-icon.svg" alt="">
-                                            <p class="activity-action">changed his Profile Photo</p>
-                                        </div>
-                                        <div class="activity-content"></div>
-                                        <div class="activity-date">2 Days ago</div>
-                                        <div class="activity-btns">
-                                            <a href="#" class="like">
-                                                <img src="../images/icons/like-Icon.svg" alt="">
-                                                <span>Like</span>
-                                            </a>
-                                            <a href="#" class="Comment">
-                                                <img src="../images/icons/Comment-Icon.svg" alt="">
-                                                <span>Comment</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="activity">
-                                    <img src="../images/icons/star-activity-Icon.svg" alt="">
-                                    <div>
-                                        <div class="activity-header">
-                                            <img src="../images/icons/user-activity-Image.png" alt="">
-                                            <span class="activity-username">Dany</span>
-                                            <img  class="verified" src="../images/icons/Verified-icon.svg" alt="">
-                                            <p class="activity-action">earned 10 Points</p>
-                                        </div>
-                                        <div class="activity-content"></div>
-                                        <div class="activity-date">Yesterday</div>
-                                        <div class="activity-btns">
-                                            <a href="#" class="like">
-                                                <img src="../images/icons/like-Icon.svg" alt="">
-                                                <span>Like</span>
-                                            </a>
-                                            <a href="#" class="Comment">
-                                                <img src="../images/icons/Comment-Icon.svg" alt="">
-                                                <span>Comment</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                        </div>
+                        </section>
+                        <!-- ========================================= End Swiper ========================================= -->
                     </div>
                 </div>
-                <!--  ========================================= Start Our Courses ========================================= -->
-                <div class="our-courses">
-                    <div class="our-courses-title">
-                        <h1>Our Courses</h1>
-                        <a href="#"> 
-                            <p class="me-1">View all the courses</p>
+                <div class="col-lg-6 col-md-6 col-sm-12 latest-activity">
+                    <div class="latest-activity-header">
+                        <p>Latest Activity</p>
+                        <a href="#">
+                            <p class="me-1">View all activity</p>
                             <img src="../images/icons/View-icon.svg" alt="">
                         </a>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-6 col-md-12 course">
-                            <img src="../images/Our Courses-img-1.png" alt="">
-                            <div class="course-details">
-                                <div class="price">
-                                    <span>FREE</span>
+                    <div class="latest-activity-content">
+                        <div class="activities">
+                            <div class="activity">
+                                <img src="../images/icons/user-activity-Icon.svg" alt="">
+                                <div>
+                                    <div class="activity-header">
+                                        <img src="../images/icons/user-activity-Image.png" alt="">
+                                        <span class="activity-username">Elias</span>
+                                        <img class="verified" src="../images/icons/Verified-icon.svg" alt="">
+                                        <p class="activity-action">changed his Profile Photo</p>
+                                    </div>
+                                    <div class="activity-content"></div>
+                                    <div class="activity-date">A few hours ago</div>
+                                    <div class="activity-btns">
+                                        <a href="#" class="like">
+                                            <img src="../images/icons/like-Icon.svg" alt="">
+                                            <span>Like</span>
+                                        </a>
+                                        <a href="#" class="Comment">
+                                            <img src="../images/icons/Comment-Icon.svg" alt="">
+                                            <span>Comment</span>
+                                        </a>
+                                    </div>
                                 </div>
-                                <h1 class="course-title">Trading Essentials 101</h1>
-                                <p class="course-description">This course will let you explore the important essentials to know about this vast world of predictions and numbers.</p>
-                                <div class="data-about-course">
-                                    <div>
-                                        <img src="../images/icons/people -Icon.svg" alt="">
-                                        <p>
-                                            <span>+685</span>
-                                            people enrolled
-                                        </p>
+
+                            </div>
+
+                            <div class="activity">
+                                <img src="../images/icons/star-activity-Icon.svg" alt="">
+                                <div>
+                                    <div class="activity-header">
+                                        <img src="../images/icons/user-activity-Image.png" alt="">
+                                        <span class="activity-username">Dany</span>
+                                        <img class="verified" src="../images/icons/Verified-icon.svg" alt="">
+                                        <p class="activity-action">earned 10 Points</p>
                                     </div>
-                                    <div>
-                                        <img src="../images/icons/lessons-Icon.svg" alt="">
-                                        <p>
-                                            <span>37</span>
-                                            lessons
-                                        </p>
+                                    <div class="activity-content">Points were earned for completing his first Course!
                                     </div>
-                                </div>
-                            </div>    
-                        </div>
-                        <!--  -->
-                        <div class="col-xl-6 col-md-12 course">
-                            <img src="../images/Our Courses-img-2.png" alt="">
-                            <div class="course-details">
-                
-                                <h1 class="course-title">Stock Market Fundamentals</h1>
-                                <p class="course-description">This is the perfect course for somebody interested in getting into day trading, swing trading or dividend investing …</p>
-                                <div class="data-about-course">
-                                    <div>
-                                        <img src="../images/icons/people -Icon.svg" alt="">
-                                        <p>
-                                            <span>+685</span>
-                                            people enrolled
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <img src="../images/icons/lessons-Icon.svg" alt="">
-                                        <p>
-                                            <span>37</span>
-                                            lessons
-                                        </p>
+                                    <div class="activity-date">Yesterday</div>
+                                    <div class="activity-btns">
+                                        <a href="#" class="like">
+                                            <img src="../images/icons/like-Icon.svg" alt="">
+                                            <span>Like</span>
+                                        </a>
+                                        <a href="#" class="Comment">
+                                            <img src="../images/icons/Comment-Icon.svg" alt="">
+                                            <span>Comment</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--  -->
-                    </div>
-                </div>
-                <!--  ========================================= End Our Courses ========================================= -->
-                
-                <!--  ========================================= Start Tools  ========================================= -->
-                <div class="tools">
-                    <div class="tools-title">
-                        <h1>Powerful Tools and Insights</h1>
-                        <p>We give you the tools and resources to make fully informed decisions about using margin</p>
-                    </div>
-                    <div class="row tools-cards">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img src="../images/tools-Img-card-1.png" alt="">
-                            <h1>Margin Analyzer Tool</h1>
-                            <p>All-in-one dashboard to monitor margin requirements for different positions</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img src="../images/tools-Img-card-2.png" alt="">
-                            <h1>Margin Calculator Tool</h1>
-                            <p>Create what-if scenarios to explore the potential outcomes of different transactions</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img src="../images/tools-Img-card-3.png" alt="">
-                            <h1>Requirements Search</h1>
-                            <p>Different trades have different margin requirements. Look them up easily.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <img src="../images/tools-Img-card-4.png" alt="">
-                            <h1>Risk Slide Tool</h1>
-                            <p>Analyze your portfolio across a range of conditions. Use the grid and the graph within</p>
-                        </div>
-                    </div>
-                </div>
-                <!--  ========================================= End Tools  ========================================= -->
 
-                <!-- ========================================= Start Footer ========================================= -->
-<footer>
-    <div class="container">
-        <div class="footer">
-            <div>
-                <img src="../images/Logo-footer.svg" alt="">
-                <p>© 2023 - All Rights Reserved</p>
-            </div>
-            <div>
-                <div class="footer-links">
-                    <ul>
-                        <li><a href="../Contact-us/contact-us.html">Contact us</a> </li>
-                        <li><a href="#">Privacy Policy</a> </li>
-                        <li><a href="../Terms/terms.html">Terms of Use</a> </li>
-                    </ul>
+                            <div class="activity">
+                                <img src="../images/icons/star-activity-Icon.svg" alt="">
+                                <div>
+                                    <div class="activity-header">
+                                        <img src="../images/icons/user-activity-Image.png" alt="">
+                                        <span class="activity-username">Christine</span>
+                                        <img class="verified" src="../images/icons/Verified-icon.svg" alt="">
+                                        <p class="activity-action">earned 25 Points</p>
+                                    </div>
+                                    <div class="activity-content">Points were earned for completing her second Course in
+                                        a row!</div>
+                                    <div class="activity-date">2 Days ago</div>
+                                    <div class="activity-btns">
+                                        <a href="#" class="like">
+                                            <img src="../images/icons/like-Icon.svg" alt="">
+                                            <span>Like</span>
+                                        </a>
+                                        <a href="#" class="Comment">
+                                            <img src="../images/icons/Comment-Icon.svg" alt="">
+                                            <span>Comment</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activity">
+                                <img src="../images/icons/user-activity-Icon.svg" alt="">
+                                <div>
+                                    <div class="activity-header">
+                                        <img src="../images/icons/user-activity-Image.png" alt="">
+                                        <span class="activity-username">Joseph</span>
+                                        <img class="verified" src="../images/icons/Verified-icon.svg" alt="">
+                                        <p class="activity-action">changed his Profile Photo</p>
+                                    </div>
+                                    <div class="activity-content"></div>
+                                    <div class="activity-date">Yesterday</div>
+                                    <div class="activity-btns">
+                                        <a href="#" class="like">
+                                            <img src="../images/icons/like-Icon.svg" alt="">
+                                            <span>Like</span>
+                                        </a>
+                                        <a href="#" class="Comment">
+                                            <img src="../images/icons/Comment-Icon.svg" alt="">
+                                            <span>Comment</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activity">
+                                <img src="../images/icons/star-activity-Icon.svg" alt="">
+                                <div>
+                                    <div class="activity-header">
+                                        <img src="../images/icons/user-activity-Image.png" alt="">
+                                        <span class="activity-username">Elias</span>
+                                        <img class="verified" src="../images/icons/Verified-icon.svg" alt="">
+                                        <p class="activity-action">changed his Profile Photo</p>
+                                    </div>
+                                    <div class="activity-content"></div>
+                                    <div class="activity-date">2 Days ago</div>
+                                    <div class="activity-btns">
+                                        <a href="#" class="like">
+                                            <img src="../images/icons/like-Icon.svg" alt="">
+                                            <span>Like</span>
+                                        </a>
+                                        <a href="#" class="Comment">
+                                            <img src="../images/icons/Comment-Icon.svg" alt="">
+                                            <span>Comment</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="activity">
+                                <img src="../images/icons/star-activity-Icon.svg" alt="">
+                                <div>
+                                    <div class="activity-header">
+                                        <img src="../images/icons/user-activity-Image.png" alt="">
+                                        <span class="activity-username">Dany</span>
+                                        <img class="verified" src="../images/icons/Verified-icon.svg" alt="">
+                                        <p class="activity-action">earned 10 Points</p>
+                                    </div>
+                                    <div class="activity-content"></div>
+                                    <div class="activity-date">Yesterday</div>
+                                    <div class="activity-btns">
+                                        <a href="#" class="like">
+                                            <img src="../images/icons/like-Icon.svg" alt="">
+                                            <span>Like</span>
+                                        </a>
+                                        <a href="#" class="Comment">
+                                            <img src="../images/icons/Comment-Icon.svg" alt="">
+                                            <span>Comment</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-social-media-links">
-                    <ul>
-                        <li>
-                            <a href="" class="facebook">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="twitter">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="telegram">
-                                <i class="fa-solid fa-paper-plane"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="Utube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="discord">
-                                <i class="fa-brands fa-discord"></i>
-                            </a>
-                        </li>
-                    </ul>
+            </div>
+            <!--  ========================================= Start Our Courses ========================================= -->
+            <div class="our-courses">
+                <div class="our-courses-title">
+                    <h1>Our Courses</h1>
+                    <a href="#">
+                        <p class="me-1">View all the courses</p>
+                        <img src="../images/icons/View-icon.svg" alt="">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-md-12 course">
+                        <img src="../images/Our Courses-img-1.png" alt="">
+                        <div class="course-details">
+                            <div class="price">
+                                <span>FREE</span>
+                            </div>
+                            <h1 class="course-title">Trading Essentials 101</h1>
+                            <p class="course-description">This course will let you explore the important essentials to
+                                know about this vast world of predictions and numbers.</p>
+                            <div class="data-about-course">
+                                <div>
+                                    <img src="../images/icons/people -Icon.svg" alt="">
+                                    <p>
+                                        <span>+685</span>
+                                        people enrolled
+                                    </p>
+                                </div>
+                                <div>
+                                    <img src="../images/icons/lessons-Icon.svg" alt="">
+                                    <p>
+                                        <span>37</span>
+                                        lessons
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="col-xl-6 col-md-12 course">
+                        <img src="../images/Our Courses-img-2.png" alt="">
+                        <div class="course-details">
+
+                            <h1 class="course-title">Stock Market Fundamentals</h1>
+                            <p class="course-description">This is the perfect course for somebody interested in getting
+                                into day trading, swing trading or dividend investing …</p>
+                            <div class="data-about-course">
+                                <div>
+                                    <img src="../images/icons/people -Icon.svg" alt="">
+                                    <p>
+                                        <span>+685</span>
+                                        people enrolled
+                                    </p>
+                                </div>
+                                <div>
+                                    <img src="../images/icons/lessons-Icon.svg" alt="">
+                                    <p>
+                                        <span>37</span>
+                                        lessons
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
                 </div>
             </div>
+            <!--  ========================================= End Our Courses ========================================= -->
+
+            <!--  ========================================= Start Tools  ========================================= -->
+            <div class="tools">
+                <div class="tools-title">
+                    <h1>Powerful Tools and Insights</h1>
+                    <p>We give you the tools and resources to make fully informed decisions about using margin</p>
+                </div>
+                <div class="row tools-cards">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="../images/tools-Img-card-1.png" alt="">
+                        <h1>Margin Analyzer Tool</h1>
+                        <p>All-in-one dashboard to monitor margin requirements for different positions</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="../images/tools-Img-card-2.png" alt="">
+                        <h1>Margin Calculator Tool</h1>
+                        <p>Create what-if scenarios to explore the potential outcomes of different transactions</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="../images/tools-Img-card-3.png" alt="">
+                        <h1>Requirements Search</h1>
+                        <p>Different trades have different margin requirements. Look them up easily.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <img src="../images/tools-Img-card-4.png" alt="">
+                        <h1>Risk Slide Tool</h1>
+                        <p>Analyze your portfolio across a range of conditions. Use the grid and the graph within</p>
+                    </div>
+                </div>
+            </div>
+            <!--  ========================================= End Tools  ========================================= -->
+
+            <!-- ========================================= Start Footer ========================================= -->
+            <footer>
+                <div class="container">
+                    <div class="footer">
+                        <div>
+                            <img src="../images/Logo-footer.svg" alt="">
+                            <p>© 2023 - All Rights Reserved</p>
+                        </div>
+                        <div>
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a href="../Contact-us/contact-us.html">Contact us</a> </li>
+                                    <li><a href="#">Privacy Policy</a> </li>
+                                    <li><a href="../Terms/terms.html">Terms of Use</a> </li>
+                                </ul>
+                            </div>
+                            <div class="footer-social-media-links">
+                                <ul>
+                                    <li>
+                                        <a href="" class="facebook">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="twitter">
+                                            <i class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="telegram">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="instagram">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="Utube">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="discord">
+                                            <i class="fa-brands fa-discord"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- ========================================= End Footer ========================================= -->
+
         </div>
     </div>
-</footer>
-<!-- ========================================= End Footer ========================================= -->
-
-            </div>
-        </div>
 
     <!-- ========================================= End Page ========================================= -->
 
@@ -595,4 +610,5 @@
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="dashboard.js"></script>
 </body>
+
 </html>
