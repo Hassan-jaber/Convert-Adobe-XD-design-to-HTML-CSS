@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
+    <div class="overlay-bg"></div>
+
      <!-- ========================================= Start Navbar ========================================= -->
      <div class="container nav_container">
         <nav class="navbar navbar-expand-lg">
@@ -122,6 +124,27 @@
         </nav>
     </div>
     <!-- ========================================= End Navbar ========================================= -->
+
+    <!-- ========================================= Start alert ========================================= -->
+    <div class="alert" role="alert">
+
+        <div class="circular-progress"  data-percentage="60" data-progress-color="#BA9950" data-bg-color="#EBE5D6">
+            <div class="inner-circle"></div>
+            <p class="percentage">0%</p>
+          </div>
+
+        <div class="alert-content">
+            <p>Welcome <span class="username">John</span>!</p>
+            <p class="alert-msg">Come info is still missing from your Profile …</p>
+            <a href="#">
+                <p class="me-1">Complete your Profile</p>
+                <img src="../images/icons/View-icon.svg" alt="">
+            </a>
+        </div>
+
+        <img class="close" src="../images/icons/Close.svg" alt="">
+      </div>
+    <!-- ========================================= End alert ========================================= -->
 
     <!-- ========================================= Start Page ========================================= -->
         <div class="page">
