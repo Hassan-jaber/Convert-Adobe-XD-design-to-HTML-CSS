@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+  <g id="Send" transform="translate(-1308 -778)">
+    <circle id="Bg" cx="9.5" cy="9.5" r="9.5" transform="translate(1308 778)" fill="#727272"/>
+    <path id="Check" d="M2.59,10.153.112,7.674a.381.381,0,0,1,0-.539L.651,6.6a.381.381,0,0,1,.539,0l1.67,1.67L6.436,4.689a.381.381,0,0,1,.539,0l.539.539a.381.381,0,0,1,0,.539L3.13,10.153A.381.381,0,0,1,2.59,10.153Z" transform="translate(1313.687 780.079)" fill="#fff"/>
+  </g>
+</svg>
