@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    
+    <div class="overlay-bg"></div>
+
+    <!-- ========================================= Start Navbar ========================================= -->
+    <div class="container nav_container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <img src="../images/Logo.svg" alt="" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../images/Logo.svg" width="100" alt="">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <img src="../images/icons/Dashboard-not-active-Icon.svg" alt="">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Activity Feed-Icon.png" alt="">
+                                <span>Activity Feed</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Tools-Icon.png" alt="">
+                                <span>Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Courses-Icon.png" alt="">
+                                <span>Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Economic Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Support</span>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="notifications-navbar">
+                            <div class="num-of-notifications">
+                                <span>23</span>
+                            </div>
+                            <img src="../images/icons/Notifications-Icon.svg" alt="">
+                        </a>
+                        <div class="dropdown-navbar">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../images/icons/user-img.png" alt="">
+                                <span class="ml-1">John</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-profile.svg" alt="">
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-settings.svg" alt="">
+                                        <span>Account Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Connections-Icon.svg" alt="">
+                                        <span>Connections</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Group-icon.svg" alt="">
+                                        <span>Groups</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Photos-icon.svg" alt="">
+                                        <span>Photos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Email-icon.svg" alt="">
+                                        <span>Email Invites</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Logout-icon.svg" alt="">
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ========================================= End Navbar ========================================= -->
+
+    <!-- ========================================= Start Profile Cover ========================================= -->
+    <div class="container">
+        <div class="profile-cover">
+            <div>
+            <div class="photo-and-username">
+                <div class="photo">
+                    <img src="../images/User-img.png" alt="">
+                    <div class="change-photo">
+                        <img src="../images/icons/Camera.png"  alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="username">
+                        <h1>John</h1>
+                        <p>@jsmith</p>
+                    </div>
+                    <div class="is-active">
+                        <img src="../images/icons/Active.png" alt="">
+                        <span>Active now</span>
+                    </div>
+                </div>
+
+            </div>
+             <!--  -->
+             <div class="change-cover-photo">
+                 <img src="../images/icons/Camera.png" alt="">
+                 <p>Change my Cover Photo</p>
+             </div>
+            </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+    <!-- ========================================= End Profile Cover ========================================= -->
+
+    <!-- ========================================= Start Profile ========================================= -->
+    <div class="container">
+        <section class="profile row">
+            <div class="profile-info col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                <div class="my-info">
+                    <div class="points">
+                        <div>
+                            <img src="../images/icons/Points-star.svg" alt="">
+                            <p><span class="num-fo-points">0</span> Points</p>
+                        </div>
+                        <a href="#">Edit my Info</a>
+                    </div>
+                    <div class="joined-date">
+                        <img src="../images/icons/Flag-icon.svg" alt="">
+                        <p>You joined us on 23 September 2023</p>
+                    </div>
+                    <ul class="user-info">
+                        <li>
+                            <span>First Name</span>
+                            <span>John</span>
+                        </li>
+                        <li>
+                            <span>Last Name</span>
+                            <span>Smith</span>
+                        </li>
+                        <li>
+                            <span>Nickname</span>
+                            <span>jsmith</span>
+                        </li>
+                        <li>
+                            <span>Email</span>
+                            <span>jsmith@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--  -->
+                <div class="my-connections">
+                    <div class="my-connections-header">
+                        <div>
+                            <p>My Connections</p>
+                            <span>(280)</span>
+                        </div>
+                        <a href="#">
+                            <p class="me-1">View all Connections</p>
+                            <img  src="../images/icons/View-icon.svg" alt="">
+                        </a>
+                    </div>
+                    <ul class="my-connections-list">
+                        <li>
+                            <div class="my-connections-img-container">
+                                <img src="../images/connections-User-img.svg" alt="">
+                                <img src="../images/icons/Active.png" width="9" alt="">
+                            </div>
+                            <p>Charlie Smith</p>
+                        </li>
+                        <li>
+                            <div class="my-connections-img-container">
+                                <img src="../images/connections-User-img.svg" alt="">
+                                <img src="../images/icons/Active.png" width="9" alt="">
+                            </div>
+                            <p>Charlie Smith</p>
+                        </li>
+                        <li>
+                            <div class="my-connections-img-container">
+                                <img src="../images/connections-User-img.svg" alt="">
+                                <img src="../images/icons/Active.png" width="9" alt="">
+                            </div>
+                            <p>Charlie Smith</p>
+                        </li>
+                        <li>
+                            <div class="my-connections-img-container">
+                                <img src="../images/connections-User-img.svg" alt="">
+                                <img src="../images/icons/Active.png" width="9" alt="">
+                            </div>
+                            <p>Charlie Smith</p>
+                        </li>
+                    </ul>
+                </div>
+                <!--  -->
+                <div class="my-photos">
+                    <div class="my-photos-header">
+                        <div>
+                            <p>My photos</p>
+                            <span>(32)</span>
+                        </div>
+                        <a href="#">
+                            <p class="me-1">View all photos</p>
+                            <img  src="../images/icons/View-icon.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="photos row">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                        <img class="col-xl-3 col-lg-4 col-md-3 col-sm-6" src="../images/my-photos.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="community col-xl-8 col-lg-8 col-md-12 col-sm-12">
+                <form action="#">
+                    <textarea name="textarea-comment" id="textarea-comment"></textarea>
+                </form>
+                <div class="share-to-community">
+                    <div>
+                        <div class="user-img-container">
+                            <img src="../images/icons/User-img2.svg" alt="">
+                        </div>
+                        <p class="textarea-placeholder">Share something for the community …</p>
+                    </div>
+                    <!--  -->
+                    <div>
+                        <img src="../images/icons/Camera.svg" alt="">
+                        <img src="../images/icons/Send.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                <div class="list-of-community-comments">
+                    <div class="comment">
+                        <img src="../images/icons/li-icon-comments-1.svg" alt="">
+                        <div>
+                            <div class="comments-header">
+                                <div class="user-img-container">
+                                    <img src="../images/icons/User-img2.svg" alt="">
+                                </div>
+                                <p class="username-comment">John</p>
+                                <p class="user-action">shared 2 Photos</p>
+                            </div>
+                            <p class="mention"></p>
+                            <div class="comments-content">
+                                <div class="imgs-comment">
+                                    <img src="../images/imgs-comment-1.png" alt="">
+                                    <img src="../images/imgs-comment-2.png" alt="">
+                                </div>
+                                <p>Take a look at how the trading industry has progressed over the last few years!</p>
+                            </div>
+                            <div class="comments-date">
+                                <p>2 weeks ago</p>
+                            </div>
+                            <div class="comments-btns">
+                                <div>
+                                    <a href="#" class="like">
+                                        <img src="../images/icons/like-Icon.svg" alt="">
+                                        <span>Like</span>
+                                    </a>
+                                    <a href="#" class="Comment-btn">
+                                        <img src="../images/icons/Comment-Icon.svg" alt="">
+                                        <span>Comment</span>
+                                    </a>
+                                </div>
+                                <div class="total-likes-and-comments">
+                                    <p class="me-3"><span>2.2k</span> Likes</p>
+                                    <p class="me-3"><span>300</span> Comments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="comment">
+                        <img src="../images/icons/li-icon-comments-1.svg" alt="">
+                        <div>
+                            <div class="comments-header">
+                                <div class="user-img-container">
+                                    <img src="../images/icons/User-img-2.png" alt="">
+                                </div>
+                                <p class="username-comment">Antoine</p>
+                                <p class="user-action">shared 2 Photos</p>
+                            </div>
+                            <p class="mention">@John</p>
+                            <div class="comments-content">
+                                <div class="imgs-comment"></div>
+                                <p>Did you watch Apple’s new video?</p>
+                            </div>
+                            <div class="comments-date">
+                                <p>2 weeks ago</p>
+                            </div>
+                            <div class="comments-btns">
+                                <div>
+                                    <a href="#" class="like">
+                                        <img src="../images/icons/like-Icon.svg" alt="">
+                                        <span>Like</span>
+                                    </a>
+                                    <a href="#" class="Comment-btn">
+                                        <img src="../images/icons/Comment-Icon.svg" alt="">
+                                        <span>Comment</span>
+                                    </a>
+                                </div>
+                                <div class="total-likes-and-comments">
+                                    <p class="me-3"><span>2.2k</span> Likes</p>
+                                    <p class="me-3"><span>300</span> Comments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="comment">
+                        <img src="../images/icons/li-icon-comments-1.svg" alt="">
+                        <div>
+                            <div class="comments-header">
+                                <div class="user-img-container">
+                                    <img src="../images/icons/User-img-2.png" alt="">
+                                </div>
+                                <p class="username-comment">John</p>
+                                <p class="user-action">shared 2 Photos</p>
+                            </div>
+                            <p class="mention">@John</p>
+                            <div class="comments-content">
+                                <div class="imgs-comment"></div>
+                                <p>Did you watch Apple’s new video?</p>
+                            </div>
+                            <div class="comments-date">
+                                <p>2 weeks ago</p>
+                            </div>
+                            <div class="comments-btns">
+                                <div>
+                                    <a href="#" class="like">
+                                        <img src="../images/icons/like-Icon.svg" alt="">
+                                        <span>Like</span>
+                                    </a>
+                                    <a href="#" class="Comment-btn">
+                                        <img src="../images/icons/Comment-Icon.svg" alt="">
+                                        <span>Comment</span>
+                                    </a>
+                                </div>
+                                <div class="total-likes-and-comments">
+                                    <p class="me-3"><span>2.2k</span> Likes</p>
+                                    <p class="me-3"><span>300</span> Comments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="comment">
+                        <img src="../images/icons/li-icon-comments-1.svg" alt="">
+                        <div>
+                            <div class="comments-header">
+                                <div class="user-img-container">
+                                    <img src="../images/icons/User-img2.svg" alt="">
+                                </div>
+                                <p class="username-comment">John</p>
+                                <p class="user-action">shared 2 Photos</p>
+                            </div>
+                            <p class="mention"></p>
+                            <div class="comments-content">
+                                <div class="imgs-comment">
+                                    <img src="../images/imgs-comment-1.png" alt="">
+                                    <img src="../images/imgs-comment-2.png" alt="">
+                                </div>
+                                <p>Take a look at how the trading industry has progressed over the last few years!</p>
+                            </div>
+                            <div class="comments-date">
+                                <p>2 weeks ago</p>
+                            </div>
+                            <div class="comments-btns">
+                                <div>
+                                    <a href="#" class="like">
+                                        <img src="../images/icons/like-Icon.svg" alt="">
+                                        <span>Like</span>
+                                    </a>
+                                    <a href="#" class="Comment-btn">
+                                        <img src="../images/icons/Comment-Icon.svg" alt="">
+                                        <span>Comment</span>
+                                    </a>
+                                </div>
+                                <div class="total-likes-and-comments">
+                                    <p class="me-3"><span>2.2k</span> Likes</p>
+                                    <p class="me-3"><span>300</span> Comments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- ========================================= End Profile ========================================= -->
+
+    <!-- ========================================= Start Footer ========================================= -->
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div>
+                    <img src="../images/Logo-footer.svg" alt="">
+                    <p>© 2023 - All Rights Reserved</p>
+                </div>
+                <div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="../Contact-us/contact-us.html">Contact us</a> </li>
+                            <li><a href="#">Privacy Policy</a> </li>
+                            <li><a href="../Terms/terms.html">Terms of Use</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-media-links">
+                        <ul>
+                            <li>
+                                <a href="" class="facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="twitter">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="telegram">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="Utube">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="discord">
+                                    <i class="fa-brands fa-discord"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ========================================= End Footer ========================================= -->
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
