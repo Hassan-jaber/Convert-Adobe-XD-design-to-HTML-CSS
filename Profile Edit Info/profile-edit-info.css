@@ -1,0 +1,533 @@
+/* ========================================= import font 'Montserrat' from google ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/* ========================================= Start Global Rules =========================================*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--page-background);
+    overflow-x: hidden !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --page-background: #F7F7F7;
+    --main-btn-bg-color: #BA9950;
+    --main-btn-color: #F7F7F7;
+    --btn-hover-color: #BA9950;
+    --btn-border: #BA9950;
+    --btn-bg-hover-color: #F7F7F7;
+}
+
+/* ========================================= End Global Rules ========================================= */
+
+/* ========================================= Start Navbar =========================================*/
+
+.navbar {
+    background-color: #FFFFFF;
+    position: relative;
+    height: 70px;
+    z-index: 9999;
+}
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+}
+
+.navbar::before {
+    left: -150px;
+}
+
+.navbar::after {
+    right: -150px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.active-link {
+    position: relative;
+    font-weight: bold;
+    color: #BA9950;
+}
+
+.active-link:hover {
+    color: #BA9950;
+}
+
+.active-link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #BA9950;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-navbar {
+    margin-left: 30px;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link span {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.nav-link:not(.active-link) span {
+    color: #727272;
+}
+
+.nav-link:not(.active-link) span:hover {
+    color: #727272;
+}
+
+.span-animation {
+    width: 0;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #BA9950;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.dropdown-menu {
+    padding: 24px 30px;
+    border-radius: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: calc(100% - 179px);
+    width: 300px;
+    background-color: #1A1818;
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: #F7F7F7;
+    font-size: 15px;
+    padding-left: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item span {
+    margin-left: 10px;
+}
+
+.dropdown-menu li {
+    width: 240px;
+    margin: 0 auto;
+    height: 37px;
+}
+
+.dropdown-menu li:not(:last-of-type) {
+    border-bottom: 1px solid #4E4B4B;
+}
+
+.notifications-navbar {
+    position: relative;
+    cursor: pointer;
+}
+
+.num-of-notifications {
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #BA9950;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus .navbar::before {
+    box-shadow: none;
+}
+
+.nav-container-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Set maximum height to 100% of viewport height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    display: none;
+    /* Initially hide the overlay */
+    z-index: 999;
+    /* Ensure the overlay is above other content */
+}
+
+@media(max-width:1286px) {
+    .dropdown-menu[data-bs-popper] {
+        width: 265px;
+    }
+
+    .dropdown-menu li {
+        width: 200px;
+    }
+}
+
+@media(max-width:1200px) {
+    .nav-link span {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:992px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+
+    .overlay-bg {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 30px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        padding-top: 40px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Join-us-btn {
+        margin: 39px auto;
+    }
+
+    .navbar-collapse {
+        transition: 0s;
+    }
+
+    .nav-container-bg {
+        background-color: #FFFFFF;
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .nav-item {
+        width: 180px;
+        margin-left: 45px;
+    }
+
+    .active-link::after {
+        bottom: -2px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .nav-link span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:576px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        width: 200px;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .dropdown-menu li {
+        width: 150px;
+    }
+
+    .dropdown-menu {
+        padding: 15px;
+    }
+
+    .navbar::after {
+        right: -12px;
+    }
+}
+
+/* ========================================= End Navbar =========================================*/
+
+/* ========================================= Start Profile-Edit-Info page ========================================= */
+    .page{
+        margin-top: 23px;
+    }
+    .previous-page{
+        width: 130px;
+        height: 32px;
+        border-radius: 8px;
+        border: 1px solid #727272;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .previous-page p{
+        font-size: 12px;
+        color: #727272;
+        margin-left: 5px;
+    }
+    .edit-info h1{
+        margin-top: 12px;
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .edit-info-container{
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        background-color: #FFFFFF;
+        margin-top: 15px;
+        padding: 15px 21px;
+    }
+
+    .sign-up {
+        width: calc(100% - 399px);
+        /* height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* align-self: flex-start; */
+    }
+    
+    .sign-up-container {
+        max-width: 794px;
+        min-height: 427px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        margin: 0 auto;
+        padding: 35px;
+        box-shadow: 0px 13px 20px #00000014;
+    }
+    
+    input[type="checkbox"] {
+        position: relative;
+        width: 19px;
+        height: 19px;
+        color: #BA9950;
+        border: 1px solid #BA9950;
+        appearance: none;
+        outline: 0;
+        cursor: pointer;
+        transition: background 175ms cubic-bezier(0.1, 0.1, 0.25, 1);
+    }
+    
+    input[type="checkbox"] {
+        border: 1px solid #DCD6CA !important;
+        border-radius: 0 !important;
+    }
+    
+    input[type="checkbox"]:focus {
+        box-shadow: none;
+    }
+    
+    input[type="checkbox"]::before {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 2px;
+        left: 7px;
+        width: 8px;
+        height: 14px;
+        border-style: solid;
+        border-color: white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    
+    label:not(.form-check-label) {
+        font-size: 12px;
+        color: #727272;
+    }
+    
+    .form-check-label {
+        font-size: 15px;
+        margin-left: 8px;
+        color: #727272;
+    }
+    
+    input[type="checkbox"]:checked {
+        color: white;
+        border-color: #BA9950;
+        background: #BA9950;
+    
+    }
+    
+    .form-control {
+        max-width: 352px;
+        height: 50px;
+        border-radius: 0px;
+        border: 1px solid #DBD5C9;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .form-control:focus {
+        outline: none !important;
+        border: 1px solid #DBD5C9;
+        box-shadow: none !important;
+    }
+    
+    input[type="checkbox"]:checked&::before {
+        opacity: 1;
+    }
+    
+    .flag {
+        position: absolute;
+        left: 15px;
+        display: flex;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .flag>:nth-child(2) {
+        margin-left: 5px;
+    }
+    
+    .submit {
+        width: 194px;
+        height: 39px;
+        background-color: #BA9950;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+    
+    ::placeholder {
+        font-size: 15px !important;
+        color: #727272;
+        font-weight: normal !important;
+    }
+    
+    .sign-up-footer {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        width: max-content;
+        margin: 20px auto;
+    }
+    
+    .sign-up-footer p {
+        margin-bottom: 0;
+        color: #727272;
+    }
+    
+    .sign-up-footer a {
+        margin-left: 34px;
+        font-weight: bold;
+        color: #1A1818;
+    }
+    .form-label{
+        font-size: 12px;
+        font-weight: normal;
+        color: #727272;
+    }
+    .password-input{
+        max-width: 352px;
+        position: relative;
+    }
+    .change-password{
+        position: absolute;
+        width: 135px;
+        height: 30px;
+        font-size: 12px;
+        color: #F7F7F7;
+        background-color: #BA9950;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        top: 10px;
+        right: 10px;
+    }
+    @media (max-width:992px) {
+        .form-control,.password-input{
+            max-width: 100%;
+        }
+    }
+/* ========================================= End Profile-Edit-Info page ========================================= */
