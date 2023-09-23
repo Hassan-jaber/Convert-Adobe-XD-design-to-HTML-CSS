@@ -1,0 +1,678 @@
+/* ========================================= import font 'Montserrat' from google ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/* ========================================= Start Global Rules =========================================*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--page-background);
+    overflow-x: hidden !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --page-background: #F7F7F7;
+    --main-btn-bg-color: #BA9950;
+    --main-btn-color: #F7F7F7;
+    --btn-hover-color: #BA9950;
+    --btn-border: #BA9950;
+    --btn-bg-hover-color: #F7F7F7;
+}
+
+/* ========================================= End Global Rules ========================================= */
+
+/* ========================================= Start Navbar =========================================*/
+
+.navbar {
+    background-color: #FFFFFF;
+    position: relative;
+    height: 70px;
+    z-index: 9999;
+}
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+}
+
+.navbar::before {
+    left: -150px;
+}
+
+.navbar::after {
+    right: -150px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.active-link {
+    position: relative;
+    font-weight: bold;
+    color: #BA9950;
+}
+
+.active-link:hover {
+    color: #BA9950;
+}
+
+.active-link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #BA9950;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-navbar {
+    margin-left: 30px;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link span {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.nav-link:not(.active-link) span {
+    color: #727272;
+}
+
+.nav-link:not(.active-link) span:hover {
+    color: #727272;
+}
+
+.span-animation {
+    width: 0;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #BA9950;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.dropdown-menu {
+    padding: 24px 30px;
+    border-radius: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: calc(100% - 179px);
+    width: 300px;
+    background-color: #1A1818;
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: #F7F7F7;
+    font-size: 15px;
+    padding-left: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item span {
+    margin-left: 10px;
+}
+
+.dropdown-menu li {
+    width: 240px;
+    margin: 0 auto;
+    height: 37px;
+}
+
+.dropdown-menu li:not(:last-of-type) {
+    border-bottom: 1px solid #4E4B4B;
+}
+
+.notifications-navbar {
+    position: relative;
+    cursor: pointer;
+}
+
+.num-of-notifications {
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #BA9950;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus .navbar::before {
+    box-shadow: none;
+}
+
+.nav-container-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Set maximum height to 100% of viewport height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    display: none;
+    /* Initially hide the overlay */
+    z-index: 999;
+    /* Ensure the overlay is above other content */
+}
+
+@media(max-width:1286px) {
+    .dropdown-menu[data-bs-popper] {
+        width: 265px;
+    }
+
+    .dropdown-menu li {
+        width: 200px;
+    }
+}
+
+@media(max-width:1200px) {
+    .nav-link span {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:992px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+
+    .overlay-bg {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 30px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        padding-top: 40px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Join-us-btn {
+        margin: 39px auto;
+    }
+
+    .navbar-collapse {
+        transition: 0s;
+    }
+
+    .nav-container-bg {
+        background-color: #FFFFFF;
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .nav-item {
+        width: 180px;
+        margin-left: 45px;
+    }
+
+    .active-link::after {
+        bottom: -2px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .nav-link span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:576px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        width: 200px;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .dropdown-menu li {
+        width: 150px;
+    }
+
+    .dropdown-menu {
+        padding: 15px;
+    }
+
+    .navbar::after {
+        right: -12px;
+    }
+}
+
+/* ========================================= End Navbar =========================================*/
+
+/* ========================================= Start account settings notifications page ========================================= */
+.page-title{
+    font-size: 26px;
+    font-weight: bold;
+    color: #1A1818;
+    margin-top: 10px;
+}
+.account-settings {
+    margin-top: 15px;
+}
+.sidbar,.account-settings-notifications-content{
+    border-radius: 8px;
+}
+.sidbar{
+    height: 276px;
+    box-shadow: 0px 3px 0px #00000014 !important;
+    border: 1px solid #DEDEDE;
+    transition: width 0.3s;
+}
+.account-settings-notifications-content{
+    background-color: #FFFFFF;
+    height: auto;
+    padding: 16px 20px;
+    box-shadow: 0px 3px 0px #00000014;
+}
+.account-settings-notifications-content>:first-child{
+    font-size: 12px;
+    color: #727272;
+}
+.sidbar ul{
+    padding: 24px 30px;
+}
+.sidbar ul li{
+    height: 37px;
+    display: flex;
+    margin-bottom: 14px;
+}
+.sidbar ul li:not(:last-of-type){
+    /* width: 100%; */
+    border-bottom: 1px solid #DEDEDE;
+}
+.sidbar ul li a{
+    display: flex;
+    align-items: center;
+    height: 37px;
+    width: 100%;
+}
+.sidbar ul li a p{
+    font-size: 14px;
+    color: #727272;
+    margin-left: 10px;
+}
+.sidbar ul li:last-of-type a p{
+    color: #F11852;
+}
+.sidbar ul>:nth-child(2) a p{
+    color: #BA9950;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    border: 1px solid #DCD6CA !important;
+    border-radius: 0 !important;
+}
+
+input[type="checkbox"]:focus {
+    box-shadow: none;
+}
+
+input[type="checkbox"]:checked {
+    color: white;
+    border-color: #BA9950;
+    background: #BA9950;
+
+}
+input[type="checkbox"]:checked&::before {
+    opacity: 1;
+}
+.form-check-label{
+    font-size: 15px;
+    color: #1A1818;
+}
+.submit {
+    width: 150px;
+    height: 39px;
+    background-color: #BA9950;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-top: 32px !important;
+}
+.sidbar>:first-child >:first-child{
+    display: none;
+}
+.checkbox-container{
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 4px;
+    border: 1px solid #DEDEDE;
+    position: relative;
+    flex-direction: column;
+}
+.checkbox-container input{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+.setting-title{
+    font-size: 15px;
+    font-weight: bold;
+}
+.checkbox-container ul {
+    width: 100%;
+}
+.checkbox-container ul li {
+    position: relative;
+    width: 100%;
+    min-height: 32px;
+}
+.checkbox-container ul li input{
+    bottom: 12px;
+    right: 0;
+}
+.checkbox-container ul li:not(:last-of-type){
+    margin-bottom: 9.5px;
+    border-bottom: 1px solid #DEDEDE;
+}
+.checkbox-container ul{
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.checkbox-container label{
+    max-width: calc(100% - 20px);
+}
+@media (max-width:992px) {
+    .sidbar ul {
+    padding: 24px 5px;
+    }
+    .sidbar ul li a p,.form-check-label,.submit{
+        font-size: 14px;
+    }
+
+    .page-title{
+        font-size: 20px;
+    }
+}
+@media (max-width:768px) {
+    .sidbar>:first-child >:first-child{
+        display: block;
+        cursor: pointer;
+    }
+    .sidbar{
+        height: 315px;
+        transition: width 0.3s;
+
+    }
+    .sidbar ul li a p{
+        display: none;
+        transition: width 0.3s;
+    }
+    .sidbar{
+        width: 45px;
+        position: absolute;
+        z-index: 999;
+        background-color: #F7F7F7;
+    }
+    .expanded{
+        width: 210px;
+    }
+    .account-settings-notifications-content{
+        margin-left: 45px;
+    }
+}
+@media (max-width:576px) {
+    .sidbar ul li a p, .form-check-label, .submit{
+        font-size: 12px;
+    }
+    .account-settings-notifications-content{
+        width: calc(100% - 55px);
+        margin-left: 50px;
+        padding: 16px 8px;
+    }
+    .checkbox-container{
+        margin-top: 10px;
+        display: flex;
+        align-items: flex-start;
+        padding: 8px;
+    }
+    .checkbox-container input{
+        right: 5px;
+        bottom: 10px;
+    }
+    .checkbox-container label{
+        margin-left: 5px;
+        max-width: calc(100% - 40px);
+        padding-bottom: 5px;
+    }
+    .form-check-input[type=checkbox]{
+        width: 19px;
+        height: 16px;
+    }
+}
+@media (min-width:576px) and (max-width:768px) {
+    .sidbar ul li a p{
+        font-size: 12px;
+    }
+}
+/* ========================================= End account settings notifications page ========================================= */
+
+/* ========================================= Start Footer ========================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.footer>:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul,
+.footer-social-media-links ul,
+.footer>:first-child {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.footer>:first-child p {
+    margin-bottom: 0;
+    margin-left: 17px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+.footer-social-media-links ul li a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F7F7;
+    border: 1px solid #707070;
+    margin-left: 10px;
+}
+
+.footer-links ul li a {
+    font-size: 15px;
+    color: #1A1818;
+}
+
+.footer-links ul li {
+    margin-left: 25px;
+}
+
+.footer-social-media-links ul li a:hover {
+    border: 1px solid white;
+    background-color: #BA9950;
+    transition: 0.4s;
+}
+
+.footer-social-media-links ul li a:hover i {
+    color: white;
+}
+
+.footer-social-media-links ul li a i {
+    color: black;
+}
+
+@media(max-width:1200px) {
+    .footer-links ul li {
+        font-size: 13px;
+        margin-left: 13px;
+    }
+
+    .footer>:first-child p {
+        font-size: 13px;
+    }
+}
+
+@media(max-width:992px) {
+    .footer>:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .footer-links ul li {
+        margin-top: 12px;
+    }
+
+    .footer>:first-child p {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+    footer ul {
+        padding-left: 0;
+    }
+
+    .footer>:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .footer-links {
+        align-self: flex-start;
+    }
+
+}
+
+
+
+@media (max-width:576px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer>:nth-child(2) {
+        margin-top: 20px;
+    }
+
+    .first-link,
+    .footer-links ul>:first-of-type {
+        margin-left: 0 !important;
+    }
+}
+
+/* ========================================= End Footer ========================================= */
