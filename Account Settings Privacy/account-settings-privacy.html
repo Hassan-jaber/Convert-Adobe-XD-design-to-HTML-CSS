@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>account settings</title>
+    <title>privacy settings</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
-    <link rel="stylesheet" href="account-settings-groupInvites.css">
+    <link rel="stylesheet" href="account-settings-privacy.css">
 </head>
 <body>
     <div class="overlay-bg"></div>
@@ -144,13 +144,13 @@
                     </li>
                     <li>
                         <a href="../Account Settings Privacy/account-settings-privacy.html">
-                            <img src="../images/icons/Privacy-icon.svg" alt="">
+                            <img src="../images/icons/Privacy-icon-active.svg" alt="">
                             <p>Privacy</p>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="../images/icons/Group-icon-Active.svg" alt="">
+                        <a href="../Account Settings GroupInvites/account-settings-groupInvites.html">
+                            <img src="../images/icons/Group-icon-not-active.svg" alt="">
                             <p>Group Invites</p>
                         </a>
                     </li>
@@ -169,20 +169,34 @@
                 </ul>
             </div>
             <!--  -->
-            <div class="account-settings-content col-xl-9 col-lg-8 col-md-8 col-sm-11">
-                <img src="../images/Visual.svg" alt="">
-                <p>Currently every member of the community can invite you to join their groups.
-                    Optionally, you may restrict group invites to your connections only.</p>
-
+            <div class="account-privacy-settings-content col-xl-9 col-lg-8 col-md-8 col-sm-11">
+                <p class="privacy-settings-title">Select who may see your profile details.</p>
                 <form action="#">
-                    <div class="mt-lg-4 mt-md-2 mt-sm-3">
-                        <div class="checkbox-container">
-                            <input type="checkbox" class="form-check-input" id="terms">
-                            <label class="form-check-label" for="terms">Restrict Group invites to members who are connected.</label>
-                        </div>
-                        <!--  -->
-                        <button type="submit" class="mt-3 submit">Save Changes</button>
+                    <div class="form-container">
+                        <ul>
+                            <li>
+                                <p>First Name</p>
+                                <p>Public</p>
+                            </li>
+                            <li>
+                                <p>Last Name</p>
+                                <div class="select-container">
+                                    <select>
+                                        <option value="Public">Public</option>
+                                        <option value="option1">Option 1</option>
+                                        <option value="option2">Option 2</option>
+                                        <option value="option3">Option 3</option>
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Nickname</p>
+                                <p>Public</p>
+                            </li>
+                        </ul>
                     </div>
+                    <!--  -->
+                    <button type="submit" class="mt-3 submit">Save Changes</button>
                 </form>
             </div>
         </section>
@@ -244,6 +258,6 @@
     </footer>
     <!-- ========================================= End Footer ========================================= -->
     <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="account-settings-groupInvites.js"></script>
+    <script src="account-settings-privacy.js"></script>
 </body>
 </html>
