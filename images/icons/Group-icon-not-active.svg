@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="10.045" viewBox="0 0 17 10.045">
+  <g id="Group-icon-not-active" transform="translate(-1 -6)">
+    <path id="Path_96" data-name="Path 96" d="M4.477,13a3.6,3.6,0,0,1,2.164.618,4.768,4.768,0,0,0-2.473,2.473v.077H1v-1A3.6,3.6,0,0,1,4.477,13Z" transform="translate(0 -1.591)" fill="#727272"/>
+    <circle id="Ellipse_15" data-name="Ellipse 15" cx="1.932" cy="1.932" r="1.932" transform="translate(2.545 6)" fill="#727272"/>
+    <path id="Path_97" data-name="Path 97" d="M17.864,13a3.6,3.6,0,0,0-2.164.618,4.768,4.768,0,0,1,2.473,2.473v.077h3.168v-1A3.6,3.6,0,0,0,17.864,13Z" transform="translate(-3.341 -1.591)" fill="#727272"/>
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="1.932" cy="1.932" r="1.932" transform="translate(12.591 6)" fill="#727272"/>
+    <path id="Path_98" data-name="Path 98" d="M17.864,13a3.6,3.6,0,0,0-2.164.618,4.768,4.768,0,0,1,2.473,2.473v.077h3.168v-1A3.6,3.6,0,0,0,17.864,13Z" transform="translate(-3.341 -1.591)" fill="#727272"/>
+    <circle id="Ellipse_17" data-name="Ellipse 17" cx="1.932" cy="1.932" r="1.932" transform="translate(12.591 6)" fill="#727272"/>
+    <path id="Path_99" data-name="Path 99" d="M8.318,8.318a2.318,2.318,0,0,1,4.636,0,2.318,2.318,0,1,1-4.636,0Zm2.318,3.864A4.85,4.85,0,0,0,6,14.732v1.314h9.273V14.732A4.85,4.85,0,0,0,10.636,12.182Z" transform="translate(-1.136 0)" fill="#727272"/>
+  </g>
+</svg>
