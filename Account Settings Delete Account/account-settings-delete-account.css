@@ -336,7 +336,7 @@ h1 {
 .account-settings {
     margin-top: 15px;
 }
-.sidbar,.account-settings-content{
+.sidbar,.account-delete-settings-content{
     border-radius: 8px;
 }
 .sidbar{
@@ -345,10 +345,27 @@ h1 {
     border: 1px solid #DEDEDE;
     transition: width 0.3s;
 }
-.account-settings-content{
+.account-delete-settings-content{
     background-color: #FFFFFF;
     min-height: 496px;
     box-shadow: 0px 3px 0px #00000014;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.account-delete-settings-content h1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 19px;
+    margin-top: 32px;
+}
+.account-delete-settings-content p{
+    font-size: 12px;    
+    color: #727272;
+    margin-bottom: 19px;
+    max-width: 420px;
 }
 .sidbar ul{
     padding: 24px 30px;
@@ -359,7 +376,6 @@ h1 {
     margin-bottom: 14px;
 }
 .sidbar ul li:not(:last-of-type){
-    /* width: 100%; */
     border-bottom: 1px solid #DEDEDE;
 }
 .sidbar ul li a{
@@ -376,23 +392,7 @@ h1 {
 .sidbar ul li:last-of-type a p{
     color: #F11852;
 }
-.sidbar ul>:nth-child(4) a p{
-    color: #BA9950;
-}
 
-.account-settings-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.account-settings-content p{
-    text-align: center;
-    color: #727272;
-    font-size: 12px;
-    max-width: 470px;
-    margin-top: 35px;
-}
 input[type="checkbox"] {
     position: relative;
     width: 19px;
@@ -418,12 +418,9 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked&::before {
     opacity: 1;
 }
-.form-check-label{
-    font-size: 15px;
-    color: #1A1818;
-}
+
 .submit {
-    width: 150px;
+    width: 162px;
     height: 39px;
     background-color: #BA9950;
     color: white;
@@ -451,7 +448,7 @@ input[type="checkbox"]:checked&::before {
     .sidbar ul li a p,.form-check-label,.submit{
         font-size: 14px;
     }
-    .account-settings-content p{
+    .account-delete-settings-content p{
         max-width: 100%;
     }
     .page-title{
@@ -481,32 +478,20 @@ input[type="checkbox"]:checked&::before {
     .expanded{
         width: 210px;
     }
-    .account-settings-content{
+    .account-delete-settings-content{
         margin-left: 45px;
     }
 }
 @media (max-width:576px) {
-    .sidbar ul li a p, .form-check-label, .submit{
+    .sidbar ul li a p, .submit{
         font-size: 12px;
     }
-    .account-settings-content{
+    .account-delete-settings-content{
         width: calc(100% - 55px);
         margin-left: 50px;
     }
-    .account-settings-content >:first-child{
+    .account-delete-settings-content >:first-child{
         max-width: 100%;
-    }
-    .checkbox-container{
-        margin-top: 10px;
-        display: flex;
-        align-items: flex-start;
-    }
-    .checkbox-container label{
-        margin-left: 5px;
-    }
-    .form-check-input[type=checkbox]{
-        width: 19px;
-        height: 16px;
     }
 }
 @media (min-width:576px) and (max-width:768px) {

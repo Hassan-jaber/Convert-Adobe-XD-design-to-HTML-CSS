@@ -474,6 +474,11 @@ input[type="checkbox"]:checked&::before {
 .checkbox-container label{
     max-width: calc(100% - 20px);
 }
+@media (min-width:768px) {
+    .sidbar ul li a p{
+        display: block !important;
+    }
+}
 @media (max-width:992px) {
     .sidbar ul {
     padding: 24px 5px;
