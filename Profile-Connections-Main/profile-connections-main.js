@@ -67,3 +67,16 @@ if(my_Sent_invitations.children.length == 0){
   empty.style.display="flex"
 }
 
+
+// ----------------------------------------------
+// Check if the page has a vertical scrollbar
+function hasVerticalScrollbar() {
+  return document.body.scrollHeight > window.innerHeight;
+}
+
+const footer = document.querySelector(".footer")
+if (hasVerticalScrollbar()) {
+  footer.style.display="block"
+} else {
+  footer.style.display="none"
+}
