@@ -1,0 +1,645 @@
+/* ========================================= import font 'Montserrat' from google ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/* ========================================= Start Global Rules =========================================*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--page-background);
+    overflow-x: hidden !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --page-background: #F7F7F7;
+    --main-btn-bg-color: #BA9950;
+    --main-btn-color: #F7F7F7;
+    --btn-hover-color: #BA9950;
+    --btn-border: #BA9950;
+    --btn-bg-hover-color: #F7F7F7;
+}
+
+/* ========================================= End Global Rules ========================================= */
+
+/* ========================================= Start Navbar =========================================*/
+
+.navbar {
+    background-color: #FFFFFF;
+    position: relative;
+    height: 70px;
+    z-index: 9999;
+}
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+}
+
+.navbar::before {
+    left: -150px;
+}
+
+.navbar::after {
+    right: -150px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.active-link {
+    position: relative;
+    font-weight: bold;
+    color: #BA9950;
+}
+
+.active-link:hover {
+    color: #BA9950;
+}
+
+.active-link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #BA9950;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-navbar {
+    margin-left: 30px;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link span {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.nav-link:not(.active-link) span {
+    color: #727272;
+}
+
+.nav-link:not(.active-link) span:hover {
+    color: #727272;
+}
+
+.span-animation {
+    width: 0;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #BA9950;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.dropdown-menu {
+    padding: 24px 30px;
+    border-radius: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: calc(100% - 179px);
+    width: 300px;
+    background-color: #1A1818;
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: #F7F7F7;
+    font-size: 15px;
+    padding-left: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item span {
+    margin-left: 10px;
+}
+
+.dropdown-menu li {
+    width: 240px;
+    margin: 0 auto;
+    height: 37px;
+}
+
+.dropdown-menu li:not(:last-of-type) {
+    border-bottom: 1px solid #4E4B4B;
+}
+
+.notifications-navbar {
+    position: relative;
+    cursor: pointer;
+}
+
+.num-of-notifications {
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #BA9950;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus .navbar::before {
+    box-shadow: none;
+}
+
+.nav-container-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Set maximum height to 100% of viewport height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    display: none;
+    /* Initially hide the overlay */
+    z-index: 999;
+    /* Ensure the overlay is above other content */
+}
+
+@media(max-width:1286px) {
+    .dropdown-menu[data-bs-popper] {
+        width: 265px;
+    }
+
+    .dropdown-menu li {
+        width: 200px;
+    }
+}
+
+@media(max-width:1200px) {
+    .nav-link span {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:992px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+
+    .overlay-bg {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 30px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        padding-top: 40px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Join-us-btn {
+        margin: 39px auto;
+    }
+
+    .navbar-collapse {
+        transition: 0s;
+    }
+
+    .nav-container-bg {
+        background-color: #FFFFFF;
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .nav-item {
+        width: 180px;
+        margin-left: 45px;
+    }
+
+    .active-link::after {
+        bottom: -2px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .nav-link span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:576px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        width: 200px;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .dropdown-menu li {
+        width: 150px;
+    }
+
+    .dropdown-menu {
+        padding: 15px;
+    }
+
+    .navbar::after {
+        right: -12px;
+    }
+}
+
+/* ========================================= End Navbar =========================================*/
+
+/* ========================================= Start Connections Page ========================================= */
+.page-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1A1818;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.connections-section {
+    width: 100%;
+    height: auto;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 3px 0px #00000014;
+    border: 1px solid #DEDEDE;
+}
+
+.tab {
+    position: relative;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 12px 0;
+}
+
+.tabcontent:not(#my-connections) {
+    display: none;
+}
+
+.tab button {
+    all: unset;
+    cursor: pointer;
+    font-size: 15px;
+    color: #1A1818;
+}
+
+.tab button:not(:first-of-type) {
+    margin-left: 43px;
+}
+
+.tab button:first-of-type {
+    margin-left: 20px;
+}
+
+.tab .active p {
+    color: #BA9950;
+    font-weight: bold;
+}
+/*  =========================================  Start Tab content for my-connections ========================================= */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #DEDEDE;
+    margin-bottom: 12px;
+}
+
+.search-input::placeholder {
+    font-size: 12px;
+    color: #727272;
+}
+
+.search-input {
+    padding: 10px;
+    height: 35px;
+    font-size: 16px;
+    width: 270px;
+    background-color: #DEDEDE;
+    border: none;
+    padding-left: 35px;
+    margin-left: 12px;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 17px;
+}
+
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.dropdown-container p {
+    font-size: 12px;
+    color: #727272;
+}
+
+.sort-by-dropdown {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1A1818;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('../images/icons/dropdown-Arrow.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 120px;
+    margin-left: 12px;
+}
+.my-connections-list li{
+    display: flex;
+    align-items: center;
+    padding: 12px 12px 0 12px;
+}
+.my-connections-img-container {
+    width:63px;
+    height:63px;
+    border-radius: 50%;
+    border: 3px solid #1A181833;
+    position: relative;
+    
+}
+.my-connections-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    padding-bottom: 7px;
+}
+.my-connections-list li:not(:last-of-type) >.my-connections-content{
+    border-bottom: 1px solid #DEDEDE;
+}
+.my-connections-img-container>:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 4px;
+}
+#my-connections .message-btn{
+    width: 78px;
+    height: 30px;
+    border-radius: 4px;
+    background-color: #BA9950;
+    color: white;
+    justify-content: center;
+}
+#my-connections .btns {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btns button{
+    font-size: 12px;
+    border: none;
+    display: flex;
+    align-items: center;
+}
+#my-connections .remove-btn{
+    width: 170px;
+    background-color: transparent;
+}
+#my-connections .remove-btn span{
+    margin-left: 8px;
+}
+.user-name{
+    font-size: 12px;
+    font-weight: bold;
+    color: #1A1818;
+}
+.connection-date{
+    font-size: 12px;
+    color: #727272;
+}
+@media (max-width:768px) {
+    .tab button{
+        font-size: 12px;
+    }
+    .search-input{
+        width: 200px;
+    }
+}
+@media (max-width:576px){
+    .search-container{
+        flex-direction: column;
+    }
+    .my-connections-content{
+        flex-direction: column;
+    }
+    .user-info{
+        margin-bottom: 10px;
+    }
+    .sort-by-dropdown{
+        width: 120px;
+        margin-left: 6px;
+    }
+    .search-input{
+        width: calc(100% - 20px);
+        padding-left: 30px;
+        margin: 0 10px;
+    }
+    .search-button{
+        left: 10px;
+        top: 15px;
+    }
+    .dropdown-container{
+        margin-left: 10px;
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+    .tab{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .tab button:first-of-type,.tab button:last-of-type{
+        margin: 0;
+    }
+    .tab button{
+        font-size: 10px;
+        margin: 0 5px !important;
+    }
+    .tab button:not(:first-of-type){
+        margin-left: 0px;
+    }
+    .tab button:last-of-type{
+        margin-right: 20px;
+    }
+
+}
+/*  =========================================  End Tab content for my-connections ========================================= */
+
+
+/* =========================================  Start Tab content for received-invitations ========================================= */
+    #received-invitations .btns{
+        width: 230px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ignore-btn{
+        width: fit-content;
+        background-color: transparent;
+    }
+    #received-invitations .btns button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #received-invitations .btns .message-btn{
+        width: 78px;
+        height: 30px;
+        background-color: #727272;
+        border-radius: 4px;
+        color: white;
+    }
+    #received-invitations .btns .accept-btn{
+        width: 67px;
+        height: 30px;
+        background-color: #BA9950;
+        border-radius: 4px;
+        color: white;
+    }
+    @media (max-width:576px){
+        #received-invitations .user-info{
+            margin-bottom: 5px;
+        }
+        #received-invitations .btns button{
+            padding-left: 0;
+        }
+    }
+/* =========================================  End Tab content for received-invitations ========================================= */
+
+
+/*  =========================================  Start Tab content for sent-invitations ========================================= */
+#sent-invitations .btns button{
+    width: fit-content;
+    background-color: transparent;
+}
+@media (max-width:576px){
+    #sent-invitations .user-info{
+        margin-bottom: 5px;
+    }
+    #sent-invitations .btns button{
+        padding-left: 0;
+    }
+}
+/*  =========================================  End Tab content for sent-invitations ========================================= */
+.empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    display: none;
+    text-align: center;
+}
+.empty h1{
+    font-size: 26px;
+    font-weight: bold;
+    color: #1A1818;
+    margin-bottom: 5px;
+}
+.empty p{
+    font-size: 12px;
+    color: #727272;
+}
+@media (max-width:576px) {
+    .empty h1{
+        font-size: 22px;
+    }
+}
+/* ========================================= End Connections Page ========================================= */
