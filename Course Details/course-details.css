@@ -17,8 +17,19 @@ body {
     overflow-x: hidden !important;
 }
 
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 a {
     text-decoration: none;
+}
+
+p,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 :root {
@@ -307,582 +318,418 @@ a {
     .dropdown-menu {
         padding: 15px;
     }
-}
-
-/* ========================================= End Navbar =========================================*/
-
-/* ========================================= Start alert ========================================= */
-.alert {
-    width: 700px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 22px auto;
-    position: relative;
-}
-
-.circular-progress {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent !important;
-}
-
-.inner-circle {
-    position: absolute;
-    width: calc(55px - 10px);
-    height: calc(55px - 10px);
-    border-radius: 50%;
-    background-color: #F7F7F7;
-}
-
-.percentage {
-    width: 60%;
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 0;
-    color: #1A1818 !important;
-}
-
-.alert-content {
-    width: 600px;
-    height: 50px;
-    border-radius: 8px;
-    background-color: #1A1818;
-    display: flex;
-    align-items: center;
-    padding: 17px 20px;
-}
-
-.alert-content p {
-    margin-bottom: 0;
-    font-size: 12px;
-    color: #F7F7F7;
-}
-
-.alert-msg {
-    margin-left: 18px;
-}
-
-.alert-content>:first-child {
-    font-weight: bold;
-}
-
-.alert-content a {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-}
-
-.alert-content a p {
-    color: #BA9950;
-}
-
-.close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-}
-
-@media(max-width: 768px) {
-    .alert-content {
-        flex-direction: column;
-        width: fit-content;
-        height: fit-content;
-        text-align: center;
-    }
-
-    .alert-content a {
-        margin-right: auto;
-    }
-
-    .alert {
-        width: fit-content;
-        margin: 40px auto;
-    }
-
-    .close {
-        top: -20px;
-    }
-
-    .circular-progress {
-        margin-right: 5px;
-    }
-}
-
-@media(max-width: 576px) {
-    .alert-content {
-        padding: 10px 8px;
-    }
-
-    .close {
-        right: 7px;
-    }
-}
-
-/* ========================================= End alert ========================================= */
-
-/* ========================================= Start Page ========================================= */
-.page {
-    position: relative;
-    margin-top: 20px;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-}
-
-.my-courses,
-.latest-activity {
-    width: 653px;
-    min-height: 431px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    padding: 10px 16px;
-    overflow-y: hidden;
-}
-
-.latest-activity-content {
-    height: 391px;
-    overflow: scroll;
-}
-
-.latest-activity {
-    position: relative;
-}
-
-.my-courses-header,
-.latest-activity-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    border-bottom: 1px solid #DEDEDE;
-    padding: 0px 0 10px 0;
-}
-
-.my-courses-header p,
-.latest-activity-header p {
-    margin-bottom: 0;
-}
-
-.my-courses-header>:first-child,
-.latest-activity-header>:first-child {
-    color: #1A1818;
-}
-
-.my-courses-header>:nth-child(2),
-.latest-activity-header>:nth-child(2) {
-    display: flex;
-    align-items: center;
-    color: #BA9950;
-}
-
-.my-courses-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-.no-courses {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.no-courses h1 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.no-courses p {
-    font-size: 12px;
-    color: #727272;
-}
-
-.no-courses a {
-    width: 175px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    font-weight: bold;
-    color: #F7F7F7;
-    background-color: #BA9950;
-}
-
-.activity-header,
-.activity-btns {
-    display: flex;
-    align-items: center;
-}
-
-.activities {
-    padding: 20px 0;
-}
-
-.activity {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 15px;
-}
-
-.activity p {
-    margin-bottom: 0;
-}
-
-.activity>:nth-child(2) {
-    width: calc(100% - 60px);
-    margin-left: 15px;
-    padding-bottom: 10px;
-}
-
-.activity:not(:last-of-type)>:nth-child(2) {
-    border-bottom: 1px solid #DEDEDE;
-}
-
-.activity-username,
-.verified,
-.activity-action {
-    margin-left: 10px;
-}
-
-.activity-content,
-.activity-btns {
-    margin-top: 9px;
-}
-
-.activity-date {
-    margin-top: 4px;
-    font-size: 12px;
-    color: #727272;
-}
-
-.activity-action {
-    font-size: 15px;
-    color: #1A1818;
-}
-
-.activity-username {
-    font-size: 15px;
-    font-weight: bold;
-    color: #1A1818;
-}
-
-.Comment {
-    margin-left: 20px;
-}
-
-.like,
-.Comment {
-    font-size: 12px;
-    color: #1A1818;
-}
-.latest-activity-content::-webkit-scrollbar {
-    width: 7px;
-    height: 50px;
-}
-
-.latest-activity-content {
-    margin-top: 10px;
-}
-
-.latest-activity-content::-webkit-scrollbar-thumb {
-    background-color: #DEDEDE;
-    border-radius: 5px;
-    position: relative;
-}
-
-/* ========================================= Start Swiper ========================================= */
-
-.slider {
-    overflow: hidden;
-}
-
-.cards-slide-container {
-    max-width: auto;
-    width: auto;
-    height: 100%;
-    position: relative;
-    padding: 8px 0;
-}
-
-.slider-header h1 {
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-.slider-header p {
-    font-size: 12px;
-    color: #727272;
-    margin-bottom: 0;
-}
-
-.slider-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* margin-top: 25px; */
-}
-
-.slider-title p {
-    font-size: 55px;
-    color: #727272;
-    margin-bottom: 0;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #BA9950;
-}
-
-.swiper-pagination {
-    position: relative;
-    z-index: 9999;
-    bottom: -8px !important;
-}
-
-.slide-card {
-    width: 100%;
-    min-height: 328px;
-    border: 1px solid #BA9950;
-    display: flex;
-    border-radius: 8px;
-    flex-direction: column;
-    padding: 20px;
-    opacity: 0.5;
-    box-shadow: 0px 3px 0px #00000014;
-}
-
-.swiper-slide-active {
-    opacity: 1;
-}
-
-.course-info {
-    display: flex;
-    align-items: flex-start;
-}
-
-.course-info>:nth-child(2) {
-    margin-left: 24px;
-    max-width: 260px;
-}
-
-.course-info>:nth-child(2) h1 {
-    font-size: 15px;
-    font-weight: bold;
-    color: #1A1818;
-}
-
-.course-info>:nth-child(2) p {
-    font-size: 12px;
-    color: #727272;
-}
-
-.Step-2>:first-child {
-    font-size: 15px;
-    color: #1A1818;
-    margin-bottom: 10px;
-}
-
-.Step-2 p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.quiz {
-    width: 100%;
-    height: 45px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 19px;
-    background-color: #DEDEDE;
-    border-radius: 8px;
-}
-
-.quiz>:first-child {
-    font-size: 12px;
-    color: #1A1818;
-}
-
-.quiz>:nth-child(2) {
-    font-size: 12px;
-    color: #727272;
-}
-
-.progress-bar {
-    margin-top: 15px;
-}
-
-.progress-bar>:first-child {
-    width: 100%;
-    height: 6px;
-    border-radius: 40px;
-    background-color: #DEDEDE;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.progress-now>:first-child {
-    width: 33%;
-    border-radius: 40px;
-    height: 100%;
-    background-color: #BA9950;
-}
-
-.progress-bar p {
-    font-size: 12px;
-    color: #BA9950;
-    align-self: flex-start;
-    margin-top: 4px;
-}
-
-.course-continue {
-    width: 256px;
-    height: 39px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #BA9950;
-    color: #F7F7F7;
-    font-size: 15px;
-    font-weight: bold;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-@media(min-width:992px) and (max-width:1200px) {
-    .course-info>:nth-child(2) {
-        margin-left: 12px;
-    }
-
-    .course-info>:nth-child(2) p {
-        margin-bottom: 4px;
-    }
-}
-
-@media(max-width:576px) {
-    .slider-header h1 {
-        font-size: 12px;
-        margin-bottom: 0;
-    }
-
-    .course-info {
-        flex-direction: column;
-    }
-
-    .course-info>:nth-child(2) {
-        margin-top: 10px;
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    .slide-card {
-        padding: 7px;
-    }
-
-    .course-info>:nth-child(2) p {
-        margin-bottom: 0.5rem;
-    }
-
-    .Step-2>:first-child,
-    .course-info>:nth-child(2) h1 {
-        margin-bottom: 3px;
-    }
-
-    .quiz {
-        height: 30px;
-    }
-
-    .progress-bar {
-        margin-top: 4px;
-    }
-
-    .course-info>:nth-child(2) {
-        margin-top: 5px;
-    }
-
-    .course-img {
-        width: 100%;
-        height: 100px;
-        background-image: url(../images/course-slider-img.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        border-radius: 8px;
-    }
-
-    .course-img img {
-        display: none;
-    }
-
-    .course-continue {
-        width: 200px;
-        font-size: 12px;
-        margin-top: 4px;
-        padding-left: 0;
-        justify-content: center;
-    }
-}
-
-/* ========================================= End Swiper ========================================= */
-
-@media(max-width:1286px) {
-
-    .my-courses,
-    .latest-activity {
-        width: calc(98%/2);
-    }
-}
-
-@media(max-width:992px) {
-
-    .my-courses,
-    .latest-activity {
-        width: 100%;
-    }
-
-    .my-courses {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width:768px) {
-    .navbar::before {
-        left: -116px;
-    }
-
-    .navbar::after {
-        right: -116px;
-    }
-}
-
-@media (max-width:576px) {
-    .navbar::before {
-        left: -12px;
-    }
 
     .navbar::after {
         right: -12px;
     }
 }
 
-/* ========================================= End Page ========================================= */
+/* ========================================= End Navbar =========================================*/
 
-/* ========================================= Start Our Courses ========================================= */
+/* ========================================= Start Page Header ========================================= */
+    .header{
+        width: 100%;
+        min-height: 300px;
+        position: relative;
+        padding: 27px 10px 30px 0;
+    }
+    .course-overlay{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: -1;
+    }
+    .course-overlay img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .header-price{
+        width: 63px;
+        height: 24px;
+        background-color: #BA9950;
+        border-radius: 0 8px 0 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-price p{
+        font-size: 12px;
+        color: white;
+        font-weight: bold;
+    }
+    .course-name{
+        font-size: 55px;
+        font-weight: bold;
+        color: white;
+    }
+    .course-description{
+        max-width: 700px;
+        font-size: 12px;
+        color: white !important;
+    }
+    .course-date{
+        font-size: 12px;
+        color: white;
+        margin-top: 10px;
+    }
+    .mentor-info{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .mentor-info .mentor-img-container{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 3px solid #F7F7F7;
+        position: relative;
+
+    }
+    .mentor-info .mentor-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .mentor-info>:nth-child(2) {
+        margin-left: 12px;
+    }
+    .mentor-info>:nth-child(2) p{
+        font-size: 12px;
+        color: white;
+    }
+    @media (max-width:768px) {
+        .course-name{
+            font-size: 45px;
+        }
+    }
+    @media (max-width:576px) {
+        .course-name{
+            font-size: 26px;
+            margin-top: 4px;
+        }
+        .course-description{
+            max-width: 100%;
+            margin-top: 8px;
+        }
+        .mentor-info .mentor-img-container{
+            align-self: flex-start;
+        }
+    }
+/* ========================================= End Page Header ========================================= */
+
+/* ========================================= Start enrolled Course card  =========================================  */
+    .enroll-course{
+        position: fixed;
+        right: 20px;
+        top: 215px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        width: 400px;
+        height: 400px;
+        box-shadow: 0px 10px 30px #BA995033;
+        border: 1px solid #DEDEDE;
+        z-index: 9999;
+        padding-top: 42px;
+        padding-bottom: 21px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .people-enrolled{
+        display: flex;
+        align-items: center;
+    }
+    .num-of-enrolled{
+        font-size: 18px;
+        font-weight: bold;
+        color: #1A1818;
+        margin-left: 10px;
+    }
+    .people-enrolled p,.lessons-and-quizes p{
+        font-size: 18px;
+        color: #1A1818;
+        margin-left: 4px;
+    }
+    .lessons-and-quizes{
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .lessons-and-quizes p{
+        margin-left: 10px;
+    }
+    .enroll-course h1{
+        font-size: 26px;
+        color: #BA9950;
+        font-weight: bold;
+        margin-top: 38px;
+    }
+    .enroll-course >:nth-child(4){
+        font-size: 15px;
+        color: #727272;
+        max-width: 220px;
+    }
+    .enroll-course >:nth-child(5){
+        margin-top: 45px;
+        font-size: 12px;
+        color: #727272;
+    }
+    .enroll-course button{
+        border: none;
+        background-color: #BA9950;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 332px;
+        max-width: 332px;
+        height: 40px;
+        margin-top: 18px;
+    }
+/* ========================================= End enrolled Course card  =========================================  */
+
+
+/* ========================================= Start Lessons Section  ========================================*/
+    .lessons{
+        margin-top: 12px;
+    }
+    .lessons h1{
+        font-size: 15px;
+        font-weight: bold;
+        color: #1A1818;
+    }
+    .list-of-lessons-container{
+        max-height: 307px;
+        max-width: 906px;
+        border: 1px solid #DEDEDE;
+        margin-top: 17px;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+    .list-of-lessons-container::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: transparent linear-gradient(180deg, #F7F7F700 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+    }
+    .list-of-lessons-container>:first-child{
+        font-size: 15px;
+        padding: 13px 20px;
+        color: #1A1818;
+    }
+    .list-of-lessons{
+        padding: 0 20px;
+    }
+    .list-of-lessons li{
+        max-width: 100%;
+        height: 45px;
+        border-radius: 4px;
+        background-color: #DEDEDE;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .list-of-lessons li a{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .lesson{
+        display: flex;
+        align-items: center;
+    }
+    .list-of-lessons li a>:last-child{
+        font-size: 12px;
+        color: #727272;
+    }
+    .lesson-name{
+        margin-left: 8px;
+        font-size: 12px;
+        color: #1A1818;
+    }
+    .show-all{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+    }
+    .show-all p{
+        font-size: 15px;
+        font-weight: bold;
+        color: #BA9950;
+    }
+    .show-all img{
+        margin-left: 20px;
+    }
+    @media (max-width:1300px) {
+        .list-of-lessons-container{
+            max-width: 720px;
+        }
+    }
+    @media (max-width:1200px) {
+        .list-of-lessons-container{
+            max-width: 520px;
+        }
+    }
+    @media (max-width:992px) {
+        .enroll-course {
+            max-width: 280px;
+            height: 300px;
+            padding-top: 15px;
+            top: 260px;
+        }
+        .enroll-course button{
+            width: 80%;
+        }
+        .enroll-course h1{
+            font-size: 22px;
+            margin-top: 10px;
+        }
+        .enroll-course >:nth-child(4) {
+            font-size: 13px;
+        }
+        .people-enrolled p, .lessons-and-quizes p ,.num-of-enrolled {
+            font-size: 14px;
+        }
+        .list-of-lessons-container{
+            max-width: 435px;
+        }
+    }
+    @media (max-width:768px){
+        .enroll-course{
+            width: 100%;
+            max-width: 100%;
+            height: 370px;
+            padding-top: 42px;
+            padding-bottom: 0px;
+            position: initial;
+            margin: 20px auto;
+        }
+        .enroll-course h1{
+            margin-top: 30px;
+        }
+        .lessons,.list-of-lessons-container{
+            max-width: 100%;
+        }
+        .enroll-course >:nth-child(4){
+            max-width: 185px;
+        }
+    }
+/* ========================================= End Lessons Section =======================================*/
+
+/* ========================================= Start About this Course ========================================= */
+    .about-course{
+        margin-top: 35px;
+        max-width: 900px;
+    }
+    .about-course h1{
+        font-size: 26px;
+        color: #1A1818;
+        margin-bottom: 8px;
+    }
+    .about-course p{
+        font-size: 18px;
+        color: #727272;
+    }
+    @media (max-width:1300px) {
+        .about-course{
+            max-width: 700px;
+        }
+        .about-course p{
+            font-size: 15px;
+        }
+    }
+    @media (max-width:1200px) {
+        .about-course{
+            max-width: 530px;
+        }
+    }
+    @media (max-width:992px) {
+        .about-course{
+            max-width: 415px;
+        }
+        .about-course p{
+            font-size: 15px;
+        }
+    }
+    @media (max-width:768px) {
+        .about-course{
+            max-width: 100%;
+        }
+        .about-course p{
+            font-size: 15px;
+        }
+    }
+/* ========================================= End About this Course ========================================= */
+
+/* ========================================= Start Mentor section ========================================= */
+    .mentor{
+        margin-top: 60px;
+        max-width: 906px;
+        min-height: 338px;
+        background-color: #1A1818;
+        border-radius: 8px;
+        padding: 16px 62px 26px 29px;
+    }
+    .mentor>:first-child{
+        font-size: 26px;
+        font-weight: bold;
+        color: white;
+    }
+    .mentor .mentor-info .mentor-img-container{
+        border-color: #9E9E9E;
+    }
+    .mentor .mentor-info>:nth-child(2)>:first-child{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .about-mentor{
+        font-size: 15px;
+        color: white;
+        margin-top: 21px;
+    }
+    @media (max-width:1300px) {
+        .mentor{
+            max-width: 720px;
+        }
+    }
+    @media (max-width:1200px) {
+        .mentor{
+            max-width: 520px;
+        }
+    }
+    @media (max-width:992px) {
+        .mentor{
+            max-width: 420px;
+        }
+    }
+    @media (max-width:768px) {
+        .mentor{
+            max-width: 100%;
+            padding: 20px 15px;
+        }
+    }
+/* ========================================= End Mentor section ========================================= */
+
+/*  ========================================= Start interested Courses ========================================= */
 .our-courses {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1007,7 +854,7 @@ a {
 
 @media (max-width:1200px) {
     .course {
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 15px;
         margin-bottom: 15px;
     }
@@ -1033,7 +880,9 @@ a {
     .course {
         flex-direction: column;
     }
-
+    .our-courses-title h1{
+        font-size: 18px;
+    }
     .course>:first-child,
     .course>:nth-child(2) {
         height: max-content;
@@ -1053,55 +902,7 @@ a {
     }
 }
 
-/* ========================================= End Our Courses ========================================= */
-
-/* ========================================= Start Tools  ========================================= */
-.tools-title h1 {
-    font-size: 26px;
-    font-weight: bold;
-}
-
-.tools-title p {
-    font-size: 15px;
-    color: #727272;
-}
-
-.tools-cards div {
-    width: 315px;
-    height: 210px;
-    background-color: #1A1818;
-    border-radius: 8px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 10px 10px 22px 10px;
-    margin-bottom: 33px;
-}
-
-.tools-cards div h1 {
-    font-size: 15px;
-    font-weight: bold;
-    color: #F7F7F7;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.tools-cards div p {
-    font-size: 12px;
-    color: #F7F7F7;
-}
-
-@media (max-width:576px) {
-    .tools-cards div {
-        width: 97%;
-        height: max-content;
-    }
-
-    .tools-cards div img {
-        width: 100%;
-    }
-}
-
-/* ========================================= End Tools  ========================================= */
+/*  ========================================= End interested Courses ========================================= */
 
 /* ========================================= Start Footer ========================================= */
 

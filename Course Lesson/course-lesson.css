@@ -1,0 +1,583 @@
+/* ========================================= import font 'Montserrat' from google ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/* ========================================= Start Global Rules =========================================*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--page-background);
+    overflow-x: hidden !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --page-background: #F7F7F7;
+    --main-btn-bg-color: #BA9950;
+    --main-btn-color: #F7F7F7;
+    --btn-hover-color: #BA9950;
+    --btn-border: #BA9950;
+    --btn-bg-hover-color: #F7F7F7;
+}
+
+/* ========================================= End Global Rules ========================================= */
+
+/* ========================================= Start Navbar =========================================*/
+
+.navbar {
+    background-color: #FFFFFF;
+    position: relative;
+    height: 70px;
+    z-index: 9999;
+}
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+}
+
+.navbar::before {
+    left: -150px;
+}
+
+.navbar::after {
+    right: -150px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.active-link {
+    position: relative;
+    font-weight: bold;
+    color: #BA9950;
+}
+
+.active-link:hover {
+    color: #BA9950;
+}
+
+.active-link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #BA9950;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-navbar {
+    margin-left: 30px;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link span {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.nav-link:not(.active-link) span {
+    color: #727272;
+}
+
+.nav-link:not(.active-link) span:hover {
+    color: #727272;
+}
+
+.span-animation {
+    width: 0;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #BA9950;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.dropdown-menu {
+    padding: 24px 30px;
+    border-radius: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: calc(100% - 179px);
+    width: 300px;
+    background-color: #1A1818;
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: #F7F7F7;
+    font-size: 15px;
+    padding-left: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item span {
+    margin-left: 10px;
+}
+
+.dropdown-menu li {
+    width: 240px;
+    margin: 0 auto;
+    height: 37px;
+}
+
+.dropdown-menu li:not(:last-of-type) {
+    border-bottom: 1px solid #4E4B4B;
+}
+
+.notifications-navbar {
+    position: relative;
+    cursor: pointer;
+}
+
+.num-of-notifications {
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #BA9950;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus .navbar::before {
+    box-shadow: none;
+}
+
+.nav-container-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Set maximum height to 100% of viewport height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    display: none;
+    /* Initially hide the overlay */
+    z-index: 999;
+    /* Ensure the overlay is above other content */
+}
+
+@media(max-width:1286px) {
+    .dropdown-menu[data-bs-popper] {
+        width: 265px;
+    }
+
+    .dropdown-menu li {
+        width: 200px;
+    }
+}
+
+@media(max-width:1200px) {
+    .nav-link span {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:992px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+
+    .overlay-bg {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 30px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        padding-top: 40px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Join-us-btn {
+        margin: 39px auto;
+    }
+
+    .navbar-collapse {
+        transition: 0s;
+    }
+
+    .nav-container-bg {
+        background-color: #FFFFFF;
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .nav-item {
+        width: 180px;
+        margin-left: 45px;
+    }
+
+    .active-link::after {
+        bottom: -2px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .nav-link span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:576px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        width: 200px;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .dropdown-menu li {
+        width: 150px;
+    }
+
+    .dropdown-menu {
+        padding: 15px;
+    }
+
+    .navbar::after {
+        right: -12px;
+    }
+}
+
+/* ========================================= End Navbar =========================================*/
+
+/* ========================================= Start page ========================================= */
+.page {
+    margin-top: 23px;
+    display: flex;
+}
+
+/* ========================================= End page ========================================= */
+
+
+/* ========================================= Start sidebar ========================================= */
+.sidebar {
+    width: 325px;
+    max-width: 325px;
+    height: auto;
+}
+
+.back {
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    border: 1px solid #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back p {
+    font-size: 12px;
+    color: #727272;
+    margin-left: 4px;
+}
+
+.back i {
+    color: #727272;
+}
+
+.sidebar .lesson-name {
+    margin-top: 12px;
+    font-size: 26px;
+    color: #1A1818;
+    font-weight: bold;
+}
+
+.lesson-progress {
+    margin-top: 9px;
+}
+
+.lesson-progress>:first-child {
+    font-size: 12px;
+    color: #727272;
+}
+
+.progress-container {
+    width: 100%;
+    border-radius: 20px;
+    background-color: #DEDEDE;
+    height: 6px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5%;
+    background-color: #BA9950;
+    border-radius: 20px;
+    height: 6px;
+}
+
+.lesson-progress>:last-child {
+    font-size: 12px;
+    color: #BA9950;
+    margin-top: 4px;
+}
+
+.step-1,
+.step-2,
+.step-3 {
+    margin-top: 17px;
+}
+
+.step-1>:first-child,
+.step-2>:first-child,
+.step-3>:first-child {
+    font-size: 15px;
+    color: #1A1818;
+}
+
+.step-1-ul,
+.step-2-ul,
+.step-3-ul {
+    margin-top: 15px;
+}
+
+.step-1-ul li,
+.step-2-ul li,
+.step-3-ul li {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-left: 20px;
+    padding-bottom: 16px;
+}
+
+.step-1-ul .lesson-opend,
+.step-2-ul .lesson-opend,
+.step-3-ul .lesson-opend {
+    background-color: #DEDEDE;
+}
+
+.step-1-ul>:first-child>:first-child,
+.step-2-ul>:first-child>:first-child,
+.step-3-ul>:first-child>:first-child {
+    font-size: 15px;
+    color: #1A1818;
+}
+
+.step-1-ul .lesson-opend span,
+.step-2-ul .lesson-opend span,
+.step-3-ul .lesson-opend span {
+    font-weight: bold;
+}
+
+.li-lesson,
+.li-quiz {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.li-lesson>:first-child {
+    width: 50px;
+    height: 20px;
+    background-color: #1A1818;
+    border-radius: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.li-lesson>:first-child span,
+.li-quiz>:first-child span {
+    color: white;
+    font-size: 10px;
+}
+
+.li-lesson>:nth-child(2),
+.li-quiz>:nth-child(2) {
+    font-size: 12px;
+    color: #1A1818;
+    margin-left: 10px;
+}
+
+.li-quiz>:first-child {
+    width: 40px;
+    height: 20px;
+    background-color: #727272;
+    border-radius: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.li-quiz>:nth-child(2) {
+    margin-left: 21px;
+}
+
+.lesson {
+    width: 100%;
+    height: auto;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-right: 15px;
+}
+
+.lesson a {
+    display: flex;
+    color: #1A1818;
+}
+
+.lesson a span {
+    font-size: 15px;
+}
+
+.lesson a>:first-child {
+    font-weight: bold;
+}
+
+.lesson a>:nth-child(2) {
+    margin-left: 15px;
+}
+.participants{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    background-color: #1A1818;
+    border-radius: 4px;
+    padding: 15px 20px;
+}
+.participants-title{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.participants-title span{
+    font-size: 15px;
+}
+.participants-title>:nth-child(2){
+    font-weight: bold;
+    margin-left: 26px;
+}
+
+.participants ul{
+    margin-top: 15px;
+}
+.participants ul li img{
+    width: 30px;
+    height: 30px;
+}
+.participants ul li{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    padding: 12px;
+}
+.participants ul li:not(:last-of-type){
+    border-bottom: 1px solid #484646;
+}
+.participants ul li>:nth-child(2){
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    margin-left: 10px;
+}
+.show-more-btn{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.show-more-btn span{
+    font-size: 15px;
+    font-weight: bold;
+    color: #BA9950;
+}
+.show-more-btn img{
+    margin-left: 18px;
+}
+/* ========================================= End sidebar ========================================= */

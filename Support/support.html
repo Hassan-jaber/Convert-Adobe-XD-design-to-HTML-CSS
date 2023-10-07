@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <div class="overlay-bg"></div>
+
+    <!-- ========================================= Start Navbar ========================================= -->
+    <div class="container nav_container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <img src="../images/Logo.svg" alt="" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../images/Logo.svg" width="100" alt="">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <img src="../images/icons/Dashboard-not-active-Icon.svg" alt="">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Activity Feed-Icon.png" alt="">
+                                <span>Activity Feed</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Tools-Icon.png" alt="">
+                                <span>Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Courses-Icon.png" alt="">
+                                <span>Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Economic Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active-link" href="#">
+                                <img src="../images/icons/active-Support-Icon.svg" alt="">
+                                <span>Support</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="notifications-navbar">
+                            <div class="num-of-notifications">
+                                <span>23</span>
+                            </div>
+                            <img src="../images/icons/Notifications-Icon.svg" alt="">
+                        </a>
+                        <div class="dropdown-navbar">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../images/icons/user-img.png" alt="">
+                                <span class="ml-1">John</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-profile.svg" alt="">
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-settings.svg" alt="">
+                                        <span>Account Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Connections-Icon.svg" alt="">
+                                        <span>Connections</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Group-icon.svg" alt="">
+                                        <span>Groups</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Photos-icon.svg" alt="">
+                                        <span>Photos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Email-icon.svg" alt="">
+                                        <span>Email Invites</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Logout-icon.svg" alt="">
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ========================================= End Navbar ========================================= -->
+
+    <!-- ========================================= Start support page ========================================= -->
+    <div class="container">
+        <div class="support-page">
+            <div class="tab">
+                <!--  -->
+                <button class="tablinks active" onclick="openTap(event, 'submit-ticket')">
+                 <div class="d-flex  justify-content-center align-items-center">
+                  <p>Submit Ticket</p>
+                 </div>
+                </button>
+                <!--  -->
+                <button class="tablinks" onclick="openTap(event, 'my-tickets')">
+                  <div>
+                    <p>My Tickets</p>
+                  </div>
+                </button>
+                <!--  -->
+              </div>
+        
+              <!-- =========================================  Start Tab content for submit-ticket =========================================  -->
+              <div id="submit-ticket" class="tabcontent">
+                <form action="#">
+                    <div class="input-container">
+                        <label for="input-subject" class="form-label form-label-email">Subject</label>
+                        <input type="text" class="form-control" id="input-subject" placeholder="Subject" aria-label="Subject">
+                    </div>
+                    <div class="customization-text-container">
+                        <p>Description</p>
+                        <div class="customization">
+                            <div class="customization-nav">
+                                <ul>
+                                    <li>
+                                        <img src="../images/icons/Bold-icon.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="../images/icons/Bullets-icon.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="../images/icons/Numbers-icon.svg" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="../images/icons/Link-icon.svg" alt="">
+                                    </li>
+                                </ul>
+                            </div>  
+                            <textarea class="customization-box"></textarea>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="attachements-container">
+                        <h1>Attachments</h1>
+                        <div class="attachements">
+                            <div>
+                                <ul class="attachements-list">
+                                </ul>
+                            </div>
+                            <div>
+                                <label for="fileUpload" class="fileupload-label">Choose files to attach</label>
+                                <input type="file" id="fileUpload" name="fileUpload" accept=".jpg, .jpeg, .png, .gif, .pdf, .doc, .docx">
+                            </div>
+                        </div>
+                        <div class="attachements-description">
+                            <p>You can upload up to 2 files (maximum 2 MB each)</p>
+                            <p>Supported File Types:</p>
+                            <ul>
+                                <li><span>.jpg</span></li>
+                                <li><span>.jpeg</span></li>
+                                <li><span>.png</span></li>
+                                <li><span>.gif</span></li>
+                                <li><span>.pdf</span></li>
+                                <li><span>.doc</span></li>
+                                <li><span>.docx</span></li>
+                            </ul>
+                        </div>
+                        <!-- Add the attachement-counter element with an initial value of 0 -->
+                        <div class="attachement-counter">0</div>
+                        <input type="submit" class="submit-ticket-btn" value="Submit Ticket">
+                    </div>                    
+                </form>
+              </div>
+              <!-- =========================================  End Tab content for submit-ticket =========================================  -->
+        
+              <!-- =========================================  Start Tab content for my-tickets =========================================  -->
+              <div id="my-tickets" class="tabcontent">
+                <ul>
+                    <li class="row justify-content-between align-items-center">
+                        <div class="subject-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Subject</p>
+                            <p>Password Change Glitch</p>
+                        </div>
+                        <div class="description-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Description</p>
+                            <p>I tried changing my password a few times now & the system is still not working.</p>
+                        </div>
+                        <div class="invited-date col-lg-2 col-md-2 col-sm-12">
+                            <p>Date of submission</p>
+                            <p>13 September, 2023</p>
+                        </div>
+                        <div class="attachement_li col-lg-3 col-md-3 col-sm-4">
+                            <p>Attachements</p>
+                            <ul>
+                                <li>FileName.jpeg  200 KB</li>
+                                <li>FileName.mov  1,002 KB</li>
+                            </ul>
+                        </div>
+                        <div class="status-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Status</p>
+                            <div>
+                                <img src="../images/icons/Time-icon.svg" alt="">
+                                <p>Invited</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row justify-content-between align-items-center">
+                        <div class="subject-li  col-lg-2 col-md-2 col-sm-12">
+                            <p>Subject</p>
+                            <p>JPassword Change Glitch</p>
+                        </div>
+                        <div class="description-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Description</p>
+                            <p>I tried changing my password a few times now & the system is still not working.</p>
+                        </div>
+                        <div class="invited-date col-lg-2 col-md-2 col-sm-12">
+                            <p>Date of submission</p>
+                            <p>13 September, 2023</p>
+                        </div>
+                        <div class="attachement_li col-lg-3 col-md-3 col-sm-4">
+                            <p>Attachements</p>
+                            <ul>
+                                <li>FileName.jpeg  200 KB</li>
+                                <li>FileName.mov  1,002 KB</li>
+                            </ul>
+                        </div>
+                        <div class="status-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Status</p>
+                            <div>
+                                <img src="../images/icons/Being Resolved-icon.svg" alt="">
+                                <p class="resolved">Being Resolved</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="row justify-content-between align-items-center">
+                        <div class="subject-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Subject</p>
+                            <p>Password Change Glitch</p>
+                        </div>
+                        <div class="description-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Description</p>
+                            <p>I tried changing my password a few times now & the system is still not working.</p>
+                        </div>
+                        <div class="invited-date col-lg-2 col-md-2 col-sm-12">
+                            <p>Date of submission</p>
+                            <p>13 September, 2023</p>
+                        </div>
+                        <div class="attachement_li col-lg-3 col-md-3 col-sm-4">
+                            <p>Attachements</p>
+                            <ul>
+                                <li>FileName.jpeg  200 KB</li>
+                                <li>FileName.mov  1,002 KB</li>
+                            </ul>
+                        </div>
+                        <div class="status-li col-lg-2 col-md-2 col-sm-12">
+                            <p>Status</p>
+                            <div>
+                                <img src="../images/icons/Check.svg" alt="">
+                                <p class="completed">Completed</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <!-- =========================================  End Tab content for my-tickets =========================================  -->
+        </div>
+    </div>
+
+        <!-- ========================================= End support page ========================================= -->
+
+        <!-- ========================================= Start Footer ========================================= -->
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div>
+                        <img src="../images/Logo-footer.svg" alt="">
+                        <p>© 2023 - All Rights Reserved</p>
+                    </div>
+                    <div>
+                        <div class="footer-links">
+                            <ul>
+                                <li><a href="../Contact-us/contact-us.html">Contact us</a> </li>
+                                <li><a href="#">Privacy Policy</a> </li>
+                                <li><a href="../Terms/terms.html">Terms of Use</a> </li>
+                            </ul>
+                        </div>
+                        <div class="footer-social-media-links">
+                            <ul>
+                                <li>
+                                    <a href="" class="facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="twitter">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="telegram">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="Utube">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="discord">
+                                        <i class="fa-brands fa-discord"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- ========================================= End Footer ========================================= -->
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="support.js"></script>
+</body>
+</html>

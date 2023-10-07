@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="182.866" height="91.5" viewBox="0 0 182.866 91.5">
+  <g id="no-chats-img" transform="translate(-571.09 -198)">
+    <g id="Bubble" transform="translate(228 71)">
+      <rect id="Rectangle_44" data-name="Rectangle 44" width="99" height="61" rx="8" transform="translate(352 127)" fill="#e3d6ca"/>
+      <path id="Arrow" d="M362.768,188H343.09S352,185.2,352,176.877,362.768,188,362.768,188Z" fill="#e3d6ca"/>
+    </g>
+    <g id="Bubble-2" data-name="Bubble" transform="translate(646.045 228.5)">
+      <rect id="Rectangle_44-2" data-name="Rectangle 44" width="99" height="61" rx="8" transform="translate(0)" fill="#f4f4f4"/>
+      <path id="Arrow-2" data-name="Arrow" d="M343.09,188h19.678s-8.914-2.8-8.914-11.123S343.09,188,343.09,188Z" transform="translate(-254.857 -127)" fill="#f4f4f4"/>
+    </g>
+  </g>
+</svg>

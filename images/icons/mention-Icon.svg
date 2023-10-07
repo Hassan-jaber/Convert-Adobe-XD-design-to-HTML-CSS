@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="41" viewBox="0 0 38 41">
+  <g id="mention-Icon" transform="translate(-195)">
+    <rect id="Shadow" width="38" height="38" rx="5" transform="translate(195 3)" fill="#6f5419"/>
+    <rect id="Bg" width="38" height="38" rx="5" transform="translate(195)" fill="#ba9950"/>
+    <path id="Icon" d="M7.5,0a7.5,7.5,0,1,0,0,15,.938.938,0,0,0,0-1.875A5.625,5.625,0,1,1,13.125,7.5v2.812a.938.938,0,0,1-1.875,0V7.5A3.75,3.75,0,1,0,7.5,11.25a3.709,3.709,0,0,0,1.915-.543A2.806,2.806,0,0,0,15,10.313V7.5A7.507,7.507,0,0,0,7.5,0Zm0,9.375A1.875,1.875,0,1,1,9.375,7.5,1.875,1.875,0,0,1,7.5,9.375Z" transform="translate(207 11.556)" fill="#fff"/>
+  </g>
+</svg>

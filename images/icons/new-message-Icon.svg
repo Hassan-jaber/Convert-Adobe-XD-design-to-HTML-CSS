@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="41" viewBox="0 0 38 41">
+  <g id="new-message-Icon" transform="translate(-195)">
+    <rect id="Shadow" width="38" height="38" rx="5" transform="translate(195 3)" fill="#6f5419"/>
+    <rect id="Bg" width="38" height="38" rx="5" transform="translate(195)" fill="#ba9950"/>
+    <path id="Message" d="M16.667,3H3.333A3.343,3.343,0,0,0,0,6.333v8.333A3.343,3.343,0,0,0,3.333,18H16.667A3.343,3.343,0,0,0,20,14.667V6.333A3.343,3.343,0,0,0,16.667,3ZM18,7.833,11.417,12.25A2.809,2.809,0,0,1,10,12.667a2.809,2.809,0,0,1-1.417-.417L2,7.833a.881.881,0,0,1-.167-1.167A.881.881,0,0,1,3,6.5l6.583,4.417a.9.9,0,0,0,.917,0L17.083,6.5a.82.82,0,0,1,1.167.25A.909.909,0,0,1,18,7.833Z" transform="translate(204 8.556)" fill="#fff"/>
+  </g>
+</svg>

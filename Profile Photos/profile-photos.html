@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Photos</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="profile-photos.css">
+</head>
+
+<body>
+    <div class="overlay-bg"></div>
+
+    <!-- ========================================= Start Navbar ========================================= -->
+    <div class="container nav_container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <img src="../images/Logo.svg" alt="" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../images/Logo.svg" width="100" alt="">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <img src="../images/icons/Dashboard-not-active-Icon.svg" alt="">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Activity Feed-Icon.png" alt="">
+                                <span>Activity Feed</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Tools-Icon.png" alt="">
+                                <span>Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Courses-Icon.png" alt="">
+                                <span>Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Economic Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Support</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="notifications-navbar">
+                            <div class="num-of-notifications">
+                                <span>23</span>
+                            </div>
+                            <img src="../images/icons/Notifications-Icon.svg" alt="">
+                        </a>
+                        <div class="dropdown-navbar">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../images/icons/user-img.png" alt="">
+                                <span class="ml-1">John</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-profile.svg" alt="">
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-settings.svg" alt="">
+                                        <span>Account Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Connections-Icon.svg" alt="">
+                                        <span>Connections</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Group-icon.svg" alt="">
+                                        <span>Groups</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Photos-icon.svg" alt="">
+                                        <span>Photos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Email-icon.svg" alt="">
+                                        <span>Email Invites</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Logout-icon.svg" alt="">
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ========================================= End Navbar ========================================= -->
+
+    <!-- ========================================= Start Photos Page========================================= -->
+    <div class="container">
+        <div class="page-title">
+            <h1 class="">Photos</h1>
+            <button class="add-photos-btn">Add Photos</button>
+        </div>
+        <div class="photos-page">
+            <div class="tab">
+                <div class="tab-btns">
+                    <!--  -->
+                    <button class="tablinks active" onclick="openTap(event, 'photos')">
+                        <div class="d-flex  justify-content-center align-items-center">
+                            <p>Photos <span class="total-num">(0)</span></p>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button class="tablinks" onclick="openTap(event, 'albums')">
+                        <div>
+                            <p>Albums <span class="total-num">(0)</span></p>
+                        </div>
+                    </button>
+                    <!--  -->
+                </div>
+                <div class="photos-btns">
+                    <button class="selected-btn">
+                        <p><span class="num-of-selected">0 </span>Selected</p>
+                    </button>
+                    <button class="select-all-btn">Select all</button>
+                    <button class="delete-selected-btn">
+                        <img src="../images/icons/Delete-icon.svg" alt="">
+                        <span>Delete selected</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- =========================================  Start Tab content for photos =========================================  -->
+            <div id="photos" class="tabcontent">
+                <div class="add-photos">
+                    <div class="hero">
+                        <h1>You have not added any photos yet</h1>
+                        <p>“Sharing is caring” start adding wisdom to your community!</p>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#adding-photos">
+                            Start adding Photos
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="adding-photos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                                        <span>close</span>
+                                        <img src="../images/icons/Close-icon.svg" alt="">
+                                    </button>
+                                    <div class="modal-title">
+                                        <h1>Add Photos</h1>
+                                        <p class="num-of-Photos"><span class="Photos-counter">0 </span>Photos uploaded</p>
+                                    </div>
+                                </div>
+                                <div class="modal-body" id="modal-body">
+                                    <p class="drop-imgs">Drop Photos here</p>
+                                    <form action="#">
+                                        <input type="file" name="image" accept="image/*" id="imageUpload" style="display: none;">
+                                        <label for="imageUpload" class="custom-file-upload">
+                                            Select from files
+                                        </label>
+                                        <div class="show-uploaded-imgs" id="show-uploaded-imgs">
+                                            <ul class="row list-of-uploaded-imgs"></ul>
+                                        </div>
+                                        <input type="submit" class="my-upload-btn" value="Finish & upload" style="display: none;">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="copied-images">
+                                <ul class="row list-of-copied-images"></ul>
+                        </div>
+                </div>
+            </div>
+            <!-- =========================================  End Tab content for photos =========================================  -->
+
+            <!-- =========================================  Start Tab content for albums =========================================  -->
+            <div id="albums" class="tabcontent">
+                <p>2</p>
+            </div>
+            <!-- =========================================  End Tab content for albums =========================================  -->
+        </div>
+
+    </div>
+    <!-- ========================================= End Photos Page========================================= -->
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="profile-photos.js"></script>
+</body>
+
+</html>

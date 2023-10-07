@@ -1,0 +1,624 @@
+/* ========================================= import font 'Montserrat' from google ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
+/* ========================================= Start Global Rules =========================================*/
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--page-background);
+    overflow-x: hidden !important;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+:root {
+    --page-background: #F7F7F7;
+    --main-btn-bg-color: #BA9950;
+    --main-btn-color: #F7F7F7;
+    --btn-hover-color: #BA9950;
+    --btn-border: #BA9950;
+    --btn-bg-hover-color: #F7F7F7;
+}
+
+/* ========================================= End Global Rules ========================================= */
+
+/* ========================================= Start Navbar =========================================*/
+
+.navbar {
+    background-color: #FFFFFF;
+    position: relative;
+    height: 70px;
+    z-index: 9999;
+}
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    box-shadow: 1px 1px 1px 1px #E3E3E3;
+}
+
+.navbar::before {
+    left: -150px;
+}
+
+.navbar::after {
+    right: -150px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.active-link {
+    position: relative;
+    font-weight: bold;
+    color: #BA9950;
+}
+
+.active-link:hover {
+    color: #BA9950;
+}
+
+.active-link::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #BA9950;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dropdown-navbar {
+    margin-left: 30px;
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link span {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.nav-link:not(.active-link) span {
+    color: #727272;
+}
+
+.nav-link:not(.active-link) span:hover {
+    color: #727272;
+}
+
+.span-animation {
+    width: 0;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #BA9950;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.dropdown-menu {
+    padding: 24px 30px;
+    border-radius: 0;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: calc(100% - 179px);
+    width: 300px;
+    background-color: #1A1818;
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: #F7F7F7;
+    font-size: 15px;
+    padding-left: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item span {
+    margin-left: 10px;
+}
+
+.dropdown-menu li {
+    width: 240px;
+    margin: 0 auto;
+    height: 37px;
+}
+
+.dropdown-menu li:not(:last-of-type) {
+    border-bottom: 1px solid #4E4B4B;
+}
+
+.notifications-navbar {
+    position: relative;
+    cursor: pointer;
+}
+
+.num-of-notifications {
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #BA9950;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus .navbar::before {
+    box-shadow: none;
+}
+
+.nav-container-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    z-index: -9999;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* Set maximum height to 100% of viewport height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    display: none;
+    /* Initially hide the overlay */
+    z-index: 999;
+    /* Ensure the overlay is above other content */
+}
+
+@media(max-width:1286px) {
+    .dropdown-menu[data-bs-popper] {
+        width: 265px;
+    }
+
+    .dropdown-menu li {
+        width: 200px;
+    }
+}
+
+@media(max-width:1200px) {
+    .nav-link span {
+        font-size: 11px;
+    }
+}
+
+@media(max-width:992px) {
+    .logo {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin: 0 auto;
+    }
+
+    .overlay-bg {
+        display: none !important;
+    }
+
+    .navbar-collapse {
+        margin-top: 30px;
+        background-color: #F7F7F7;
+        border: 1px solid #BA9950;
+        padding-top: 40px;
+        box-shadow: 0px 3px 6px #00000029;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Join-us-btn {
+        margin: 39px auto;
+    }
+
+    .navbar-collapse {
+        transition: 0s;
+    }
+
+    .nav-container-bg {
+        background-color: #FFFFFF;
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .nav-item {
+        width: 180px;
+        margin-left: 45px;
+    }
+
+    .active-link::after {
+        bottom: -2px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .nav-link span {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:576px) {
+    .logo img {
+        width: 90px;
+    }
+
+    .dropdown-menu[data-bs-popper] {
+        left: 50%;
+        width: 200px;
+        top: 436px;
+        transform: translateX(-50%);
+    }
+
+    .dropdown-menu li {
+        width: 150px;
+    }
+
+    .dropdown-menu {
+        padding: 15px;
+    }
+
+    .navbar::after {
+        right: -12px;
+    }
+}
+
+/* ========================================= End Navbar =========================================*/
+
+/*  ========================================= Start Photos Page=========================================  */
+.page-title{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-title h1{
+    font-size: 26px;
+    color: #1A1818;
+    font-weight: bold;
+}
+.page-title .add-photos-btn{
+    width: 95px;
+    height: 30px;
+    background-color: #BA9950;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    display: none;
+}
+.photos-page{
+    width: 100%;
+    min-height: 450px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0px 3px 0px #00000014;
+    border: 1px solid #DEDEDE;
+    margin-top: 15px;
+}
+.tab {
+    position: relative;
+    border-bottom: 1px solid #DEDEDE;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabcontent:not(#photos) {
+    display: none;
+  }
+  .tab button{
+    all: unset;
+    cursor: pointer;
+    font-size: 15px;
+    color: #1A1818;
+  }
+  .tab button:not(:first-of-type){
+   margin-left: 43px;
+  }
+  .tab button:first-of-type{
+    margin-left:20px ;
+  }
+  .tab button:last-of-type{
+    margin-right:20px ;
+  }
+  .tab .active p{
+    color: #BA9950;
+    font-weight: bold;
+  }
+  .tabcontent{
+    padding: 12px;
+  }
+  .add-photos>:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+  }
+  .modal-title{
+    display: flex;
+    align-items: center;
+  }
+  .modal-title .num-of-Photos{
+    font-size: 15px;
+    color: #727272;
+    margin-left: 14px;
+    display: none;
+  }
+  .add-photos>:first-child h1{
+    font-size: 26px;
+    font-weight: bold;
+    color: #1A1818;
+  }
+  .add-photos>:first-child p{
+    font-size: 12px;
+    color: #727272;
+  }
+  .add-photos>:first-child button{
+    width: 200px;
+    height: 40px;
+    background-color: #BA9950;
+    border: none;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    margin-top: 18px;
+    color: white;
+  }
+  #adding-photos{
+    z-index: 9999;
+  }
+  .modal::after {
+    content: "";
+    position: fixed;
+    z-index: 9998;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal.show .modal-dialog {
+    z-index: 9999;
+    height: auto;
+    max-width: 800px;
+}
+.modal-header {
+    position: relative;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+.modal-header h1{
+    font-size: 15px;
+    color: #1A1818;
+    font-weight: bold;
+}
+.btn-close-modal {
+    position: absolute;
+    top: -55px;
+    right: 0;
+    width: 75px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: #727272;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    z-index: 9999 !important;
+}
+.modal-body-bg{
+    background-color: #FFFFFF;
+}
+.btn-close-modal span{
+    color: white;
+    font-size: 12px;
+    margin-right: 3px;
+}
+.modal-content{
+    padding: 20px;
+}
+.modal-body{
+    width: 100%;
+    border-radius: 8px;
+    background-color: #F7F7F7;
+    min-height: 200px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.custom-file-upload,.my-upload-btn{
+    width: 190px;
+    height: 40px;
+    background-color: #BA9950;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    cursor: pointer;
+    margin: 16px auto;
+}
+
+.my-upload-btn{
+    border: none;
+    display: none;
+    margin: 0 auto;
+}
+.img-previewed{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 0; 
+}
+.first-li{
+    display: none;
+}
+.img-previewed:not(.first-li):after{
+    content: "Ready!";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first-li,.first-li-copied{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid #DEDEDE;
+    background-color: #F7F7F7;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.first-li-copied img{
+    pointer-events: none;
+}
+form{
+    width: 100%;
+}
+.img-previewed img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.delete-img{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #1A1818;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.delete-img i{
+    font-size: 12px;
+    color: white;
+}
+.photos-btns{
+    display: none;
+}
+.photos-btns button p,.photos-btns button span:not(.delete-selected-btn span),.photos-btns button{
+    font-size: 15px;
+    color: #1A1818;
+}
+.delete-selected-btn span{
+    font-size: 15px;
+    color: #F11852;
+}
+@media (max-width:768px) {
+    .tab{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media (max-width:576px) {
+    .list-of-uploaded-imgs{
+        flex-wrap: wrap;
+    }
+    .list-of-uploaded-imgs li{
+        width: 150px;
+        height: 150px;
+    }
+    .tablinks>:first-child p,.photos-btns button p,.photos-btns button span,.photos-btns button{
+        font-size: 12px;
+    }
+    .add-photos>:first-child h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .add-photos>:first-child p{
+        margin-top: 8px;
+        text-align: center;
+    }
+
+}
+/*  ========================================= End Photos Page=========================================  */
