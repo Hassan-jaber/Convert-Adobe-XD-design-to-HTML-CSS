@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="41" viewBox="0 0 38 41">
+  <g id="notifications-shared-Icon" transform="translate(-195)">
+    <rect id="Shadow" width="38" height="38" rx="5" transform="translate(195 3)" fill="#1a1818"/>
+    <rect id="Bg" width="38" height="38" rx="5" transform="translate(195)" fill="#727272"/>
+    <g id="Icon">
+      <rect id="Rectangle_42" data-name="Rectangle 42" width="16" height="16" rx="4" transform="translate(208 12.556)" fill="#fff"/>
+      <g id="Rectangle_43" data-name="Rectangle 43" transform="translate(204 8.556)" fill="#fff" stroke="#707070" stroke-width="2">
+        <rect width="18" height="18" rx="3" stroke="none"/>
+        <rect x="1" y="1" width="16" height="16" rx="2" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

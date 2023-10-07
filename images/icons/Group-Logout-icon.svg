@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+  <g id="Group-Logout-icon" transform="translate(0 0)">
+    <path id="Path_102" data-name="Path 102" d="M2.134,27.126H6.875a.625.625,0,0,0,0-1.25H2.134l.808-.808a.625.625,0,1,0-.884-.884L.183,26.059a.625.625,0,0,0,0,.884l1.875,1.875a.625.625,0,0,0,.884-.884Z" transform="translate(0 -21.501)" fill="#f7f7f7"/>
+    <path id="Path_103" data-name="Path 103" d="M41.625,0h-5A.625.625,0,0,0,36,.625v1.25a.625.625,0,0,0,1.25,0V1.25H41v7.5H37.25V8.125a.625.625,0,0,0-1.25,0v1.25a.625.625,0,0,0,.625.625h5a.625.625,0,0,0,.625-.625V.625A.625.625,0,0,0,41.625,0Z" transform="translate(-32.25 0)" fill="#f7f7f7"/>
+  </g>
+</svg>

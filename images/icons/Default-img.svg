@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="Default-img" transform="translate(-1262 54)">
+    <circle id="Bg" cx="11" cy="11" r="11" transform="translate(1262 -54)" fill="#b1b1b1"/>
+    <path id="Icon" d="M4,4.5A2.25,2.25,0,1,0,1.75,2.25,2.251,2.251,0,0,0,4,4.5ZM6,5H5.139A2.72,2.72,0,0,1,2.861,5H2A2,2,0,0,0,0,7v.25A.75.75,0,0,0,.75,8h6.5A.75.75,0,0,0,8,7.25V7A2,2,0,0,0,6,5Z" transform="translate(1269 -47)" fill="#fff"/>
+  </g>
+</svg>

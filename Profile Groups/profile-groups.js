@@ -1,3 +1,4 @@
+
 // Get references to the elements
 const toggleButton = document.querySelector('.dropdown-toggle');
 const overlay = document.querySelector('.overlay-bg');
@@ -49,23 +50,14 @@ function openTap(tap, tapname) {
 // ---------------------------
 // Js Code For Display '.empty' div if no content in '.my-connections-list'
 
-let my_Connections = document.querySelector("#my-connections .my-connections-list")
-let my_Received_Invitations  = document.querySelector("#received-invitations .my-connections-list")
-let my_Sent_invitations = document.querySelector("#sent-invitations .my-connections-list")
+let my_groups = document.querySelector("#my-groups .my-groups-list")
 let empty = document.querySelector(".empty")
 
-if(my_Connections.children.length == 0){
-  my_Connections.appendChild(empty)
+if(my_groups.children.length == 0){
+  my_groups.appendChild(empty)
   empty.style.display="flex"
 }
-if(my_Received_Invitations.children.length == 0){
-  my_Received_Invitations.appendChild(empty)
-  empty.style.display="flex"
-}
-if(my_Sent_invitations.children.length == 0){
-  my_Sent_invitations.appendChild(empty)
-  empty.style.display="flex"
-}
+
 
 
 // ----------------------------------------------
@@ -74,9 +66,36 @@ function hasVerticalScrollbar() {
   return document.body.scrollHeight > window.innerHeight;
 }
 
-const footer = document.querySelector(".footer")
-if (hasVerticalScrollbar()) {
-  footer.style.display="flex"
-} else {
-  footer.style.display="none"
+function toggleFooterDisplay() {
+  const footer = document.querySelector(".footer");
+  if (hasVerticalScrollbar()) {
+    footer.style.display = "flex";
+  } else {
+    footer.style.display = "none";
+  }
 }
+
+// Check for vertical scrollbar when the page loads
+window.addEventListener("load", toggleFooterDisplay);
+
+// Attach click event listeners to elements with the .tablinks class
+let tablinksBtns = document.querySelectorAll('.tablinks');
+tablinksBtns.forEach((tab) => {
+  tab.addEventListener("click", toggleFooterDisplay);
+});
+
+
+//-------------------------------------------------------------------------------------------
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Your code here, including adding event listeners
+  var element = document.getElementById('create-group');
+  if (element) {
+    element.addEventListener('click', function() {      
+      // Redirect to the page with the modal content
+      window.location.href = '../Profile-Groups-Joined/joined.html?openModal=true';
+    });
+  }
+});
+

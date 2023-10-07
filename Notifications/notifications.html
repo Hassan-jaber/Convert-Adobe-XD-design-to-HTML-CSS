@@ -1,122 +1,1114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>notifications</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <link rel="stylesheet" href="notifications.css">
 </head>
+
 <body>
     <div class="overlay-bg"></div>
 
-<!-- ========================================= Start Navbar ========================================= -->
-<div class="container nav_container">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand logo" href="#">
-                <img src="../images/Logo.svg" alt="" width="100">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <img src="../images/Logo.svg" width="100" alt="">
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">
-                            <img src="../images/icons/Dashboard-not-active-Icon.svg" alt="">
-                            <span>Dashboard</span>
+    <!-- ========================================= Start Navbar ========================================= -->
+    <div class="container nav_container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">
+                    <img src="../images/Logo.svg" alt="" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="../images/Logo.svg" width="100" alt="">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <img src="../images/icons/Dashboard-not-active-Icon.svg" alt="">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Activity Feed-Icon.png" alt="">
+                                <span>Activity Feed</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Tools-Icon.png" alt="">
+                                <span>Tools</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Courses-Icon.png" alt="">
+                                <span>Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Economic Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../images/icons/Economic Calendar-Icon.png" alt="">
+                                <span>Support</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="#" class="notifications-navbar">
+                            <div class="num-of-notifications">
+                                <span>23</span>
+                            </div>
+                            <img src="../images/icons/Notifications-Icon.svg" alt="">
                         </a>
+                        <div class="dropdown-navbar">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../images/icons/user-img.png" alt="">
+                                <span class="ml-1">John</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="../Profile/profile.html">
+                                        <img src="../images/icons/Icon-profile.svg" alt="">
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Icon-settings.svg" alt="">
+                                        <span>Account Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Connections-Icon.svg" alt="">
+                                        <span>Connections</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Group-icon.svg" alt="">
+                                        <span>Groups</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Photos-icon.svg" alt="">
+                                        <span>Photos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Email-icon.svg" alt="">
+                                        <span>Email Invites</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="../images/icons/Logout-icon.svg" alt="">
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- ========================================= End Navbar ========================================= -->
+
+    <!-- ========================================= Start Page ========================================= -->
+    <div class="container">
+        <h1 class="page-title">Notifications & Messages</h1>
+        <div class="page">
+            <div class="tab">
+                <!--  -->
+                <button class="tablinks active" onclick="openTap(event, 'notifications')">
+                    <div class="d-flex  justify-content-center align-items-center">
+                        <p><span class="total-num">(10) </span>Notifications</p>
+                    </div>
+                </button>
+                <!--  -->
+                <button class="tablinks" onclick="openTap(event, 'messages')">
+                    <div>
+                        <p><span class="total-num">(13) </span>Messages</p>
+                    </div>
+                </button>
+                <!--  -->
+                <button class="new-message-btn" type="button" data-bs-toggle="modal" data-bs-target="#new-message">
+                    <img src="../images/icons/New-msg-icon.svg" alt="">
+                        <p>Start a new message</p>
+                </button>
+            </div>
+
+            <!-- =========================================  Start Tab content for notifications =========================================  -->
+            <div id="notifications" class="tabcontent">
+                <div class="past-notifications">
+                    <p class="activities-title">Past notifications</p>
+
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/mention-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Elias</span>
+                                        <p class="notification-action">changed his Profile Photo</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content"></div>
+                                <div class="notification-date">A few hours ago</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/star-activity-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Dany</span>
+                                        <p class="notification-action">earned 10 Points</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content">Points were earned for completing his first Course!
+                                </div>
+                                <div class="notification-date">Yesterday</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/star-activity-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Christine</span>
+                                        <p class="notification-action">earned 25 Points</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content">Points were earned for completing her second Course in
+                                    a row!</div>
+                                <div class="notification-date">2 Days ago</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/new-message-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Joseph</span>
+                                        <p class="notification-action">changed his Profile Photo</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content"></div>
+                                <div class="notification-date">Yesterday</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/star-activity-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Elias</span>
+                                        <p class="notification-action">changed his Profile Photo</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content"></div>
+                                <div class="notification-date">2 Days ago</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/star-activity-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Dany</span>
+                                        <p class="notification-action">earned 10 Points</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content"></div>
+                                <div class="notification-date">Yesterday</div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+                <!--  -->
+                <div class="new-notifications">
+                    <p class="activities-title">New notifications</p>
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/notifications-user-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Elias</span>
+                                        <p class="notification-action">changed his Profile Photo</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content"></div>
+                                <div class="notification-date">A few hours ago</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/notifications-star-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Dany</span>
+                                        <p class="notification-action">earned 10 Points</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content">Points were earned for completing his first Course!
+                                </div>
+                                <div class="notification-date">Yesterday</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/notifications-star-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Christine</span>
+                                        <p class="notification-action">earned 25 Points</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content">Points were earned for completing her second Course in
+                                    a row!</div>
+                                <div class="notification-date">2 Days ago</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                    <button type="button" class="modal-btn" data-bs-toggle="modal"
+                        data-bs-target="#notification-expanded">
+                        <div class="notification">
+                            <img src="../images/icons/notifications-shared-Icon.svg" alt="">
+                            <div>
+                                <div class="notification-header">
+                                    <img src="../images/icons/user-activity-Image.png" alt="">
+                                    <div>
+                                        <span class="notification-username">Christine</span>
+                                        <p class="notification-action">earned 25 Points</p>
+                                    </div>
+                                </div>
+                                <div class="notification-content">
+                                    <img src="../images/imgs-comment-1.png" alt="">
+                                    <img src="../images/imgs-comment-2.png" alt="">
+                                    <p>Take a look at how the trading industry has progressed over the last few years!
+                                    </p>
+                                </div>
+                                <div class="notification-date">2 Days ago</div>
+                            </div>
+                        </div>
+                    </button>
+                    <!--  -->
+                </div>
+            </div>
+            <!-- =========================================  End Tab content for notifications =========================================  -->
+
+            <!-- =========================================  Start Tab content for messages =========================================  -->
+            <div id="messages" class="tabcontent">
+                <div class="messages-container">
+                    <div class="list-of-chats">
+                        <div class="bars">
+                                <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <div class="search-container col-lg-4 col-md-4 col-sm-12">
+                            <input type="text" class="search-input" placeholder="Search">
+                            <button class="search-button">
+                                <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                            </button>
+                        </div>
+                        <ul class="list-of-chats-ul">
+                            <li class="chat-li">
+                                <button>
+                                    <div class="chat-img-container">
+                                        <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                    </div>
+                                        <div class="user-info">
+                                            <div>
+                                                <p>Charlie Smith</p>
+                                                <p class="text-msg">Hello! I was wondering if you</p>
+                                            </div>
+                                            <div>
+                                                <p>1d</p>
+                                            </div>
+                                        </div>
+                                </button>
+                            </li>
+                            <li class="chat-li active-li">
+                                <button>
+                                    <div class="active"></div>
+                                    <div class="chat-img-container">
+                                        <img src="../images/icons/user-connection-img-2.svg" alt="">
+                                    </div>
+                                        <div class="user-info">
+                                            <div>
+                                                <p>Charlie Smith</p>
+                                                <p class="text-msg">Hello! I was wondering if you </p>
+                                            </div>
+                                            <div>
+                                                <p>1d</p>
+                                            </div>
+                                        </div>
+                                </button>
+                            </li>
+                            <li class="chat-li active-li">
+                                <button>
+                                    <div class="active"></div>
+                                    <div class="chat-img-container">
+                                        <img src="../images/icons/user-connection-img-3.svg" alt="">
+                                    </div>
+                                        <div class="user-info">
+                                            <div>
+                                                <p>Charlie Smith</p>
+                                                <p class="text-msg">Hello! I was wondering if you </p>
+                                            </div>
+                                            <div>
+                                                <p>1d</p>
+                                            </div>
+                                        </div>
+                                </button>
+                            </li>
+                            <li class="chat-li active-li">
+                                <button>
+                                    <div class="active"></div>
+                                    <div class="chat-img-container">
+                                        <img src="../images/icons/user-connection-img-4.svg" alt="">
+                                    </div>
+                                        <div class="user-info">
+                                            <div>
+                                                <p>Charlie Smith</p>
+                                                <p class="text-msg">Hello! I was wondering if you </p>
+                                            </div>
+                                            <div>
+                                                <p>1d</p>
+                                            </div>
+                                        </div>
+                                </button>
+                            </li>
+                            <li class="chat-li active-li">
+                                <button>
+                                    <div class="active"></div>
+                                    <div class="chat-img-container">
+                                        <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                    </div>
+                                        <div class="user-info">
+                                            <div>
+                                                <p>Charlie Smith</p>
+                                                <p class="text-msg">Hello! I was wondering if you </p>
+                                            </div>
+                                            <div>
+                                                <p>1d</p>
+                                            </div>
+                                        </div>
+                                </button>
+                            </li>
+                            <li class="chat-li">
+                                <button>
+                                    <div class="chat-img-container">
+                                        <img src="../images/icons/user-connection-img-2.svg" alt="">
+                                    </div>
+                                        <div class="user-info">
+                                            <div>
+                                                <p>Charlie Smith</p>
+                                                <p class="text-msg">Hello! I was wondering if you </p>
+                                            </div>
+                                            <div>
+                                                <p>1d</p>
+                                            </div>
+                                        </div>
+                                    </button>
+                            </li>
+                            <li class="chat-li">
+                                <button>
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-3.svg" alt="">
+                                </div>
+                                    <div class="user-info">
+                                        <div>
+                                            <p>Charlie Smith</p>
+                                            <p class="text-msg">Hello! I was wondering if you </p>
+                                        </div> 
+                                        <div>
+                                            <p>1d</p>
+                                        </div>                                   
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="chat-li">
+                                <button>
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-3.svg" alt="">
+                                </div>
+                                    <div class="user-info">
+                                        <div>
+                                            <p>Charlie Smith</p>
+                                            <p class="text-msg">Hello! I was wondering if you </p>
+                                        </div> 
+                                        <div>
+                                            <p>1d</p>
+                                        </div>                                   
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="chat-li">
+                                <button>
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-3.svg" alt="">
+                                </div>
+                                    <div class="user-info">
+                                        <div>
+                                            <p>Charlie Smith</p>
+                                            <p class="text-msg">Hello! I was wondering if you </p>
+                                        </div> 
+                                        <div>
+                                            <p>1d</p>
+                                        </div>                                   
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="chat-li">
+                                <button>
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-3.svg" alt="">
+                                </div>
+                                    <div class="user-info">
+                                        <div>
+                                            <p>Charlie Smith</p>
+                                            <p class="text-msg">Hello! I was wondering if you </p>
+                                        </div> 
+                                        <div>
+                                            <p>1d</p>
+                                        </div>                                   
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="chat">
+                        <div class="chat-header">
+                            <div class="chat-img-container">
+                                <img src="../images/icons/user-connection-img-1.svg" alt="">
+                            </div>
+                            <div> 
+                                <p>Charlie Smith</p>
+                                <div class="user-active">
+                                    <div class="is-active"></div>
+                                    <p>Active now</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-content">
+                            <div class="sender">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">Hello! I was wondering if you have the time for a quick
+                                        zoom meeting?</div>
+                                        <img class="corner" src="../images/icons/corner-msg-img-sender.svg" alt="">
+                                </div>
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="receiver">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-2.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">Sure! I’ll wait for the zoom link
+                                    </div>
+                                    <img class="corner" src="../images/icons/corner-msg-img-receiver.svg" alt="">
+                                </div>
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="sender">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">
+                                        Here you go:
+                                        <a href="#">https://zoomlink.akkjjsakaaljlalkjsklaskja;kasasask.com</a>
+                                    </div>
+                                    <img class="corner" src="../images/icons/corner-msg-img-sender.svg" alt="">
+                                </div>
+
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="sender">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">Hello! I was wondering if you have the time for a quick
+                                        zoom meeting?</div>
+                                        <img class="corner" src="../images/icons/corner-msg-img-sender.svg" alt="">
+                                </div>
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="receiver">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-2.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">Sure! I’ll wait for the zoom link
+                                    </div>
+                                    <img class="corner" src="../images/icons/corner-msg-img-receiver.svg" alt="">
+                                </div>
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="sender">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">
+                                        Here you go:
+                                        <a href="#">https://zoomlink.akkjjsakaaljlalkjsklaskja;kasasask.com</a>
+                                    </div>
+                                    <img class="corner" src="../images/icons/corner-msg-img-sender.svg" alt="">
+                                </div>
+
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <!--  -->
+                            <div class="sender">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">Hello! I was wondering if you have the time for a quick
+                                        zoom meeting?</div>
+                                        <img class="corner" src="../images/icons/corner-msg-img-sender.svg" alt="">
+                                </div>
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="receiver">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-2.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">Sure! I’ll wait for the zoom link
+                                    </div>
+                                    <img class="corner" src="../images/icons/corner-msg-img-receiver.svg" alt="">
+                                </div>
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="sender">
+                                <div class="chat-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="msg-container">
+                                    <div class="msg">
+                                        Here you go:
+                                        <a href="#">https://zoomlink.akkjjsakaaljlalkjsklaskja;kasasask.com</a>
+                                    </div>
+                                    <img class="corner" src="../images/icons/corner-msg-img-sender.svg" alt="">
+                                </div>
+
+                                <p class="msg-time">Now</p>
+                            </div>
+                            <!--  -->
+                            <div class="message-textarea">
+                                <form action="#">
+                                    <textarea name="textarea-comment" placeholder="Add your comment …" id="textarea-comment"></textarea>
+                                </form>
+                                <div class="add-comment-btns">
+                                    <div>
+                                        <div class="user-img-container">
+                                            <img src="../images/icons/User-img2.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div>
+                                        <img src="../images/icons/Camera.svg" alt="">
+                                        <img src="../images/icons/Send.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no-chats">
+                                <img src="../images/icons/no-chats-img.svg" alt="">
+                                <p>The conversation is empty now.
+                                    Start talking to fill it up!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =========================================  End Tab content for messages =========================================  -->
+        </div>
+    </div>
+    <!-- ========================================= Start Modal ========================================= -->
+
+    <div class="modal fade" id="notification-expanded" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <!--  -->
+                <div class="modal-body">
+                    <!--  -->
+                    <button class="download-btn">
+                        <img src="../images/icons/Download-Icon.svg" alt="">
+                        <span>Download</span>
+                    </button>
+                    <div class="modal-slider">
+                        <!-- ========================================= Start Swiper ========================================= -->
+                        <section class="slider" id="trading-tools">
+                            <div class="slides">
+                                <div class="cards-slide-container swiper">
+                                    <div class="slide-content">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="slide-card swiper-slide">
+                                                <img src="../images/slide-Img-1.png" alt="">
+                                            </div>
+
+                                            <div class="slide-card swiper-slide">
+                                                <img src="../images/slide-2.png" alt="">
+                                            </div>
+
+                                            <div class="slide-card swiper-slide ">
+                                                <img src="../images/slider-Img3.png" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="btns">
+                            <div class="swiper-btn-prev swiper-navBtn">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper-btn-next swiper-navBtn">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+                        <!-- ========================================= End Swiper ========================================= -->
+                    </div>
+                </div>
+                <!--  -->
+                <div class="modal-content-section">
+                    <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+                        <span>close</span>
+                        <img src="../images/icons/Close-icon.svg" alt="">
+                    </button>
+                    <div class="modal-content-header">
+                        <p><span>Joelle </span>shared 2 Photos</p>
+                        <p>Take a look at how the trading industry has progressed over the last few years!</p>
+                        <p>2 weeks ago</p>
+                    </div>
+                    <div class="right-section-container">
+                        <div class="like-and-comment">
+                            <button class="like-btn">
+                                <img src="../images/icons/Like-btn-Icon.svg" alt="">
+                                <span>Like</span>
+                            </button>
+                            <div class="total-like-and-comment-btn">
+                                <div class="total-like">
+                                    <span>2.2K </span>
+                                    <span>Likes</span>
+                                </div>
+                                <div class="total-comments">
+                                    <span>300</span>
+                                    <span>Comments</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="comment-section">
+                            <div class="comment-content-container">
+                                <div class="comment-img-container">
+                                    <img src="../images/icons/user-connection-img-1.svg" alt="">
+                                </div>
+                                <div class="comment-content">
+                                    <div>
+                                        <p>Charlie Smith</p>
+                                        <p>Yes! I totally agree you can literally see it everywhere</p>
+                                    </div>
+                                    <div class="comment-date">
+                                        <p>1 Day ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="like-and-replys">
+                                <div>
+                                    <button>Like</button>
+                                    <button class="reply-btn" style="color: #BA9950;">Reply</button>
+                                </div>
+                                <div>
+                                    <button>
+                                        <img src="../images/icons/Reply-icon.svg" alt="">
+                                    </button>
+                                    <p class="Replies">
+                                        <span>3 </span>
+                                        Replies
+                                    </p>
+                                    <p class="likes">
+                                        <span>14 </span>
+                                        Likes
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="reply-section">
+                            <button>
+                                <img src="../images/icons/Reply-gray-icon.svg" alt="">
+                            </button>
+                            <div>
+                                <div class="comment-content-container">
+                                    <img src="../images/icons/Default-img.svg" alt="">
+                                    <div class="comment-content">
+                                        <div>
+                                            <p>Charbel</p>
+                                            <p>Thank you for sharing this!</p>
+                                        </div>
+                                        <div class="comment-date">
+                                            <p>Few hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="like-and-replys">
+                                    <div>
+                                        <button>Like</button>
+                                        <button class="reply-btn">Reply</button>
+                                    </div>
+                                    <div>
+                                        <p class="likes">
+                                            <span>10 </span>
+                                            Likes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="reply-section">
+                            <button>
+                                <img src="../images/icons/Reply-gray-icon.svg" alt="">
+                            </button>
+                            <div>
+                                <div class="comment-content-container">
+                                    <img src="../images/icons/Default-img.svg" alt="">
+                                    <div class="comment-content">
+                                        <div>
+                                            <p>Charbel</p>
+                                            <p>Thank you for sharing this!</p>
+                                        </div>
+                                        <div class="comment-date">
+                                            <p>Few hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="like-and-replys">
+                                    <div>
+                                        <button>Like</button>
+                                        <button class="reply-btn">Reply</button>
+                                    </div>
+                                    <div>
+                                        <p class="likes">
+                                            <span>10 </span>
+                                            Likes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="reply-textarea">
+                            <img src="../images/icons/user-img.png" alt="">
+                            <div class="reply-content-container">
+                                <div class="textarea-placeholder">
+                                    <div class="name">
+                                        <p>Charlie Smith</p>
+                                    </div>
+                                    <div>
+                                        <p>Yes I agr</p>
+                                        <img src="../images/icons/Type-line.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="textarea-btns">
+                                    <button>
+                                        <img src="../images/icons/Camera.svg" alt="">
+                                    </button>
+                                    <button>
+                                        <img src="../images/icons/Send-active.svg" alt="">
+                                    </button>
+                                </div>
+                                <textarea></textarea>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="comment-section">
+                            <div>
+                                <div class="comment-content-container">
+                                    <img src="../images/icons/Default-img.svg" alt="">
+                                    <div class="comment-content">
+                                        <div>
+                                            <p>Charbel</p>
+                                            <p>Thank you for sharing this!</p>
+                                        </div>
+                                        <div class="comment-date">
+                                            <p>Few hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="like-and-replys">
+                                    <div>
+                                        <button>Like</button>
+                                        <button class="reply-btn">Reply</button>
+                                    </div>
+                                    <div>
+                                        <p class="likes">
+                                            <span>10 </span>
+                                            Likes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <!--  -->
+                        <div class="comment-section">
+                            <div>
+                                <div class="comment-content-container">
+                                    <img src="../images/icons/Default-img.svg" alt="">
+                                    <div class="comment-content">
+                                        <div>
+                                            <p>Charbel</p>
+                                            <p>Thank you for sharing this!</p>
+                                        </div>
+                                        <div class="comment-date">
+                                            <p>Few hours ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="like-and-replys">
+                                    <div>
+                                        <button>Like</button>
+                                        <button class="reply-btn">Reply</button>
+                                    </div>
+                                    <div>
+                                        <p class="likes">
+                                            <span>10 </span>
+                                            Likes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <div class="buttom-textarea">
+                        <form action="#">
+                            <textarea name="textarea-comment" placeholder="Add your comment …" id="textarea-comment"></textarea>
+                        </form>
+                        <div class="add-comment-btns">
+                            <div>
+                                <div class="user-img-container">
+                                    <img src="../images/icons/User-img2.svg" alt="">
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div>
+                                <img src="../images/icons/Camera.svg" alt="">
+                                <img src="../images/icons/Send.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========================================= End Modal ========================================= -->
+
+    <!--  ========================================= Start Modal for new message  =========================================  -->
+
+<div class="modal fade" id="new-message" tabindex="-1" aria-labelledby="new-message" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-dialog-for-new-message">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+          <button type="button" class="btn-close-modal" data-bs-dismiss="modal" aria-label="Close">
+            <span>close</span>
+            <img src="../images/icons/Close-icon.svg" alt="">
+        </button>
+        </div>
+        <div class="modal-body">
+            <div class="new-message-section">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search by name">
+                    <button class="search-button">
+                        <img src="../images/icons/Search-icon.svg" alt="">
+                    </button>
+                </div>
+                <!--  -->
+                <ul class="new-message-list"> 
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../images/icons/Activity Feed-Icon.png" alt="">
-                            <span>Activity Feed</span>
-                        </a>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../images/icons/Tools-Icon.png" alt="">
-                            <span>Tools</span>
-                        </a>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../images/icons/Courses-Icon.png" alt="">
-                            <span>Courses</span>
-                        </a>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../images/icons/Economic Calendar-Icon.png" alt="">
-                            <span>Economic Calendar</span>
-                        </a>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../images/icons/Economic Calendar-Icon.png" alt="">
-                            <span>Support</span>
-                        </a>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
+                    </li>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
+                    </li>
+                    <li>
+                        <div class="new-message-img-container">
+                            <img src="../images/icons/user-connection-img-1.svg" alt="">
+                        </div>
+                        <p class="username">Charlie Smith</p>
                     </li>
                 </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                <div class="d-flex align-items-center justify-content-center">
-                    <a href="#" class="notifications-navbar">
-                        <div class="num-of-notifications">
-                            <span>23</span>
-                        </div>
-                        <img src="../images/icons/Notifications-Icon.svg" alt="">
-                    </a>
-                    <div class="dropdown-navbar">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="../images/icons/user-img.png" alt="">
-                            <span class="ml-1">John</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <!--  ========================================= End Modal for new message  =========================================  -->
+
+    <!-- ========================================= End Page ========================================= -->
+    <!-- ========================================= Start Footer ========================================= -->
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div>
+                    <img src="../images/Logo-footer.svg" alt="">
+                    <p>© 2023 - All Rights Reserved</p>
+                </div>
+                <div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="../Contact-us/contact-us.html">Contact us</a> </li>
+                            <li><a href="#">Privacy Policy</a> </li>
+                            <li><a href="../Terms/terms.html">Terms of Use</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer-social-media-links">
+                        <ul>
                             <li>
-                                <a class="dropdown-item" href="../Profile/profile.html">
-                                    <img src="../images/icons/Icon-profile.svg" alt="">
-                                    <span>My Profile</span>
+                                <a href="" class="facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="../images/icons/Icon-settings.svg" alt="">
-                                    <span>Account Settings</span>
+                                <a href="" class="twitter">
+                                    <i class="fa-brands fa-x-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="../images/icons/Connections-Icon.svg" alt="">
-                                    <span>Connections</span>
+                                <a href="" class="telegram">
+                                    <i class="fa-solid fa-paper-plane"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="../images/icons/Group-icon.svg" alt="">
-                                    <span>Groups</span>
+                                <a href="" class="instagram">
+                                    <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="../images/icons/Photos-icon.svg" alt="">
-                                    <span>Photos</span>
+                                <a href="" class="Utube">
+                                    <i class="fa-brands fa-youtube"></i>
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="../images/icons/Email-icon.svg" alt="">
-                                    <span>Email Invites</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    <img src="../images/icons/Logout-icon.svg" alt="">
-                                    <span>Logout</span>
+                                <a href="" class="discord">
+                                    <i class="fa-brands fa-discord"></i>
                                 </a>
                             </li>
                         </ul>
@@ -124,11 +1116,12 @@
                 </div>
             </div>
         </div>
-    </nav>
-</div>
-<!-- ========================================= End Navbar ========================================= -->
+    </footer>
+    <!-- ========================================= End Footer ========================================= -->
 
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
     <script src="notifications.js"></script>
 </body>
+
 </html>

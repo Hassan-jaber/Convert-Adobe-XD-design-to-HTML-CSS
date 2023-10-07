@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="add-photo" transform="translate(-95 -319)">
+    <circle id="Bg" cx="15" cy="15" r="15" transform="translate(95 319)" fill="#1a1818"/>
+    <path id="Camera" d="M0,4.4A1.2,1.2,0,0,1,1.2,3.2H3L4.2,2H7.8L9,3.2h1.8A1.2,1.2,0,0,1,12,4.4v6a1.2,1.2,0,0,1-1.2,1.2H1.2A1.2,1.2,0,0,1,0,10.4Zm6,6a3,3,0,1,0-3-3A3,3,0,0,0,6,10.4ZM6,9.2A1.8,1.8,0,1,1,7.8,7.4,1.8,1.8,0,0,1,6,9.2Z" transform="translate(104 327.2)" fill="#f7f7f7"/>
+  </g>
+</svg>
